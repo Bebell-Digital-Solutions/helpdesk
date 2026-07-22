@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HelpDesk - Centro de Atención al Cliente Todo en Uno</title>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<style>
+ :root {
+            /* New Color Scheme */
+            --primary-brand: #e11484; 
+            --primary-hover: #a02b8f; 
+            --accent-color: #df1783; 
+            
+            --text-main: #0f172a; /* Slate 900 */
+            --text-muted: #475569; /* Slate 600 */
+            
+            /* Backgrounds */
+            --bg-white: #ffffff;
+            --bg-slate-50: #f8fafc;
+            --bg-indigo-50: #eef2ff;
+            --bg-blue-50: #eff6ff;
+            --bg-purple-50: #f5f3ff;
+            --bg-orange-50: #fff7ed;
+            --bg-dark: #1e293b; /* Slate 800 */
+            
+            --border-radius: 12px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif; /* Changed font for new tech feel */
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            background-color: var(--bg-white);
+        }
+
+        /* Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 8px; /* Pill shape for modern look */
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-brand);
+            color: var(--bg-white);
+            box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            border: 1px solid #cbd5e1;
+            color: var(--text-main);
+            background: transparent;
+        }
+        
+        .btn-outline:hover {
+            border-color: var(--primary-brand);
+            color: var(--primary-brand);
+        }
+
+        .btn-dark {
+            background-color: var(--bg-white);
+            color: var(--text-main);
+            border: 1px solid var(--bg-white);
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+
+        h1 { font-size: 3.75rem; line-height: 1.1; }
+        h2 { font-size: 2.5rem; }
+        h3 { font-size: 1.5rem; }
+        p { font-size: 1.125rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+        
+        
+        
+
+        /* Section Layouts */
+        section {
+            padding: 90px 0;
+        }
+        
+        
+        
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        
+        
+        
+
+        /* --- Header --- */
+        header {
+            padding: 24px 0;
+            background: var(--bg-white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        
+        
+        
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+
+
+
+ 
+
+.logo {
+    font-weight: 800;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+.logo-icon {
+    height: 42px;
+    width: auto;
+}
+
+.logo-sub {
+    font-size: 8px;
+    font-weight: 400;
+    color: #888;
+    letter-spacing: 0.3px;
+    margin-top: -4px;
+}
+
+.logo:hover .logo-icon {
+    transform: scale(1.15) rotate(-3deg);
+    transition: transform 0.3s ease;
+}
+ 
+
+ 
+
+        nav ul {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        
+        
+        
+        
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        
+        
+        
+        
+        nav a:hover { color: var(--primary-brand); }
+        
+        
+        
+        
+
+        .header-actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+        
+        
+        
+
+        /* --- Hero --- */
+        .hero {
+            padding: 120px 0 80px;
+        }
+        
+        
+        
+
+        .hero-text {
+            max-width: 540px;
+        }
+        
+        
+        
+        
+
+        /* CSS Mockups (UI Style: Tech Dashboard) */
+        .mockup-container {
+            background: var(--bg-white);
+            border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            position: relative;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            height: 350px;
+        }
+        
+        .dash-sidebar {
+            background: #f8fafc;
+            border-right: 1px solid #e2e8f0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .dash-main {
+            padding: 20px;
+            background: white;
+        }
+
+        .skeleton-block {
+            background: #e2e8f0;
+            border-radius: 6px;
+        }
+        
+        /* Tech Colors for Skeletons */
+        .sk-primary { background: #c7d2fe; } /* Light Indigo */
+        .sk-accent { background: #fde68a; } /* Light Amber */
+        .sk-success { background: #bbf7d0; } /* Light Green */
+        .sk-neutral { background: #f1f5f9; } /* Slate */
+
+        .skeleton-line {
+            height: 8px;
+            background: #f1f5f9;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        
+        
+        
+        
+        
+
+        /* --- Social Proof --- */
+        .social-proof {
+            padding: 40px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
+            background: var(--bg-slate-50);
+            border: 1px solid #f1f5f9;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            align-items: center;
+        }
+
+        .stat-block h3 {
+            color: var(--primary-brand);
+            font-size: 3rem;
+            margin-bottom: 0;
+            line-height: 1;
+        }
+
+        .stat-block.accent h3 { color: var(--accent-color); }
+        
+        
+        
+        
+        
+
+        /* --- Feature Sections (Clean Backgrounds) --- */
+        .feature-section {
+            padding: 100px 0;
+        }
+
+        .feature-card-bg {
+            padding: 60px;
+            border-radius: 30px;
+        }
+
+        /* New Background Palette */
+        .bg-tech-indigo { background-color: var(--bg-indigo-50); }
+        .bg-tech-orange { background-color: var(--bg-orange-50); }
+        .bg-tech-purple { background-color: var(--bg-purple-50); }
+        .bg-tech-blue { background-color: var(--bg-blue-50); }
+
+        .bullets {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .bullets li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 18px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .bullets li::before {
+            content: '\f00c'; /* FontAwesome Check */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-brand);
+            font-size: 0.9rem;
+            top: 4px;
+        }
+
+        /* Specific Mockups */
+        .kanban-mockup {
+            display: flex;
+            gap: 15px;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .kanban-col {
+            flex: 1;
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 10px;
+            height: 300px;
+        }
+
+        .task-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .comment-ui {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+            position: relative;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .highlight-spot {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: rgba(79, 70, 229, 0.2);
+            border: 2px solid var(--primary-brand);
+            border-radius: 50%;
+            top: 35%;
+            right: 25%;
+            cursor: pointer;
+        }
+        
+        .tooltip-comment {
+            position: absolute;
+            top: 35%;
+            right: -20px;
+            transform: translateX(50%);
+            background: var(--text-main);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            width: 180px;
+        }
+
+        /* --- Support Section --- */
+        .support-section {
+            text-align: center;
+            padding: 100px 0;
+            background: linear-gradient(to bottom, white, var(--bg-slate-50));
+        }
+
+        .support-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary-brand);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            color: white;
+            font-size: 1.8rem;
+            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+        }
+
+        /* --- Features Grid --- */
+        .features-grid-section {
+            text-align: center;
+            background: var(--bg-slate-50);
+            padding: 100px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+            text-align: left;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid #f1f5f9;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+            border-color: var(--primary-brand);
+        }
+
+        .feature-item .icon-box {
+            height: 50px;
+            width: 50px;
+            background: var(--bg-indigo-50);
+            color: var(--primary-brand);
+            border-radius: 10px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+
+        /* --- Testimonials --- */
+        .testimonials {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .testimonial-card {
+            text-align: left;
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid #f1f5f9;
+        }
+        
+        .avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #cbd5e1;
+        }
+        
+        
+        
+        
+        
+        
+        
+
+        /* --- Ecosystem --- */
+        .ecosystem {
+            padding: 80px 0;
+            background: var(--bg-white);
+        }
+        
+        .eco-card {
+            border-radius: 24px;
+            padding: 50px;
+            color: var(--text-main);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .eco-light { background: var(--bg-slate-50); }
+        .eco-dark { background: var(--bg-dark); color: white; border: none; }
+        .eco-dark p { color: #94a3b8; }
+        
+        
+        
+        
+        
+        
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--bg-dark);
+            color: var(--bg-white);
+            padding: 100px 0 40px;
+            border-radius: 40px 40px 0 0; /* Kept the unique radius shape */
+        }
+
+        .footer-cta {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 80px;
+        }
+
+        .footer-cta h2 {
+            color: var(--bg-white);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 40px;
+            border-top: 1px solid #334155;
+            padding-top: 60px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: var(--bg-white);
+        }
+
+        .footer-bottom {
+            margin-top: 60px;
+            border-top: 1px solid #334155;
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+        
+        
+        
+        
+        
+        
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .grid-2, .proof-grid, .features-grid, .footer-links {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 { font-size: 2.5rem; }
+            
+            .hero { text-align: center; }
+            .hero-text { margin: 0 auto; }
+            
+            .hero .btn {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            
+            header .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            
+            .mockup-container, .feed-mockup {
+                width: 100%;
+            }
+
+            .footer-links {
+                text-align: center;
+            }
+        }
+
+
+/* LLM Integration Logo Slider */
+.partner-logo-slider {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: relative;
+}
+.partner-logo-slider:before {
+  content: "";
+  background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 9;
+}
+.partner-logo-slider:after {
+  content: "";
+  background: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 9;
+}
+.partner-logo-slide {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  animation: partner-logo 30s linear infinite;
+}
+.partner-logo-slide:hover {
+  animation-play-state: paused;
+}
+.partner-logo-slide img {
+  width: 150px;
+  border: 1px solid #b2b2b2;
+  padding: 20px;
+  border-radius: 10px;
+}
+@keyframes partner-logo {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .partner-logo-slide {
+    gap: 20px;
+  }
+  .partner-logo-slide img {
+    height: 45px;
+  }
+}
+
+
+ 
+
+</style>
+</head>
+<body>
+
+ <!-- Navigation -->
+    <header>
+        <div class="container">
+
+
+<div class="logo">
+    <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
+    <div>
+        <div>HelpDesk</div>
+        <div class="logo-sub">by Bebell Digital Solutions</div>
+    </div>
+</div>
+         
+            <nav>
+                <ul>
+                    <li><a href="#">Platform</a></li>
+                    <li><a href="#">Integrations</a></li>
+                    <li><a href="#">Enterprise</a></li>
+                    <li><a href="#planes">Pricing</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="https://app.helpdesk.icu" class="btn btn-outline" style="border-radius: 8px; padding: 10px 20px;">Iniciar Sesión</a>
+                
+                <a href="/reserva" class="btn btn-primary" style="border-radius: 8px; padding: 10px 20px;">Agendar Demo</a>
+            </div>
+        </div>
+    </header>
+    
+    
+    
+    
+    
+    
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="grid-2">
+                <div class="hero-text">
+                    <h1>Tu Centro de Atención al Cliente Todo en Uno</h1>
+                    <p>Integra WhatsApp, Instagram, Telegram y más en un solo lugar para optimizar tu comunicación.</p>
+                    
+                    
+        <a href="/planes" class="btn btn-primary">Conecta tus Canales de Chat</a>
+                    <p style="margin-top: 15px; font-size: 0.85rem; color: #94a3b8;"><i class="fa-solid fa-check" style="color: var(--primary-brand);"></i> Transacciones seguras a través de PayPal.</p>
+                </div>
+                
+                
+                
+                
+                
+                <div class="mockup-container">
+                    <!-- Dashboard Mockup -->
+                    <div style="background:#f1f5f9; padding: 12px; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between;">
+                        <div style="display:flex; gap:8px;">
+                            <div style="width:12px; height:12px; background:#cbd5e1; border-radius:50%;"></div>
+                            <div style="width:12px; height:12px; background:#cbd5e1; border-radius:50%;"></div>
+                        </div>
+                        <div style="width: 150px; height: 12px; background: white; border-radius: 4px;"></div>
+                    </div>
+                    <div class="dashboard-grid">
+                        <div class="dash-sidebar">
+                            <div class="skeleton-line" style="width: 70%;"></div>
+                            <div class="skeleton-line" style="width: 90%;"></div>
+                            <div class="skeleton-line" style="width: 60%;"></div>
+                            <div style="margin-top: 20px;"></div>
+                            <div class="skeleton-line" style="width: 80%;"></div>
+                        </div>
+                        <div class="dash-main">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                                <div class="skeleton-block sk-primary" style="width: 120px; height: 30px;"></div>
+                                <div class="skeleton-block sk-success" style="width: 80px; height: 30px;"></div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
+                                <div class="skeleton-block sk-neutral" style="height: 150px;"></div>
+                                <div class="skeleton-block sk-neutral" style="height: 150px;"></div>
+                                <div class="skeleton-block sk-neutral" style="height: 150px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<section class="llms">
+        <div class="container">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto 50px;">
+ <h2>Integraciones Inteligentes</h2>
+<p class="subtitle">Añade un agente de soporte impulsado por Inteligencia Artificial.</p>
+            </div></div>
+ 
+<div class="partner-logo-slider">
+  <div class="partner-logo-slide">
+    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/DeepSeek.svg" />
+    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/openai.svg" />
+    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/claude.svg" />
+    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/gemini.svg" />
+    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/idtcsMbudc_logos.svg" />
+    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/openrouter.svg" />
+
+    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/DeepSeek.svg" />
+    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/openai.svg" />
+    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/claude.svg" />
+    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/gemini.svg" />
+    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/idtcsMbudc_logos.svg" />
+    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/openrouter.svg" />
+
+    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/DeepSeek.svg" />
+    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/openai.svg" />
+    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/claude.svg" />
+    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/gemini.svg" />
+    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/idtcsMbudc_logos.svg" />
+    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/openrouter.svg" />
+
+
+  </div>
+</div>
+
+
+</section>
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+    <!-- Metrics / Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="proof-grid">
+                <div>
+                    <i class="fa-solid fa-star" style="color: var(--accent-color); margin-bottom: 15px;"></i>
+                    <i class="fa-solid fa-star" style="color: var(--accent-color);"></i>
+                    <i class="fa-solid fa-star" style="color: var(--accent-color);"></i>
+                    <i class="fa-solid fa-star" style="color: var(--accent-color);"></i>
+                    <i class="fa-solid fa-star" style="color: var(--accent-color);"></i>
+                    <h3 style="font-size: 1.4rem; margin-top: 10px;">"The operating system for our entire engineering team."</h3>
+                    <div style="display:flex; align-items:center; gap:10px; margin-top:15px;">
+                        <div style="width:32px; height:32px; background:#cbd5e1; border-radius:50%;"></div>
+                        <small style="color: var(--text-muted);"><strong>Sarah J.</strong> CTO @ TechFlow</small>
+                    </div>
+                </div>
+                <div class="stat-block">
+                    <h3>2x</h3>
+                    <p style="margin:0; font-size: 0.95rem; font-weight: 500;">Faster deployment cycles</p>
+                </div>
+                <div class="stat-block accent">
+                    <h3>500+</h3>
+                    <p style="margin:0; font-size: 0.95rem; font-weight: 500;">Startups scaled globally</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 1: Workflow (Indigo BG) -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="feature-card-bg bg-tech-indigo">
+                <div class="grid-2">
+                    <div class="text-content">
+                        <div style="margin-bottom: 20px;">
+                            <span style="background:white; color: var(--primary-brand); padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight:700; text-transform: uppercase; letter-spacing: 0.5px;">Kanban View</span>
+                        </div>
+                        <h2>Visualize your workflow instantly</h2>
+                        <ul class="bullets">
+                            <li>Drag-and-drop tasks across customizable columns.</li>
+                            <li>Identify bottlenecks in real-time with capacity planning.</li>
+                            <li>Integrated status updates that sync across the whole organization.</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Explore features</a>
+                    </div>
+                    <div class="visual-content">
+                        <div class="mockup-container">
+                            <div class="kanban-mockup">
+                                <div class="kanban-col">
+                                    <div style="margin-bottom: 10px; font-size: 0.8rem; font-weight: bold; color: #64748b;">TODO</div>
+                                    <div class="task-card">
+                                        <div class="skeleton-line" style="width: 80%;"></div>
+                                        <div class="skeleton-line" style="width: 40%; margin-bottom: 0;"></div>
+                                    </div>
+                                    <div class="task-card">
+                                        <div class="skeleton-line" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                                <div class="kanban-col">
+                                    <div style="margin-bottom: 10px; font-size: 0.8rem; font-weight: bold; color: var(--primary-brand);">IN PROGRESS</div>
+                                    <div class="task-card" style="border-left: 3px solid var(--primary-brand);">
+                                        <div class="skeleton-line" style="width: 70%;"></div>
+                                        <div style="display: flex; gap: 5px; margin-top: 8px;">
+                                            <div class="skeleton-block sk-primary" style="width: 20px; height: 20px; border-radius: 50%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 2: Collaboration (Orange BG) -->
+    <section class="feature-section">
+        <div class="container">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto 50px;">
+                <h2>Collaborate without the chaos</h2>
+                <p>Stop switching between email, Slack, and project tools.</p>
+                <a href="#" class="btn btn-primary">Try it free</a>
+            </div>
+            <div class="feature-card-bg bg-tech-orange">
+                <div class="grid-2">
+                    <div class="comment-ui">
+                        <div class="skeleton-block sk-neutral" style="height: 180px; border-radius: 8px; margin-bottom: 20px; position: relative;">
+                            <!-- Interactive Element Simulation -->
+                            <div class="highlight-spot"></div>
+                            <div class="tooltip-comment">
+                                <strong>@DesignTeam</strong><br>Let's adjust the contrast here.
+                            </div>
+                        </div>
+                        <div style="display:flex; gap:12px; align-items: flex-start;">
+                            <div class="avatar" style="background: var(--primary-brand);"></div>
+                            <div style="flex:1; background:#f8fafc; padding:15px; border-radius: 12px; border: 1px solid #e2e8f0;">
+                                <p style="font-size:0.9rem; margin:0; color: var(--text-main);"><strong>Alex M.</strong> <span style="color:#94a3b8;">2m ago</span><br>Changes updated on the staging server. Please review.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Contextual feedback loops</h2>
+                        <ul class="bullets">
+                            <li>Annotate directly on designs, documents, or live builds.</li>
+                            <li>Threaded conversations keep discussions focused and tidy.</li>
+                            <li>Share secure, read-only links with external stakeholders.</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline" style="background: white;">Learn about collaboration</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 3: Automation (Purple BG) -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="feature-card-bg bg-tech-purple">
+                <div class="grid-2">
+                    <div>
+                        <h2>Sign-offs made simple</h2>
+                        <ul class="bullets">
+                            <li>Create automated approval chains based on project type.</li>
+                            <li>Eliminate bottlenecks with "One-Click" executive approval.</li>
+                            <li>Audit logs track every decision for compliance.</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Automate your workflow</a>
+                    </div>
+                    <div class="mockup-container" style="padding: 40px; background: var(--bg-white);">
+                        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px;">
+                            <div style="display:flex; justify-content: space-between; align-items:center; margin-bottom: 20px;">
+                                <div style="font-weight: 700;">Q3 Deployment</div>
+                                <span style="background:#dcfce7; color:#15803d; padding: 6px 12px; border-radius:6px; font-size:0.8rem; font-weight:700;">READY TO SHIP</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8fafc; border-radius: 8px;">
+                                <div style="width: 30px; height: 30px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #94a3b8;">1</div>
+                                <div style="flex: 1; font-size: 0.9rem; font-weight: 600;">QA Review</div>
+                                <i class="fa-solid fa-check-circle" style="color: var(--primary-brand);"></i>
+                            </div>
+                            <div style="height: 15px; border-left: 2px dashed #cbd5e1; margin-left: 15px;"></div>
+                            <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8fafc; border-radius: 8px;">
+                                <div style="width: 30px; height: 30px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #94a3b8;">2</div>
+                                <div style="flex: 1; font-size: 0.9rem; font-weight: 600;">Product Lead</div>
+                                <button style="background: var(--primary-brand); color: white; border: none; padding: 6px 12px; border-radius: 4px; font-size: 0.75rem; cursor: pointer;">Approve</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Support Section -->
+    <section class="support-section">
+        <div class="container">
+            <div class="support-icon">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+            <h2>Need expert guidance to scale?</h2>
+            <p style="max-width: 500px; margin: 15px auto 30px;">Our dedicated success team helps you configure your workspace for maximum efficiency.</p>
+            <a href="#" class="btn btn-primary">Agenda una Demostración</a>
+        </div>
+    </section>
+
+    <!-- Feature 4: Dashboard (Blue BG) -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="feature-card-bg bg-tech-blue">
+                <div class="grid-2">
+                    <div class="mockup-container" style="height: 380px; padding: 20px;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; height: 100%;">
+                            <div style="background: #f1f5f9; border-radius: 8px;"></div>
+                            <div style="display: flex; flex-direction: column; gap: 20px;">
+                                <div style="background: #e2e8f0; border-radius: 8px; flex: 1;"></div>
+                                <div style="background: #cbd5e1; border-radius: 8px; flex: 1;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>A dashboard designed for focus</h2>
+                        <ul class="bullets">
+                            <li>Cut through the noise with customizable widget views.</li>
+                            <li>Deep search functionality to find any asset in seconds.</li>
+                            <li>Dark mode support for late-night coding sessions.</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Customize your view</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 5: Assets (Slate BG) -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="feature-card-bg" style="background: #f1f5f9;">
+                <div class="grid-2">
+                    <div>
+                        <h2>Centralize your digital assets</h2>
+                        <ul class="bullets">
+                            <li>Create single source of truth for brand guidelines.</li>
+                            <li>Version control for design files and documentation.</li>
+                            <li>Smart tagging automatically organizes your library.</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline" style="background: white;">View Digital Asset Management</a>
+                    </div>
+                    <div class="mockup-container" style="padding:24px;">
+                        <div style="display:flex; gap:12px; margin-bottom:20px;">
+                            <div style="background:white; border: 1px solid #e2e8f0; padding: 8px 16px; border-radius:6px; font-size:0.8rem; font-weight: 600;">Images</div>
+                            <div style="background:white; border: 1px solid #e2e8f0; padding: 8px 16px; border-radius:6px; font-size:0.8rem; font-weight: 600;">Docs</div>
+                            <div style="background:var(--primary-brand); color: white; padding: 8px 16px; border-radius:6px; font-size:0.8rem; font-weight: 600;">+ Upload</div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+                            <div style="height: 80px; background: #e2e8f0; border-radius: 6px;"></div>
+                            <div style="height: 80px; background: #cbd5e1; border-radius: 6px;"></div>
+                            <div style="height: 80px; background: #e2e8f0; border-radius: 6px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="features-grid-section">
+        <div class="container">
+            <h2>Everything your startup needs to scale</h2>
+            <p>Enterprise-grade security, AI-driven insights, and infinite integrations.</p>
+            <a href="#" class="btn btn-primary">Get full access</a>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="icon-box"><i class="fa-solid fa-robot"></i></div>
+                    <h3>AI Copilot</h3>
+                    <p style="font-size:0.95rem; margin: 0;">Generate project specs and summarize meeting notes instantly with our built-in AI.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Advanced Analytics</h3>
+                    <p style="font-size:0.95rem; margin: 0;">Track velocity, burn-down rates, and team capacity with beautiful visualizations.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon-box"><i class="fa-solid fa-plug"></i></div>
+                    <h3>API First</h3>
+                    <p style="font-size:0.95rem; margin: 0;">Connect with GitHub, Jira, Slack, and 200+ other tools in your stack.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 style="margin-bottom: 50px;">Trusted by modern product teams</h2>
+            <div class="features-grid">
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-left" style="color:#e2e8f0; font-size:2rem;"></i>
+                    <p style="font-size: 1.05rem; font-weight: 500; margin: 20px 0; color: var(--text-main);">"We moved from three different tools to just Startup by WPDean. It's been a game changer for clarity."</p>
+                    <div class="user-profile">
+                        <div class="avatar"></div>
+                        <div style="text-align:left;">
+                            <div style="font-weight:700; font-size:0.9rem;">Marcus Chen</div>
+                            <div style="font-size:0.8rem; color:var(--text-muted);">Product Manager</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-left" style="color:#e2e8f0; font-size:2rem;"></i>
+                    <p style="font-size: 1.05rem; font-weight: 500; margin: 20px 0; color: var(--text-main);">"The approval workflow saved us from a major compliance issue last quarter. Worth every penny."</p>
+                    <div class="user-profile">
+                        <div class="avatar"></div>
+                        <div style="text-align:left;">
+                            <div style="font-weight:700; font-size:0.9rem;">Elena Rodriguez</div>
+                            <div style="font-size:0.8rem; color:var(--text-muted);">Director of Ops</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-left" style="color:#e2e8f0; font-size:2rem;"></i>
+                    <p style="font-size: 1.05rem; font-weight: 500; margin: 20px 0; color: var(--text-main);">"Finally, a project management tool that developers and designers actually agree on."</p>
+                    <div class="user-profile">
+                        <div class="avatar"></div>
+                        <div style="text-align:left;">
+                            <div style="font-weight:700; font-size:0.9rem;">David Kim</div>
+                            <div style="font-size:0.8rem; color:var(--text-muted);">Lead Engineer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ecosystem -->
+    <section class="ecosystem">
+        <div class="container">
+            <h2 style="text-align:center; margin-bottom:40px;">Expand your toolkit</h2>
+            <div class="grid-2">
+                <div class="eco-card eco-light">
+                    <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
+                        <i class="fa-solid fa-magnifying-glass"></i> <strong style="font-size: 1.2rem;">SEO Radar</strong>
+                    </div>
+                    <h3>Market Intelligence</h3>
+                    <p>Track competitor movements and search trends directly from your dashboard.</p>
+                    <div style="background:white; padding:20px; border-radius:12px; margin-top:24px; border: 1px solid #e2e8f0;">
+                         <div class="skeleton-line" style="width: 100%;"></div>
+                         <div class="skeleton-line" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="eco-card eco-dark">
+                    <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
+                        <i class="fa-solid fa-bolt"></i> <strong style="font-size: 1.2rem; color: white;">Velocity AI</strong>
+                    </div>
+                     <h3>Predictive Sprint Planning</h3>
+                    <p>Use historical data to predict shipping dates with 95% accuracy.</p>
+                     <div style="background:rgba(255,255,255,0.05); padding:24px; border-radius:12px; margin-top:24px;">
+                        <div style="font-size:2.5rem; font-weight:bold; color: var(--primary-brand);">95%</div>
+                        <p style="margin:0; font-size:0.8rem; color: #94a3b8;">Prediction Accuracy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-cta">
+                <h2>Ready to upgrade your workflow?</h2>
+                <p style="color: #94a3b8; font-size: 1rem; margin-bottom: 30px;">Join 10,000+ agile teams shipping faster today.</p>
+                <div style="display:flex; gap:16px; justify-content:center;">
+                    <a href="#" class="btn btn-primary">Start Free Trial</a>
+                    <a href="#" class="btn btn-dark" style="background:transparent; color:white; border-color:#475569;">View Pricing</a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-col">
+                
+                
+<div class="logo">
+    <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
+    <div>
+        <div style="color: white;">HelpDesk</div>
+        <div class="logo-sub">by Bebell Digital Solutions</div>
+    </div>
+</div>                
+                    <p style="color:#64748b; font-size:0.9rem; line-height: 1.6; margin-top: 10px;">La plataforma que ayuda a equipos a ofrecer soporte excepcional en cada canal.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Roadmap</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Enterprise</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+    Desarrollado con 💖 por Bebell Digital Solutions.<br>Copyright © 2024 HelpDesk • Todos los derechos reservados.
+                </div>
+                <div style="display: flex; gap: 20px;">
+                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+<script>
+
+$(document).ready(function () {
+  const $slides = $(".partner-logo-slide");
+  const cloneCount = 3;
+
+  for (let i = 0; i < cloneCount; i++) {
+    $slides.children().clone(true).appendTo($slides);
+  }
+});
+
+ 
+</script>
+
+
+
+ 
+
+</body>
+</html>
