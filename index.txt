@@ -1759,6 +1759,27 @@
                 </div>
                 <h3>Convierte visitantes en clientes</h3>
                 <p>Agrega chat en vivo a tu sitio web y atiende consultas al instante antes de que el usuario decida irse a la competencia.</p>
+
+
+
+
+
+
+
+
+    <div style="background:white; padding:20px; border-radius:12px; margin-top:24px; border: 1px solid #e2e8f0;">
+                         <div class="skeleton-line" style="width: 100%;"></div>
+                         <div class="skeleton-line" style="width: 60%;"></div>
+
+<div class="skeleton-line" style="width: 100%;"></div>
+
+ <div class="skeleton-line" style="width: 80%;"></div>
+
+</div>
+
+
+
+
             </div>
             
             <!-- Right Card: Hover-switch image (fixed) -->
@@ -1807,261 +1828,32 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section class="team-section">
-        <div class="container">
-            <div class="feature-card-bg bg-tech-indigo">
-                <div class="grid-2">
-                    <div class="text-content">
-                        <h2>Asigna y Organiza tu Equipo y las Conversaciones.</h2>
-
- <p>Dale a cada conversación el destino que merece y a tu equipo la claridad que necesita para operar sin caos.</p>
-
-
-                        <ul class="bullets">
-        <li>Distribución precisa de tickets</li>
-        <li>Designación flexible de agentes</li>
-        <li>Delegación inteligente</li>
-        <li>Visibilidad total del flujo</li>
-
-                        </ul>
-
-                        <a href="/registro" class="btn btn-primary"><strong>Solicita una Demostración</strong></a>
-
-                    </div>
-
-
-                    
-                    <div class="visual-content">
-                        <div class="mockup-container" style="padding: 40px; background: #f8fafc; border-radius: 16px;">
-                            <!-- Workflow Visual -->
-                            <div class="workflow-step">
-                                <div style="width: 40px; height: 40px; background: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
-                                    <i class="fa-brands fa-whatsapp"></i>
-                                </div>
-                                <div style="flex: 1; font-size: 1rem; font-weight: 600;">Un cliente envía un mensaje.</div>
-                            </div>
-
-
-                            <div class="workflow-connector"></div>
-                            
-                            <div class="workflow-step" style="margin-left: 20px;">
-                                <div style="width: 40px; height: 40px; background: var(--primary-brand); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
-                                    <i class="fa-solid fa-inbox"></i>
-                                </div>
-
-
-
-                                <div style="flex: 1; font-size: 1rem; font-weight: 600;">El mensaje aparece en HelpDesk.</div>
-                            </div>
-                            <div class="workflow-connector" style="margin-left: 55px;"></div>
-                            
-                            <div class="workflow-step" style="margin-left: 40px;">
-                                <div style="width: 40px; height: 40px; background: #8b5cf6; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
-                                    <i class="fa-solid fa-robot"></i>
-                                </div>
-                                <div style="flex: 1; font-size: 1rem; font-weight: 600;">La IA sugiere una respuesta.</div>
-                            </div>
-                            <div class="workflow-connector" style="margin-left: 75px;"></div>
-                            
-                            <div class="workflow-step" style="margin-left: 60px;">
-                                <div style="width: 40px; height: 40px; background: #3b82f6; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
-                                    <i class="fa-solid fa-paper-plane"></i>
-                                </div>
-                                <div style="flex: 1; font-size: 1rem; font-weight: 600;">Tu equipo responde al instante.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- 5. Feature 1 Outcomes (Orange BG) -->
-    <section class="feature-section" style="padding-top: 0;">
+<!-- 11. Base de Conocimientos Section -->
+   <section class="feature-section" style="padding-top: 0;">
         <div class="container">
             <div class="feature-card-bg bg-tech-orange">
-                <div class="grid-2">
-                    <div class="comment-ui">
-                        <div class="skeleton-block sk-neutral" style="height: 180px; border-radius: 8px; margin-bottom: 20px; position: relative;">
-                            <!-- Interactive Element Simulation -->
-                            <div class="highlight-spot"></div>
-                            <div class="tooltip-comment">
-                                <strong>@Soporte</strong><br>Cliente solicitando ayuda con su pedido.
-                            </div>
-                        </div>
-                        <div style="display:flex; gap:12px; align-items: flex-start;">
-                            <div class="avatar" style="background: var(--primary-brand); color: white; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-headset"></i></div>
-                            <div style="flex:1; background:#f8fafc; padding:15px; border-radius: 12px; border: 1px solid #e2e8f0;">
-                                <p style="font-size:0.9rem; margin:0; color: var(--text-main);"><strong>Carlos M.</strong> <span style="color:#94a3b8;">hace 2 min</span><br>Problema resuelto. Enlace de pago enviado al cliente por WhatsApp.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <h2>Todos tus mensajes. Una sola bandeja.</h2>
-                        <p>Responde cada mensaje desde un solo lugar. Atiende 5 canales desde una sola plataforma sin tener que saltar entre aplicaciones.</p>
-                        <ul class="bullets">
-                            <li>WhatsApp, Instagram, Messenger y más.</li>
-                            <li>Colaboración en tiempo real con notas internas.</li>
-                            <li>Asignación automática de conversaciones.</li>
-                        </ul>
-                    </div>
+ 
+        <div class="grid-2">
+            <!-- Left Card: Text content -->
+            <div>
+                <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
+                    <i class="fa-solid fa-book" style="font-size: 1.5rem; color: var(--primary-brand);"></i> 
+                    <strong style="font-size: 1.2rem;">Base de Conocimientos</strong>
                 </div>
+                <h3>Empodera a tus clientes</h3>
+                <p>Ofrece acceso 24/7 a artículos y guías para resolver problemas frecuentes sin necesidad de soporte en vivo.</p>
+            </div>
+            
+            <!-- Right Card: Image -->
+            <div class="eco-card eco-light" style="background:transparent; border-color:transparent; display:flex; align-items:center; justify-content:center; padding:0px;">
+                <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/Image%20Files%20&%20Assets/base-de-conocimientos-banner.webp?updatedAt=1785266352681" 
+                     alt="Dashboard Base de Conocimientos" 
+                     style="width:100%; height:auto; object-fit:contain; border-radius:8px;">
             </div>
         </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-    <!-- 6. Feature 2 Outcomes (Purple BG) -->
-    <section class="feature-section" style="padding-top: 0;">
-        <div class="container">
-            <div class="feature-card-bg bg-tech-purple">
-                <div class="grid-2">
-                    <div>
-                        <h2>Responde en segundos con respuestas guardadas.</h2>
-                        <p>Reduce hasta un 60% el tiempo de respuesta. Deja que el sistema haga el trabajo pesado por ti.</p>
-                        <ul class="bullets">
-                            <li>Plantillas pre-guardadas para preguntas frecuentes.</li>
-                            <li>Respuestas automatizadas fuera del horario comercial.</li>
-                            <li>Envío de mensajes proactivos e información de tickets.</li>
-                        </ul>
-                    </div>
-                    <div class="mockup-container" style="padding: 40px; background: var(--bg-white);">
-                        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px;">
-                            <div style="display:flex; justify-content: space-between; align-items:center; margin-bottom: 20px;">
-                                <div style="font-weight: 700;">Respuestas Automatizadas</div>
-                                <span style="background:#dcfce7; color:#15803d; padding: 6px 12px; border-radius:6px; font-size:0.8rem; font-weight:700;">ACTIVO</span>
-                            </div>
-
-
-
-
-                            <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8fafc; border-radius: 8px;">
-                                <div style="width: 30px; height: 30px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #94a3b8;"><i class="fa-solid fa-clock"></i></div>
-                                <div style="flex: 1; font-size: 0.9rem; font-weight: 600;">Mensaje de Bienvenida</div>
-                                <i class="fa-solid fa-toggle-on" style="color: var(--primary-brand); font-size: 1.5rem;"></i>
-                            </div>
-                            
-
-
-<div style="height: 15px; border-left: 2px dashed #cbd5e1; margin-left: 15px;"></div>
-
-
-
-                            <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8fafc; border-radius: 8px;">
-                                
-<div style="width: 30px; height: 30px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #94a3b8;"><i class="fa-solid fa-bell"></i></div>
-
-                                <div style="flex: 1; font-size: 0.9rem; font-weight: 600;">Enviar Notificación</div>
-                                <i class="fa-solid fa-toggle-on" style="color: var(--primary-brand); font-size: 1.5rem;"></i>
-                            </div>
-
-
-
-
-
-
-
-
-<div style="height: 15px; border-left: 2px dashed #cbd5e1; margin-left: 15px;"></div>
-
-
-
-                            <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8fafc; border-radius: 8px;">
-                                
-<div style="width: 30px; height: 30px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #94a3b8;"><i class="fa-solid fa-robot"></i></div>
-
-                                <div style="flex: 1; font-size: 0.9rem; font-weight: 600;">Sugerencia IA / Atajos</div>
-                                <i class="fa-solid fa-toggle-on" style="color: var(--primary-brand); font-size: 1.5rem;"></i>
-                            </div>
-
-
-
-
-
-
-
-<div style="height: 15px; border-left: 2px dashed #cbd5e1; margin-left: 15px;"></div>
-
-
-
-                            <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8fafc; border-radius: 8px;">
-                                
-<div style="width: 30px; height: 30px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #94a3b8;"><i class="fa-solid fa-ticket"></i></div>
-
-                                <div style="flex: 1; font-size: 0.9rem; font-weight: 600;">Crear / Asignar Ticket</div>
-                                <i class="fa-solid fa-toggle-on" style="color: var(--primary-brand); font-size: 1.5rem;"></i>
-                            </div>
-
-
-
-
-
-
-
-
-<div style="height: 15px; border-left: 2px dashed #cbd5e1; margin-left: 15px;"></div>
-
-
-
-                            <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8fafc; border-radius: 8px;">
-                                
-<div style="width: 30px; height: 30px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #94a3b8;"><i class="fa-solid fa-table"></i></div>
-
-                                <div style="flex: 1; font-size: 0.9rem; font-weight: 600;">Enviar a Google Sheet</div>
-                                <i class="fa-solid fa-toggle-on" style="color: var(--primary-brand); font-size: 1.5rem;"></i>
-                            </div>
-
-
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
+    </div>
+     </div>
+</section>
 
 
 
@@ -2193,159 +1985,6 @@
 
 
 
-
-
-
-
-
-<section class="ecosystem">
-    <div class="container">
-        <h2 style="text-align:center; margin-bottom:40px;">Expande tu ecosistema de herramientas</h2>
-        
-        <div class="grid-2">
-            <!-- Left Card: Text content -->
-            <div class="eco-card eco-light">
-                <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
-                    <i class="fa-solid fa-cube" style="font-size: 1.5rem; color: var(--primary-brand);"></i> 
-                    <strong style="font-size: 1.2rem;">Widgets Web</strong>
-                </div>
-                <h3>Convierte visitantes en clientes</h3>
-                <p>Agrega chat en vivo a tu sitio web y atiende consultas al instante antes de que el usuario decida irse a la competencia.</p>
-            </div>
-            
-            <!-- Right Card: Hover-switch image (fixed) -->
-            <div class="eco-card eco-light" style="background:#fff5f5; display:flex; align-items:center; justify-content:center; padding:20px;">
-                <div class="hover-image-wrapper" style="width:100%; max-width:500px; border-radius:8px; overflow:hidden; position:relative;">
-                
-                
-                
-                    <!-- Primary image (visible by default) -->
-                    <img 
-                        class="hover-image primary" 
-                        src="https://ik.imagekit.io/bebell/HelpDesk%20App/Image%20Files%20&%20Assets/Widget-web-1.webp?updatedAt=1785261707397" 
-                        alt="Web Widget" 
-                        style="width:100%; height:auto; display:block; border-radius:8px; position:relative; z-index:2; transition: opacity 0.3s ease;"
-                    >
-                    
-                    
-                    
-                    <!-- Secondary image (hidden by default, appears on hover) -->
-                    <img 
-                        class="hover-image secondary" 
-                        src="https://ik.imagekit.io/bebell/HelpDesk%20App/Image%20Files%20&%20Assets/Widget-web-2.webp?updatedAt=1785261707046" 
-                        alt="Web Widget hover" 
-                        style="width:100%; height:auto; display:block; border-radius:8px; position:absolute; top:0; left:0; z-index:1; opacity:0; transition: opacity 0.3s ease;"
-                    >
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 10. Ecosystem - Web Widget Section -->
-<section class="ecosystem">
-    <div class="container">
-        <h2 style="text-align:center; margin-bottom:40px;">Expande tu ecosistema de herramientas</h2>
-        
-        <div class="grid-2">
-            <!-- Left Card: Text content -->
-            <div class="eco-card eco-light">
-                <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
-                    <i class="fa-solid fa-cube" style="font-size: 1.5rem; color: var(--primary-brand);"></i> 
-                    <strong style="font-size: 1.2rem;">Widgets Web</strong>
-                </div>
-                <h3>Convierte visitantes en clientes</h3>
-                <p>Agrega chat en vivo a tu sitio web y atiende consultas al instante antes de que el usuario decida irse a la competencia.</p>
-
-
-
-
-            </div>
-            
-            <!-- Right Card: Image -->
-            <div class="eco-card eco-light" style="background:#fff5f5; display:flex; align-items:center; justify-content:center; padding:20px;">
-                <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/Image%20Files%20&%20Assets/HelpDesk-Widget.gif?updatedAt=1785259568260" 
-                     alt="Web Widget" 
-                     style="width:100%; height:auto; object-fit:contain; border-radius:8px;">
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-<!-- 11. Base de Conocimientos Section -->
-<section class="ecosystem" style="background: #fff5f5; padding: 60px 0;">
-    <div class="container">
-        <div class="grid-2">
-            <!-- Left Card: Text content -->
-            <div>
-                <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
-                    <i class="fa-solid fa-book" style="font-size: 1.5rem; color: var(--primary-brand);"></i> 
-                    <strong style="font-size: 1.2rem;">Base de Conocimientos</strong>
-                </div>
-                <h3>Empodera a tus clientes</h3>
-                <p>Ofrece acceso 24/7 a artículos y guías para resolver problemas frecuentes sin necesidad de soporte en vivo.</p>
-            </div>
-            
-            <!-- Right Card: Image -->
-            <div class="eco-card eco-light" style="background:white; border-color: #fff; display:flex; align-items:center; justify-content:center; padding:20px;">
-                <img src="https://bucket.mlcdn.com/a/3336/3336910/images/d65481c3f9955b6bc98a77491c52958ba6283c24.png" 
-                     alt="Dashboard Base de Conocimientos" 
-                     style="width:100%; height:auto; object-fit:contain; border-radius:8px;">
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-    <!-- 10. Ecosystem -->
-    <section class="ecosystem">
-        <div class="container">
-            <h2 style="text-align:center; margin-bottom:40px;">Expande tu ecosistema de herramientas</h2>
-            <div class="grid-2">
-                <div class="eco-card eco-light">
-                    <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
-                        <i class="fa-solid fa-cube" style="font-size: 1.5rem; color: var(--primary-brand);"></i> <strong style="font-size: 1.2rem;">Widgets Web</strong>
-                    </div>
-                    <h3>Convierte visitantes en clientes</h3>
-                    <p>Agrega chat en vivo a tu sitio web y atiende consultas al instante antes de que el usuario decida irse a la competencia.</p>
-                    <div style="background:white; padding:20px; border-radius:12px; margin-top:24px; border: 1px solid #e2e8f0;">
-                         <div class="skeleton-line" style="width: 100%;"></div>
-                         <div class="skeleton-line" style="width: 60%;"></div>
-                    </div>
-                </div>
-               </div> 
-        </div>
-    </section>
 
 
 
