@@ -1,0 +1,2496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HelpDesk - Nunca pierdas otro cliente por responder tarde</title>
+
+<!-- === META TAGS PRINCIPALES === -->
+<meta name="description" content="Unifica las conversaciones con tus clientes desde WhatsApp, Instagram, Telegram, Facebook Messenger, correo electrónico y chat en vivo. Automatiza respuestas, gestiona tickets y atiende desde un solo panel.">
+<meta name="keywords" content="servicio al cliente, help desk, atención multicanal, chat en vivo, gestión de tickets, automatización, integración WhatsApp, mensajería social, base de conocimientos, CRM">
+<meta name="author" content="HelpDesk">
+<meta name="robots" content="index, follow">
+
+<!-- === URL CANÓNICA === -->
+<link rel="canonical" href="https://helpdesk.icu">
+
+<!-- === FAVICON Y ICONOS DE APLICACIÓN === -->
+<link rel="icon" type="image/x-icon" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
+
+<!-- === OPEN GRAPH / FACEBOOK === -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://helpdesk.icu">
+<meta property="og:title" content="HelpDesk | Nunca pierdas otro cliente por responder tarde">
+<meta property="og:description" content="Unifica las conversaciones con tus clientes desde WhatsApp, Instagram, Telegram, Facebook Messenger, correo electrónico y chat en vivo. Automatiza respuestas, gestiona tickets y atiende desde un solo panel.">
+<meta property="og:image" content="https://bucket.mlcdn.com/a/3336/3336910/images/929e59b8ebaab4772063e0bbf3153da5773b06a3.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="HelpDesk">
+<meta property="og:locale" content="es_ES">
+
+<!-- === TARJETA DE TWITTER === -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://helpdesk.icu">
+<meta name="twitter:title" content="HelpDesk | Nunca pierdas otro cliente por responder tarde">
+<meta name="twitter:description" content="Unifica las conversaciones con tus clientes desde WhatsApp, Instagram, Telegram, Facebook Messenger, correo electrónico y chat en vivo. Automatiza respuestas, gestiona tickets y atiende desde un solo panel.">
+<meta name="twitter:image" content="https://bucket.mlcdn.com/a/3336/3336910/images/929e59b8ebaab4772063e0bbf3153da5773b06a3.png">
+<meta name="twitter:creator" content="@helpdesk">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+ 
+
+
+
+
+
+
+<style>
+ :root {
+            /* New Color Scheme */
+            --primary-brand: #e11484; 
+            --primary-hover: #a02b8f; 
+            --accent-color: #df1783; 
+            
+            --text-main: #0f172a; /* Slate 900 */
+            --text-muted: #475569; /* Slate 600 */
+            
+            /* Backgrounds */
+            --bg-white: #ffffff;
+            --bg-slate-50: #f8fafc;
+            --bg-indigo-50: #eef2ff;
+            --bg-blue-50: #eff6ff;
+            --bg-purple-50: #f5f3ff;
+            --bg-orange-50: #fff7ed;
+            --bg-dark: #1e293b; /* Slate 800 */
+            
+            --border-radius: 12px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            background-color: var(--bg-white);
+        }
+
+
+
+
+
+
+
+
+        /* Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-brand);
+            color: var(--bg-white);
+            box-shadow: 0 4px 6px -1px rgba(225, 20, 132, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+            color: var(--bg-white);
+        }
+
+        .btn-outline {
+            border: 1px solid #cbd5e1;
+            color: var(--text-main);
+            background: transparent;
+        }
+        
+        .btn-outline:hover {
+            border-color: var(--primary-brand);
+            color: var(--primary-brand);
+        }
+
+        .btn-dark {
+            background-color: var(--bg-white);
+            color: var(--text-main);
+            border: 1px solid var(--bg-white);
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+
+        h1 { font-size: 3.5rem; line-height: 1.1; }
+        h2 { font-size: 2.5rem; line-height: 1.2; }
+        h3 { font-size: 1.5rem; }
+        p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+
+        /* Section Layouts */
+        section {
+            padding: 90px 0;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+
+
+
+
+
+
+
+        /* --- Header --- */
+        header {
+            padding: 20px 0;
+            background: var(--bg-white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            height: 42px;
+            width: auto;
+        }
+
+        .logo-sub {
+            font-size: 8px;
+            font-weight: 400;
+            color: #888;
+            letter-spacing: 0.3px;
+            margin-top: -4px;
+        }
+
+        .logo:hover .logo-icon {
+            transform: scale(1.15) rotate(-3deg);
+            transition: transform 0.3s ease;
+        }
+ 
+        nav ul {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: var(--primary-brand); }
+
+        .header-actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+
+
+
+
+
+
+ 
+        /* --- Hero --- */
+        .hero {
+            padding: 100px 0 80px;
+        }
+         
+        .hero-text {
+            max-width: 540px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        
+        /* CSS Mockups (UI Style: Tech Dashboard) */
+        .hero-container {
+            position:relative;
+            overflow:hidden;
+            border-radius:10px;
+            border:1px solid #e2e8f0;
+            background:#fff;
+            box-shadow:
+                0 20px 40px rgba(15,23,42,.08),
+                0 8px 18px rgba(15,23,42,.05);
+            transition:
+                transform .45s cubic-bezier(.22,1,.36,1),
+                box-shadow .45s ease;
+            animation:float 2s ease-in-out infinite;
+        }
+
+        .hero-container:hover {
+            animation-play-state:paused;
+            transform: translateY(-12px);
+            box-shadow:
+                0 35px 80px rgba(15,23,42,.18),
+                0 15px 30px rgba(15,23,42,.08);
+        }
+
+
+        @keyframes float {
+            0%,100% { transform:translateY(0); }
+            50% { transform:translateY(-8px); }
+        }
+
+        .hero-dashboard {
+            display:block;
+            width:100%;
+            aspect-ratio:2070 / 1500;
+            object-fit:cover;
+            transition: opacity .45s ease, transform .6s ease;
+        }
+
+        .hero-dashboard.hover {
+            position:absolute;
+            inset:0;
+            opacity:0;
+            transform:scale(1.05);
+        }
+
+        .hero-container:hover .hero-dashboard.default {
+            opacity:0;
+            transform:scale(1.05);
+        }
+
+        .hero-container:hover .hero-dashboard.hover {
+            opacity:1;
+            transform:scale(1);
+        }
+
+        .hero-container::after {
+            content:"";
+            position:absolute;
+            inset:0;
+            background:linear-gradient(110deg, transparent 25%, rgba(255,255,255,.35) 50%, transparent 75%);
+            transform:translateX(-120%);
+            transition:transform .5s ease;
+            pointer-events:none;
+        }
+
+        .hero-container:hover::after {
+            transform:translateX(120%);
+        }
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        /* CSS Mockups (UI Style: Tech Dashboard) */
+        .mockup-container {
+            position:relative;
+            overflow:hidden;
+            border-radius:8px;
+            border:1px solid #e2e8f0;
+            background:#fff;
+            box-shadow:
+                0 20px 40px rgba(15,23,42,.08),
+                0 8px 18px rgba(15,23,42,.05);
+            transition:
+                transform .45s cubic-bezier(.22,1,.36,1),
+                box-shadow .45s ease;
+            animation:float 2s ease-in-out infinite;
+        }
+
+        .mockup-container:hover {
+            animation-play-state:paused;
+            transform: translateY(-12px);
+            box-shadow:
+                0 35px 80px rgba(15,23,42,.18),
+                0 15px 30px rgba(15,23,42,.08);
+        }
+
+
+        @keyframes float {
+            0%,100% { transform:translateY(0); }
+            50% { transform:translateY(-8px); }
+        }
+
+        .mockup-container:hover .hero-dashboard.default {
+            opacity:0;
+            transform:scale(1.05);
+        }
+
+        .mockup-container:hover .hero-dashboard.hover {
+            opacity:1;
+            transform:scale(1);
+        }
+
+        .mockup-container::after {
+            content:"";
+            position:absolute;
+            inset:0;
+            background:linear-gradient(110deg, transparent 25%, rgba(255,255,255,.35) 50%, transparent 75%);
+            transform:translateX(-120%);
+            transition:transform .5s ease;
+            pointer-events:none;
+        }
+
+        .mockup-container:hover::after {
+            transform:translateX(120%);
+        }
+
+
+
+
+
+
+
+        /* Tech Colors for Skeletons */
+        .sk-primary { background: #c7d2fe; } /* Light Indigo */
+        .sk-accent { background: #fde68a; } /* Light Amber */
+        .sk-success { background: #bbf7d0; } /* Light Green */
+        .sk-neutral { background: #f1f5f9; } /* Slate */
+
+        .skeleton-line {
+            height: 8px;
+            background: #f1f5f9;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+
+
+
+
+
+
+
+
+
+        /* --- Channels Grid --- */
+        .channels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+            text-align: left;
+        }
+        
+        .channel-card {
+            background: var(--bg-white);
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .channel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(15,23,42,0.08);
+            border-color: #cbd5e1;
+        }
+        
+        .channel-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        
+        .channel-icon-wrapper {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .channel-title {
+            font-weight: 800;
+            font-size: 1.15rem;
+            color: var(--text-main);
+            line-height: 1.2;
+        }
+        
+        .channel-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+
+
+
+
+
+
+        /* --- Social Proof --- */
+        .social-proof {
+            padding: 40px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
+            background: var(--bg-slate-50);
+            border: 1px solid #f1f5f9;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            align-items: center;
+        }
+
+        .stat-block h3 {
+            color: var(--primary-brand);
+            font-size: 3rem;
+            margin-bottom: 0;
+            line-height: 1;
+        }
+
+        .stat-block.accent h3 { color: var(--accent-color); }
+
+
+
+
+
+
+
+
+
+
+
+        /* --- Feature Sections (Clean Backgrounds) --- */
+        .feature-section {
+            padding: 100px 0;
+        }
+
+        .feature-card-bg {
+            padding: 60px;
+            border-radius: 30px;
+        }
+
+        /* New Background Palette */
+        .bg-tech-indigo { background-color: var(--bg-indigo-50); }
+        .bg-tech-orange { background-color: var(--bg-orange-50); }
+        .bg-tech-purple { background-color: var(--bg-purple-50); }
+        .bg-tech-blue { background-color: var(--bg-blue-50); }
+
+        .bullets {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .bullets li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 18px;
+            color: var(--text-muted);
+            font-weight: 600; /* made slightly bolder */
+        }
+
+        .bullets li::before {
+            content: '\f00c'; /* FontAwesome Check */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-brand);
+            font-size: 1rem;
+            top: 2px;
+        }
+
+
+
+
+
+        /* Custom Workflow UI */
+        .workflow-step {
+            display: flex; 
+            align-items: center; 
+            gap: 15px; 
+            padding: 16px; 
+            background: white; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02); 
+            border: 1px solid #e2e8f0;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+        .workflow-connector {
+            width: 2px;
+            height: 20px;
+            background: #cbd5e1;
+            margin-left: 35px;
+            margin-bottom: 10px;
+            margin-top: -5px;
+        }
+
+
+
+
+
+        /* Specific Mockups */
+        .comment-ui {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+            position: relative;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .highlight-spot {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: rgba(225, 20, 132, 0.1);
+            border: 2px solid var(--primary-brand);
+            border-radius: 50%;
+            top: 35%;
+            right: 25%;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(225, 20, 132, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(225, 20, 132, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(225, 20, 132, 0); }
+        }
+
+        .tooltip-comment {
+            position: absolute;
+            top: 35%;
+            right: -20px;
+            transform: translateX(50%);
+            background: var(--text-main);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            width: 180px;
+            z-index: 10;
+        }
+        
+        .avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #cbd5e1;
+        }
+
+
+
+
+
+
+        /* --- Support Section (Now Problem Section) --- */
+        .channels-section {
+            text-align: center;
+            padding: 100px 0;
+            background: linear-gradient(to bottom, white, var(--bg-slate-50));
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+
+
+
+
+
+
+        /* --- Features Grid (Now Target Audience) --- */
+        .features-grid-section {
+            text-align: center;
+            background: var(--bg-slate-50);
+            padding: 100px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+            text-align: left;
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 60px;
+            text-align: left;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid #f1f5f9;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(15,23,42,0.08);
+            border-color: #cbd5e1;
+        }
+
+        .feature-item .icon-box {
+            height: 60px;
+            width: 60px;
+            background: var(--bg-indigo-50);
+            color: var(--primary-brand);
+            border-radius: 12px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+
+
+
+.feature-item .icon-box {
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover .icon-box {
+    transform: scale(1.15) rotate(-3deg);
+}
+
+
+
+
+
+
+.visual-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mockup-container {
+        width: 100%;
+        max-width: 560px;
+        margin: 0 auto;
+        border-radius: 20px;
+        background: transparent;
+    }
+    .mockup-container img {
+        border-radius: 20px;
+        box-shadow: 0 20px 40px -12px rgba(0,0,0,0.2);
+        transition: 0.2s;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+
+
+    /* mobile responsiveness */
+    @media (max-width: 800px) {
+        .grid-2 {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .text-content h2 {
+            font-size: 1.8rem;
+        }
+        .feature-card-bg {
+            padding: 1.8rem 1.2rem;
+        }
+        .mockup-container {
+            max-width: 100%;
+        }
+    }
+    @media (max-width: 480px) {
+        .text-content h2 {
+            font-size: 1.5rem;
+        }
+        .btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* --- Testimonials --- */
+        .testimonials {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .testimonial-card {
+            text-align: left;
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid #f1f5f9;
+        }
+
+
+
+
+
+
+
+
+
+
+        /* --- Ecosystem --- */
+        .ecosystem {
+            padding: 80px 0;
+            background: var(--bg-white);
+        }
+        
+        .eco-card {
+            border-radius: 24px;
+            padding: 50px;
+            color: var(--text-main);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .eco-light { background: var(--bg-slate-50); }
+        .eco-dark { background: var(--bg-dark); color: white; border: none; }
+        .eco-dark p { color: #94a3b8; }
+
+
+
+    
+    /* hover behaviour: primary fades out, secondary fades in */
+    .hover-image-wrapper:hover .primary {
+        opacity: 0;
+    }
+    .hover-image-wrapper:hover .secondary {
+        opacity: 1;
+    }
+
+    /* mobile responsive */
+    @media (max-width: 700px) {
+        .grid-2 {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        .hover-image-wrapper {
+            max-width: 100%;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--bg-dark);
+            color: var(--bg-white);
+            padding: 100px 0 40px;
+            border-radius: 40px 40px 0 0;
+        }
+
+        .footer-cta {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
+
+        .footer-cta h2 {
+            color: var(--bg-white);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 40px;
+            border-top: 1px solid #334155;
+            padding-top: 60px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 5px; }
+
+        .footer-col a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover { color: var(--bg-white); }
+
+        .footer-bottom {
+            margin-top: 60px;
+            border-top: 1px solid #334155;
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+
+
+
+
+
+
+
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .grid-2, .proof-grid, .features-grid, .audience-grid, .footer-links {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            
+            .hero { text-align: center; padding: 60px 0; }
+
+
+            .hero-text { margin: 0 auto; }
+            
+            .hero-buttons {
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+            }
+
+
+            .hero-buttons .btn {
+                width: 80%;
+                margin-left: 0 !important;
+            }
+
+
+            .bullets li { text-align: left; }
+            
+            header .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            
+            .mockup-container { width: 100%; }
+            .footer-links { 
+               text-align: center; 
+                }
+            
+            .feature-card-bg { 
+              padding: 40px 20px; 
+          }
+        }
+
+
+
+
+
+
+
+        /* LLM Integration Logo Slider */
+        .partner-logo-slider {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+
+
+        .partner-logo-slider:before {
+            content: "";
+            background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 120px;
+            height: 100%;
+            z-index: 9;
+        }
+
+
+
+        .partner-logo-slider:after {
+            content: "";
+            background: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 100%);
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 120px;
+            height: 100%;
+            z-index: 9;
+        }
+
+
+
+        .partner-logo-slide {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            animation: partner-logo 30s linear infinite;
+        }
+
+
+
+        .partner-logo-slide:hover {
+            animation-play-state: paused;
+        }
+
+
+
+
+        .partner-logo-slide img {
+            width: 200px;
+            border: 1px solid #b2b2b2;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+
+
+        @keyframes partner-logo {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+
+
+
+        @media only screen and (max-width: 1025px) {
+            .partner-logo-slide { gap: 20px; }
+        }
+
+
+
+
+
+
+
+
+        /* --- Back to Top Button --- */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-brand);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(225, 20, 132, 0.3);
+            transform: translateY(15px);
+        }
+
+
+
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+
+
+
+        .back-to-top:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-3px);
+        }
+
+
+
+
+        @media (max-width: 900px) {
+            .back-to-top {
+                bottom: 20px;
+                right: 10px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+
+
+</style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
+                <div>
+                    <div>HelpDesk</div>
+                    <div class="logo-sub">by Bebell Digital Solutions</div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Integraciones</a></li>
+                    <li><a href="#">Canales</a></li>
+                    <li><a href="#planes">Planes</a></li>
+                    <li><a href="#recursos">Recursos</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="https://app.helpdesk.icu" class="btn btn-outline" style="border-radius: 8px; padding: 10px 20px;"><strong>Iniciar Sesión</strong></a>
+                <a href="/reserva" class="btn btn-primary" style="border-radius: 8px; padding: 10px 20px;">Agendar Demo</a>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+    
+    <!-- 1. Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="grid-2">
+                <div class="hero-text">
+                    <h1>Nunca pierdas otro cliente por responder tarde.</h1>
+                    <p style="margin-top: 15px;">Centraliza WhatsApp, Instagram, Facebook, Telegram y más en una sola bandeja para responder más rápido, vender más y brindar una mejor experiencia.</p>
+                    
+                    <ul class="bullets" style="margin-top: 20px; margin-bottom: 35px;">
+                        <li>Responde desde una sola bandeja</li>
+                        <li>Atiende con tu equipo</li>
+                        <li>Automatiza respuestas con IA</li>
+                        <li>Sin cambiar tu número de WhatsApp</li>
+                    </ul>
+                    
+                    <div class="hero-buttons">
+                        <a href="/registro" class="btn btn-primary"><strong>Pruébalo sin Costo</strong></a>
+                        <a href="/demo" class="btn btn-outline" style="background: white;">Solicita una Demostración</a>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.85rem; color: #94a3b8; font-weight: 500;">
+                       ✅  14 días de prueba sin costo. Configúralo en menos de 10 minutos.
+                    </p>
+                </div>
+                
+                <div class="hero-container">
+                    <img
+                        class="hero-dashboard default"
+                        src="https://ik.imagekit.io/bebell/HelpDesk%20App/Image%20Files%20&%20Assets/helpdesk-dashboard.webp?updatedAt=1785270631284"
+                        alt="HelpDesk Dashboard">
+                    <img
+                        class="hero-dashboard hover"
+                        src="https://ik.imagekit.io/bebell/HelpDesk%20App/Image%20Files%20&%20Assets/helpdesk-chat.webp?updatedAt=1785270631262"
+                        alt="HelpDesk Dashboard - Conversations">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- LLMs / Integraciones -->
+    <section class="llms" style="padding: 40px 0;">
+        <div class="container">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto 30px;">
+                <h2 style="font-size: 1.8rem; color: var(--text-muted);">Integraciones Inteligentes</h2>
+                <p class="subtitle" style="font-size: 1rem;">Añade agentes de soporte impulsados por Inteligencia Artificial.</p>
+            </div>
+        </div>
+        
+        <div class="partner-logo-slider">
+            <div class="partner-logo-slide">
+                <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/DeepSeek.svg" />
+                <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/openai.svg" />
+                <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/claude.svg" />
+                <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/gemini.svg" />
+                <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/idtcsMbudc_logos.svg" />
+                <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/openrouter.svg" />
+                <!-- Duplicates for smooth scrolling -->
+                <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/DeepSeek.svg" />
+                <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/openai.svg" />
+                <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/claude.svg" />
+                <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/gemini.svg" />
+                <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/idtcsMbudc_logos.svg" />
+                <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/LLMs/openrouter.svg" />
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+<!-- 2. Metrics / Social Proof -->
+<section class="social-proof">
+    <div class="container">
+        <div class="proof-grid">
+            <div>
+                <i class="fa-solid fa-star" style="color: var(--accent-color); margin-bottom: 15px;"></i>
+                <i class="fa-solid fa-star" style="color: var(--accent-color);"></i>
+                <i class="fa-solid fa-star" style="color: var(--accent-color);"></i>
+                <i class="fa-solid fa-star" style="color: var(--accent-color);"></i>
+                <i class="fa-solid fa-star" style="color: var(--accent-color);"></i>
+                
+                <h3 style="font-size: 1.4rem; margin-top: 10px;">"HelpDesk nos ayudó a atender a todos nuestros clientes con más facilidad sin importar el canal de su preferencia."</h3>
+
+
+
+
+                <div style="display:flex; align-items:center; gap:10px; margin-top:15px;">
+                    <img src="https://bucket.mlcdn.com/a/3336/3336910/images/0a94feb74c2ab9e74f2ab930835d81040578c867.png" 
+                         alt="Ernesto" 
+                         style="width:40px; height:40px; border-radius:50%; object-fit:cover;">
+                    <small style="color: var(--text-muted);"><strong>Ernesto B.</strong> CEO @ Bebell Digital Solutions</small>
+                </div>
+
+
+            </div>
+
+
+
+                <div class="stat-block">
+                    <h3>2x</h3>
+                    <p style="margin:0; font-size: 0.95rem; font-weight: 500;">Rápidez en asistencia</p>
+                </div>
+
+
+                <div class="stat-block accent">
+                    <h3>100+</h3>
+                    <p style="margin:0; font-size: 0.95rem; font-weight: 500;">Clientes atendidos cada mes</p>
+                </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 3. Canales de Comunicación -->
+    <section class="channels-section">
+        <div class="container">
+            <h2 style="font-size: 2.8rem; margin-bottom: 24px; color: var(--text-main);">Conecta tus Canales de Chat</h2>
+           <p style="max-width: 750px; margin: 0 auto 30px; font-size: 1.25rem; color: var(--text-muted); line-height: 1.8;">
+                <strong>HelpDesk</strong> reúne todos tus canales en un solo lugar para que nunca vuelvas a perder una oportunidad.
+            </p>
+
+            <!-- Channels Integration Grid -->
+            <div class="channels-grid">
+
+
+
+                <!-- Live Chat -->
+                <div class="channel-card">
+                    <div class="channel-header">
+                        <div class="channel-icon-wrapper" style="background: var(--bg-slate-50); border: 1px solid #e2e8f0; overflow: hidden;">
+                            <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="channel-title">Live Chat (Web)</div>
+                    </div>
+                    <p class="channel-desc">Permite a tus clientes contactarte al instante desde tu sitio web utilizando nuestro completo widget de chat en vivo. Mejora el engagement y acelera las respuestas.</p>
+                </div>
+
+
+                
+                <!-- WhatsApp -->
+                <div class="channel-card">
+                    <div class="channel-header">
+                        <div class="channel-icon-wrapper" style="background: #25D366;">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="channel-title">WhatsApp Business</div>
+                    </div>
+                    <p class="channel-desc">La app en la que confían más de 3 mil millones de usuarios. Ideal para soporte rápido y actualizaciones, con una increíble tasa de apertura del 98%.</p>
+                </div>
+
+
+
+                <!-- Facebook Messenger -->
+                <div class="channel-card">
+                    <div class="channel-header">
+                        <div class="channel-icon-wrapper" style="background: #0084FF;">
+                            <i class="fa-brands fa-facebook-messenger"></i>
+                        </div>
+                        <div class="channel-title">Facebook Messenger</div>
+                    </div>
+                    <p class="channel-desc">Conecta con más de mil millones de usuarios activos. Una herramienta clave para soporte y marketing, logrando altas tasas de engagement mundialmente.</p>
+                </div>
+
+
+
+                <!-- Instagram DM -->
+                <div class="channel-card">
+                    <div class="channel-header">
+                        <div class="channel-icon-wrapper" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="channel-title">Instagram DM</div>
+                    </div>
+                    <p class="channel-desc">Interactúa en la red social visual más grande del mundo. Ofrece una experiencia conversacional ideal para descubrir productos y construir relaciones con tu audiencia.</p>
+                </div>
+
+
+
+                <!-- SMS Twilio -->
+                <div class="channel-card">
+                    <div class="channel-header">
+                        <div class="channel-icon-wrapper" style="background: #F22F46;">
+                            <i class="fa-solid fa-message"></i>
+                        </div>
+                        <div class="channel-title">SMS (Twilio)</div>
+                    </div>
+                    <p class="channel-desc">Canal universal con acceso a más de 5 mil millones de personas. Entrega notificaciones inmediatas con un 98% de apertura, incluso sin acceso a internet.</p>
+                </div>
+
+
+
+                <!-- Telegram -->
+                <div class="channel-card">
+                    <div class="channel-header">
+                        <div class="channel-icon-wrapper" style="background: #229ED9;">
+                            <i class="fa-brands fa-telegram"></i>
+                        </div>
+                        <div class="channel-title">Telegram</div>
+                    </div>
+                    <p class="channel-desc">Plataforma global enfocada en privacidad y velocidad con más de mil millones de usuarios. Procesa millones de mensajes diarios en comunidades que crecen rápidamente.</p>
+                </div>
+
+
+
+                <!-- Viber -->
+                <div class="channel-card">
+                    <div class="channel-header">
+                        <div class="channel-icon-wrapper" style="background: #7360F2;">
+                            <i class="fa-brands fa-viber"></i>
+                        </div>
+                        <div class="channel-title">Viber</div>
+                    </div>
+                    <p class="channel-desc">App de mensajería con fuerte adopción en Europa y Asia. Envía actualizaciones directas aprovechando sus herramientas ricas en contenido multimedia.</p>
+                </div>
+
+
+
+                <!-- Line -->
+                <div class="channel-card">
+                    <div class="channel-header">
+                        <div class="channel-icon-wrapper" style="background: #00C300;">
+                            <i class="fa-brands fa-line"></i>
+                        </div>
+                        <div class="channel-title">LINE</div>
+                    </div>
+                    <p class="channel-desc">Dominante en Japón y el sudeste asiático. Una herramienta versátil que va más allá de los mensajes, integrando múltiples servicios empresariales.</p>
+                </div>
+
+
+
+                <!-- WeChat -->
+                <div class="channel-card">
+                    <div class="channel-header">
+                        <div class="channel-icon-wrapper" style="background: #09B83E;">
+                            <i class="fa-brands fa-weixin"></i>
+                        </div>
+                        <div class="channel-title">WeChat</div>
+                    </div>
+                    <p class="channel-desc">La súper-aplicación masiva con 1.4 mil millones de usuarios. Dominante en China, es un ecosistema completo para mensajería, pagos y soporte.</p>
+                </div>
+
+
+
+                <!-- Zalo -->
+                <div class="channel-card">
+                    <div class="channel-header">
+                        <div class="channel-icon-wrapper" style="background: #0068FF;">
+                            <i class="fa-solid fa-comment-dots"></i>
+                        </div>
+                        <div class="channel-title">Zalo</div>
+                    </div>
+                    <p class="channel-desc">Plataforma líder en Vietnam con 79 millones de usuarios activos. Indispensable para conectar profundamente con clientes y audiencias en esta región.</p>
+                </div>
+
+
+
+ <!-- Correo Electrónico -->
+                <div class="channel-card">
+                    <div class="channel-header">
+                        <div class="channel-icon-wrapper" style="background: #EA4335;">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="channel-title">Correo Electrónico</div>
+                    </div>
+                    <p class="channel-desc">El canal clásico e indispensable. Gestiona todos los correos de soporte directamente desde tu bandeja de HelpDesk, sin necesidad de saltar entre pestañas.</p>
+                </div>
+
+
+
+                <!-- API Channel -->
+                <div class="channel-card">
+                    <div class="channel-header">
+                        <div class="channel-icon-wrapper" style="background: #475569;">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <div class="channel-title">API Channel</div>
+                    </div>
+                    <p class="channel-desc">Conecta cualquier plataforma de terceros directamente a tu sistema. Integra apps personalizadas manteniendo todas tus conversaciones en un panel unificado.</p>
+                </div>
+
+               
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 4. The Solution & Visual Workflow Section (Indigo BG) -->
+    <section class="workflow-section" style="padding-top: 4;">
+        <div class="container">
+            <div class="feature-card-bg bg-tech-purple">
+                <div class="grid-2">
+                    <div>
+                        <h2>Crea Flujos de Chats Personalizados y Automatizados.</h2>
+                        <p>Diseña conversaciones inteligentes que trabajen por ti, sin necesidad de programar.</p>
+
+
+                        <ul class="bullets">
+
+
+<li>Conecta tus herramientas favoritas.</li>
+<li>Notificaciones en tiempo real.</li>
+<li>Gestión inteligente de tickets.</li>
+<li>Captura información valiosa sobre tus clientes.</li>
+<li>Diseña flujos personalizados y adaptables.</li>
+
+                        </ul>
+
+                        <a href="/registro" class="btn btn-primary"><strong>Empieza sin costo ahora</strong></a>
+
+
+                    </div>
+
+
+
+
+
+
+                    <div class="mockup-container" style="padding: 40px; background: var(--bg-white);">
+                        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px;">
+                            <div style="display:flex; justify-content: space-between; align-items:center; margin-bottom: 20px;">
+                                <div style="font-weight: 700;">Flujo de Chat Automatizado</div>
+                                <span style="background:#dcfce7; color:#15803d; padding: 6px 12px; border-radius:6px; font-size:0.8rem; font-weight:700;">ACTIVO</span>
+                            </div>
+
+
+
+
+                            <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8fafc; border-radius: 8px;">
+                                <div style="width: 30px; height: 30px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #94a3b8;"><i class="fa-solid fa-clock"></i></div>
+                                <div style="flex: 1; font-size: 0.9rem; font-weight: 600;">Mensaje de Bienvenida</div>
+                                <i class="fa-solid fa-toggle-on" style="color: var(--primary-brand); font-size: 1.5rem;"></i>
+                            </div>
+                            
+
+
+<div style="height: 15px; border-left: 2px dashed #cbd5e1; margin-left: 15px;"></div>
+
+
+
+                            <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8fafc; border-radius: 8px;">
+                                
+<div style="width: 30px; height: 30px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #94a3b8;"><i class="fa-solid fa-bell"></i></div>
+
+                                <div style="flex: 1; font-size: 0.9rem; font-weight: 600;">Envío de Notificación</div>
+                                <i class="fa-solid fa-toggle-on" style="color: var(--primary-brand); font-size: 1.5rem;"></i>
+                            </div>
+
+
+
+
+
+
+
+
+<div style="height: 15px; border-left: 2px dashed #cbd5e1; margin-left: 15px;"></div>
+
+
+
+                            <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8fafc; border-radius: 8px;">
+                                
+<div style="width: 30px; height: 30px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #94a3b8;"><i class="fa-solid fa-robot"></i></div>
+
+                                <div style="flex: 1; font-size: 0.9rem; font-weight: 600;">Asignación de Agente IA</div>
+                                <i class="fa-solid fa-toggle-on" style="color: var(--primary-brand); font-size: 1.5rem;"></i>
+                            </div>
+
+
+
+
+
+
+
+<div style="height: 15px; border-left: 2px dashed #cbd5e1; margin-left: 15px;"></div>
+
+
+
+                            <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8fafc; border-radius: 8px;">
+                                
+<div style="width: 30px; height: 30px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #94a3b8;"><i class="fa-solid fa-ticket"></i></div>
+
+                                <div style="flex: 1; font-size: 0.9rem; font-weight: 600;">Creación / Asignación de Ticket</div>
+                                <i class="fa-solid fa-toggle-on" style="color: var(--primary-brand); font-size: 1.5rem;"></i>
+                            </div>
+
+
+
+
+
+
+
+
+<div style="height: 15px; border-left: 2px dashed #cbd5e1; margin-left: 15px;"></div>
+
+
+
+                            <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8fafc; border-radius: 8px;">
+                                
+<div style="width: 30px; height: 30px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #94a3b8;"><i class="fa-solid fa-table"></i></div>
+
+                                <div style="flex: 1; font-size: 0.9rem; font-weight: 600;">Envío de datos a Google Sheet</div>
+                                <i class="fa-solid fa-toggle-on" style="color: var(--primary-brand); font-size: 1.5rem;"></i>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+<section class="team-section">
+    <div class="container">
+        <div class="feature-card-bg bg-tech-orange">
+            <div class="grid-2">
+                <!-- Left: text content -->
+                <div class="text-content">
+                    <h2>Asigna y Organiza tu Equipo y las Conversaciones.</h2>
+                    <p>Dale a cada conversación el destino que merece y a tu equipo la claridad que necesita para operar sin caos.</p>
+                    <ul class="bullets">
+                        <li>Distribución precisa de tickets</li>
+                        <li>Designación flexible de agentes</li>
+                        <li>Delegación inteligente</li>
+                        <li>Visibilidad total del flujo</li>
+                    </ul>
+                    <a href="/registro" class="btn btn-primary"><strong>Solicita una Demostración</strong></a>
+                </div>
+
+                <!-- Right: image instead of workflow mockup -->
+                <div class="visual-content">
+                    <div class="mockup-container" style="padding: 0; background: transparent; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
+                        <img 
+                            src="https://ik.imagekit.io/bebell/HelpDesk%20App/Image%20Files%20&%20Assets/helpdesk-assets.webp" 
+                            alt="HelpDesk team collaboration" 
+                            style="display: block; width: 100%; height: auto; object-fit: cover; border-radius: 16px;"
+                            loading="lazy"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+    <!-- 7. Feature 3 Outcomes (Blue BG) -->
+    <section class="feature-section" style="padding-top: 0;">
+        <div class="container">
+            <div class="feature-card-bg bg-tech-blue">
+                <div class="grid-2">
+                    <div class="mockup-container" style="height: 380px; padding: 20px;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; height: 100%;">
+                            <!-- Dashboard Bar Chart Mockup -->
+                            <div style="background: #fff; border-radius: 8px; display: flex; align-items: flex-end; padding: 20px; gap: 10px; justify-content: center;">
+                                <div style="width: 20%; background: #cbd5e1; height: 40%; border-radius: 4px 4px 0 0;"></div>
+                                <div style="width: 20%; background: #94a3b8; height: 60%; border-radius: 4px 4px 0 0;"></div>
+                                <div style="width: 20%; background: var(--primary-brand); height: 90%; border-radius: 4px 4px 0 0;"></div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 20px;">
+                                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; flex: 1; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
+                                    <p style="font-size: 0.8rem; margin:0; color: #64748b; font-weight: bold;">TIEMPO DE RESPUESTA</p>
+                                    <h3 style="margin:0; font-size: 2rem; color: var(--primary-brand);">1.2 min</h3>
+                                </div>
+                                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; flex: 1; padding: 20px; display: flex; flex-direction: column; justify-content: center;">
+                                    <p style="font-size: 0.8rem; margin:0; color: #64748b; font-weight: bold;">TICKETS RESUELTOS</p>
+                                    <h3 style="margin:0; font-size: 2rem;">+845</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Descubre cuánto tarda tu equipo en responder.</h2>
+                        <p>Monitorea el rendimiento de tus agentes y responde en menos de 2 minutos para asegurar una experiencia increíble.</p>
+                        <ul class="bullets">
+                            <li>Métricas de rendimiento por agente.</li>
+                            <li>Análisis del volumen de mensajes por canal.</li>
+                            <li>Toma de decisiones basadas en datos reales.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="ecosystem">
+    <div class="container">
+        <h2 style="text-align:center; margin-bottom:40px;">Expande tu ecosistema de herramientas</h2>
+        
+        <div class="grid-2">
+            <!-- Left Card: Text content -->
+            <div class="eco-card eco-light">
+                <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
+                    <i class="fa-solid fa-cube" style="font-size: 1.5rem; color: var(--primary-brand);"></i> 
+                    <strong style="font-size: 1.2rem;">Widgets Web</strong>
+                </div>
+                <h3>Convierte visitantes en clientes</h3>
+                <p>Agrega chat en vivo a tu sitio web y atiende consultas al instante antes de que el usuario decida irse a la competencia.</p>
+            </div>
+            
+            <!-- Right Card: Hover-switch image (fixed) -->
+            <div class="eco-card eco-light-bg-indigo" style="background:#fff5f5; display:flex; align-items:center; justify-content:center; padding:20px;">
+                <div class="hover-image-wrapper" style="width:100%; max-width:500px; border-radius:8px; overflow:hidden; position:relative;">
+                
+                
+                
+                    <!-- Primary image (visible by default) -->
+                    <img 
+                        class="hover-image primary" 
+                        src="https://ik.imagekit.io/bebell/HelpDesk%20App/Image%20Files%20&%20Assets/Widget-web-1.webp?updatedAt=1785261707397" 
+                        alt="Web Widget" 
+                        style="width:100%; height:auto; display:block; border-radius:8px; position:relative; z-index:2; transition: opacity 0.3s ease;"
+                    >
+                    
+                    
+                    
+                    <!-- Secondary image (hidden by default, appears on hover) -->
+                    <img 
+                        class="hover-image secondary" 
+                        src="https://ik.imagekit.io/bebell/HelpDesk%20App/Image%20Files%20&%20Assets/Widget-web-2.webp?updatedAt=1785261707046" 
+                        alt="Web Widget hover" 
+                        style="width:100%; height:auto; display:block; border-radius:8px; position:absolute; top:0; left:0; z-index:1; opacity:0; transition: opacity 0.3s ease;"
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="team-section">
+        <div class="container">
+            <div class="feature-card-bg bg-tech-indigo">
+                <div class="grid-2">
+                    <div class="text-content">
+                        <h2>Asigna y Organiza tu Equipo y las Conversaciones.</h2>
+
+ <p>Dale a cada conversación el destino que merece y a tu equipo la claridad que necesita para operar sin caos.</p>
+
+
+                        <ul class="bullets">
+        <li>Distribución precisa de tickets</li>
+        <li>Designación flexible de agentes</li>
+        <li>Delegación inteligente</li>
+        <li>Visibilidad total del flujo</li>
+
+                        </ul>
+
+                        <a href="/registro" class="btn btn-primary"><strong>Solicita una Demostración</strong></a>
+
+                    </div>
+
+
+                    
+                    <div class="visual-content">
+                        <div class="mockup-container" style="padding: 40px; background: #f8fafc; border-radius: 16px;">
+                            <!-- Workflow Visual -->
+                            <div class="workflow-step">
+                                <div style="width: 40px; height: 40px; background: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div style="flex: 1; font-size: 1rem; font-weight: 600;">Un cliente envía un mensaje.</div>
+                            </div>
+
+
+                            <div class="workflow-connector"></div>
+                            
+                            <div class="workflow-step" style="margin-left: 20px;">
+                                <div style="width: 40px; height: 40px; background: var(--primary-brand); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                                    <i class="fa-solid fa-inbox"></i>
+                                </div>
+
+
+
+                                <div style="flex: 1; font-size: 1rem; font-weight: 600;">El mensaje aparece en HelpDesk.</div>
+                            </div>
+                            <div class="workflow-connector" style="margin-left: 55px;"></div>
+                            
+                            <div class="workflow-step" style="margin-left: 40px;">
+                                <div style="width: 40px; height: 40px; background: #8b5cf6; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                                    <i class="fa-solid fa-robot"></i>
+                                </div>
+                                <div style="flex: 1; font-size: 1rem; font-weight: 600;">La IA sugiere una respuesta.</div>
+                            </div>
+                            <div class="workflow-connector" style="margin-left: 75px;"></div>
+                            
+                            <div class="workflow-step" style="margin-left: 60px;">
+                                <div style="width: 40px; height: 40px; background: #3b82f6; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </div>
+                                <div style="flex: 1; font-size: 1rem; font-weight: 600;">Tu equipo responde al instante.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 5. Feature 1 Outcomes (Orange BG) -->
+    <section class="feature-section" style="padding-top: 0;">
+        <div class="container">
+            <div class="feature-card-bg bg-tech-orange">
+                <div class="grid-2">
+                    <div class="comment-ui">
+                        <div class="skeleton-block sk-neutral" style="height: 180px; border-radius: 8px; margin-bottom: 20px; position: relative;">
+                            <!-- Interactive Element Simulation -->
+                            <div class="highlight-spot"></div>
+                            <div class="tooltip-comment">
+                                <strong>@Soporte</strong><br>Cliente solicitando ayuda con su pedido.
+                            </div>
+                        </div>
+                        <div style="display:flex; gap:12px; align-items: flex-start;">
+                            <div class="avatar" style="background: var(--primary-brand); color: white; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-headset"></i></div>
+                            <div style="flex:1; background:#f8fafc; padding:15px; border-radius: 12px; border: 1px solid #e2e8f0;">
+                                <p style="font-size:0.9rem; margin:0; color: var(--text-main);"><strong>Carlos M.</strong> <span style="color:#94a3b8;">hace 2 min</span><br>Problema resuelto. Enlace de pago enviado al cliente por WhatsApp.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Todos tus mensajes. Una sola bandeja.</h2>
+                        <p>Responde cada mensaje desde un solo lugar. Atiende 5 canales desde una sola plataforma sin tener que saltar entre aplicaciones.</p>
+                        <ul class="bullets">
+                            <li>WhatsApp, Instagram, Messenger y más.</li>
+                            <li>Colaboración en tiempo real con notas internas.</li>
+                            <li>Asignación automática de conversaciones.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 6. Feature 2 Outcomes (Purple BG) -->
+    <section class="feature-section" style="padding-top: 0;">
+        <div class="container">
+            <div class="feature-card-bg bg-tech-purple">
+                <div class="grid-2">
+                    <div>
+                        <h2>Responde en segundos con respuestas guardadas.</h2>
+                        <p>Reduce hasta un 60% el tiempo de respuesta. Deja que el sistema haga el trabajo pesado por ti.</p>
+                        <ul class="bullets">
+                            <li>Plantillas pre-guardadas para preguntas frecuentes.</li>
+                            <li>Respuestas automatizadas fuera del horario comercial.</li>
+                            <li>Envío de mensajes proactivos e información de tickets.</li>
+                        </ul>
+                    </div>
+                    <div class="mockup-container" style="padding: 40px; background: var(--bg-white);">
+                        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px;">
+                            <div style="display:flex; justify-content: space-between; align-items:center; margin-bottom: 20px;">
+                                <div style="font-weight: 700;">Respuestas Automatizadas</div>
+                                <span style="background:#dcfce7; color:#15803d; padding: 6px 12px; border-radius:6px; font-size:0.8rem; font-weight:700;">ACTIVO</span>
+                            </div>
+
+
+
+
+                            <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8fafc; border-radius: 8px;">
+                                <div style="width: 30px; height: 30px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #94a3b8;"><i class="fa-solid fa-clock"></i></div>
+                                <div style="flex: 1; font-size: 0.9rem; font-weight: 600;">Mensaje de Bienvenida</div>
+                                <i class="fa-solid fa-toggle-on" style="color: var(--primary-brand); font-size: 1.5rem;"></i>
+                            </div>
+                            
+
+
+<div style="height: 15px; border-left: 2px dashed #cbd5e1; margin-left: 15px;"></div>
+
+
+
+                            <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8fafc; border-radius: 8px;">
+                                
+<div style="width: 30px; height: 30px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #94a3b8;"><i class="fa-solid fa-bell"></i></div>
+
+                                <div style="flex: 1; font-size: 0.9rem; font-weight: 600;">Enviar Notificación</div>
+                                <i class="fa-solid fa-toggle-on" style="color: var(--primary-brand); font-size: 1.5rem;"></i>
+                            </div>
+
+
+
+
+
+
+
+
+<div style="height: 15px; border-left: 2px dashed #cbd5e1; margin-left: 15px;"></div>
+
+
+
+                            <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8fafc; border-radius: 8px;">
+                                
+<div style="width: 30px; height: 30px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #94a3b8;"><i class="fa-solid fa-robot"></i></div>
+
+                                <div style="flex: 1; font-size: 0.9rem; font-weight: 600;">Sugerencia IA / Atajos</div>
+                                <i class="fa-solid fa-toggle-on" style="color: var(--primary-brand); font-size: 1.5rem;"></i>
+                            </div>
+
+
+
+
+
+
+
+<div style="height: 15px; border-left: 2px dashed #cbd5e1; margin-left: 15px;"></div>
+
+
+
+                            <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8fafc; border-radius: 8px;">
+                                
+<div style="width: 30px; height: 30px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #94a3b8;"><i class="fa-solid fa-ticket"></i></div>
+
+                                <div style="flex: 1; font-size: 0.9rem; font-weight: 600;">Crear / Asignar Ticket</div>
+                                <i class="fa-solid fa-toggle-on" style="color: var(--primary-brand); font-size: 1.5rem;"></i>
+                            </div>
+
+
+
+
+
+
+
+
+<div style="height: 15px; border-left: 2px dashed #cbd5e1; margin-left: 15px;"></div>
+
+
+
+                            <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8fafc; border-radius: 8px;">
+                                
+<div style="width: 30px; height: 30px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #94a3b8;"><i class="fa-solid fa-table"></i></div>
+
+                                <div style="flex: 1; font-size: 0.9rem; font-weight: 600;">Enviar a Google Sheet</div>
+                                <i class="fa-solid fa-toggle-on" style="color: var(--primary-brand); font-size: 1.5rem;"></i>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 8. Target Audience Section (Replaces Features Grid) -->
+<section class="features-grid-section">
+    <div class="container">
+        <h2>¿Para quién es HelpDesk?</h2>
+        <p>Diseñado para equipos y negocios que necesitan agilidad y orden en su comunicación diaria.</p>
+
+        <div class="audience-grid">
+            <div class="feature-item">
+                <div class="icon-box">
+                    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/HelpDesk%20Icons/clinics.webp" 
+                         alt="Clínicas" 
+                         style="width:100%; height:100%; object-fit:contain;">
+                </div>
+                <h3>Clínicas</h3>
+                <p style="font-size:1.05rem; margin: 0;">Agenda citas médicas al instante y responde a pacientes desde cualquier canal de mensajería sin perder el historial.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="icon-box">
+                    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/HelpDesk%20Icons/restaurantes.webp" 
+                         alt="Restaurantes" 
+                         style="width:100%; height:100%; object-fit:contain;">
+                </div>
+                <h3>Restaurantes</h3>
+                <p style="font-size:1.05rem; margin: 0;">Recibe y gestiona múltiples pedidos a domicilio de forma centralizada. Nunca dejes a un comensal esperando.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="icon-box">
+                    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/HelpDesk%20Icons/tiendas.webp" 
+                         alt="Tiendas y eCommerce" 
+                         style="width:100%; height:100%; object-fit:contain;">
+                </div>
+                <h3>Tiendas y eCommerce</h3>
+                <p style="font-size:1.05rem; margin: 0;">Responde consultas de stock, envía fotos de productos y cierra ventas directamente por chat en tiempo récord.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="icon-box">
+                    <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/HelpDesk%20Icons/oficinas.webp" 
+                         alt="Oficinas" 
+                         style="width:100%; height:100%; object-fit:contain;">
+                </div>
+                <h3>Oficinas</h3>
+                <p style="font-size:1.05rem; margin: 0;">Ofrece soporte técnico organizado, crea tickets y brinda una atención personalizada que tus clientes amarán.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+    <!-- 9. Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 style="margin-bottom: 50px;">Negocios que ya no pierden ventas</h2>
+
+
+
+
+            <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); margin-top: 0;">
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-left" style="color:#e2e8f0; font-size:2rem;"></i>
+                    <p style="font-size: 1.05rem; font-weight: 500; margin: 20px 0; color: var(--text-main);">"Pasamos de tener un desastre en WhatsApp a responder en segundos. Ahora todo el equipo colabora desde el mismo lugar y las ventas se han disparado."</p>
+                    <div class="user-profile">
+                        <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/Image%20Files%20&%20Assets/business-woman.png" alt="María Fernández" class="avatar" style="object-fit: cover; border: 1px solid #e2e8f0;">
+                        <div style="text-align:left;">
+                            <div style="font-weight:700; font-size:0.9rem;">María Fernández</div>
+                            <div style="font-size:0.8rem; color:var(--text-muted);">Dueña de Tienda Online</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-left" style="color:#e2e8f0; font-size:2rem;"></i>
+                    <p style="font-size: 1.05rem; font-weight: 500; margin: 20px 0; color: var(--text-main);">"Las respuestas guardadas y la IA nos ahorran horas de trabajo al día. HelpDesk literalmente pagó su suscripción en la primera semana."</p>
+                    <div class="user-profile">
+                        <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/Image%20Files%20&%20Assets/business-man.png" alt="Alejandro Gómez" class="avatar" style="object-fit: cover; border: 1px solid #e2e8f0;">
+                        <div style="text-align:left;">
+                            <div style="font-weight:700; font-size:0.9rem;">Alejandro Gómez</div>
+                            <div style="font-size:0.8rem; color:var(--text-muted);">Director Comercial</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-left" style="color:#e2e8f0; font-size:2rem;"></i>
+                    <p style="font-size: 1.05rem; font-weight: 500; margin: 20px 0; color: var(--text-main);">"Nuestros pacientes ya no se quejan por respuestas lentas. Centralizar Instagram y WhatsApp nos dio la claridad que necesitábamos."</p>
+                    <div class="user-profile">
+                        <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/Image%20Files%20&%20Assets/health-professional.png" alt="Dra. Laura Jiménez" class="avatar" style="object-fit: cover; border: 1px solid #e2e8f0;">
+                        <div style="text-align:left;">
+                            <div style="font-weight:700; font-size:0.9rem;">Dr. Claudio Jiménez</div>
+                            <div style="font-size:0.8rem; color:var(--text-muted);">Director de Clínica Médica</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+<section class="ecosystem">
+    <div class="container">
+        <h2 style="text-align:center; margin-bottom:40px;">Expande tu ecosistema de herramientas</h2>
+        
+        <div class="grid-2">
+            <!-- Left Card: Text content -->
+            <div class="eco-card eco-light">
+                <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
+                    <i class="fa-solid fa-cube" style="font-size: 1.5rem; color: var(--primary-brand);"></i> 
+                    <strong style="font-size: 1.2rem;">Widgets Web</strong>
+                </div>
+                <h3>Convierte visitantes en clientes</h3>
+                <p>Agrega chat en vivo a tu sitio web y atiende consultas al instante antes de que el usuario decida irse a la competencia.</p>
+            </div>
+            
+            <!-- Right Card: Hover-switch image (fixed) -->
+            <div class="eco-card eco-light" style="background:#fff5f5; display:flex; align-items:center; justify-content:center; padding:20px;">
+                <div class="hover-image-wrapper" style="width:100%; max-width:500px; border-radius:8px; overflow:hidden; position:relative;">
+                
+                
+                
+                    <!-- Primary image (visible by default) -->
+                    <img 
+                        class="hover-image primary" 
+                        src="https://ik.imagekit.io/bebell/HelpDesk%20App/Image%20Files%20&%20Assets/Widget-web-1.webp?updatedAt=1785261707397" 
+                        alt="Web Widget" 
+                        style="width:100%; height:auto; display:block; border-radius:8px; position:relative; z-index:2; transition: opacity 0.3s ease;"
+                    >
+                    
+                    
+                    
+                    <!-- Secondary image (hidden by default, appears on hover) -->
+                    <img 
+                        class="hover-image secondary" 
+                        src="https://ik.imagekit.io/bebell/HelpDesk%20App/Image%20Files%20&%20Assets/Widget-web-2.webp?updatedAt=1785261707046" 
+                        alt="Web Widget hover" 
+                        style="width:100%; height:auto; display:block; border-radius:8px; position:absolute; top:0; left:0; z-index:1; opacity:0; transition: opacity 0.3s ease;"
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 10. Ecosystem - Web Widget Section -->
+<section class="ecosystem">
+    <div class="container">
+        <h2 style="text-align:center; margin-bottom:40px;">Expande tu ecosistema de herramientas</h2>
+        
+        <div class="grid-2">
+            <!-- Left Card: Text content -->
+            <div class="eco-card eco-light">
+                <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
+                    <i class="fa-solid fa-cube" style="font-size: 1.5rem; color: var(--primary-brand);"></i> 
+                    <strong style="font-size: 1.2rem;">Widgets Web</strong>
+                </div>
+                <h3>Convierte visitantes en clientes</h3>
+                <p>Agrega chat en vivo a tu sitio web y atiende consultas al instante antes de que el usuario decida irse a la competencia.</p>
+
+
+
+
+            </div>
+            
+            <!-- Right Card: Image -->
+            <div class="eco-card eco-light" style="background:#fff5f5; display:flex; align-items:center; justify-content:center; padding:20px;">
+                <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/Image%20Files%20&%20Assets/HelpDesk-Widget.gif?updatedAt=1785259568260" 
+                     alt="Web Widget" 
+                     style="width:100%; height:auto; object-fit:contain; border-radius:8px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- 11. Base de Conocimientos Section -->
+<section class="ecosystem" style="background: #fff5f5; padding: 60px 0;">
+    <div class="container">
+        <div class="grid-2">
+            <!-- Left Card: Text content -->
+            <div>
+                <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
+                    <i class="fa-solid fa-book" style="font-size: 1.5rem; color: var(--primary-brand);"></i> 
+                    <strong style="font-size: 1.2rem;">Base de Conocimientos</strong>
+                </div>
+                <h3>Empodera a tus clientes</h3>
+                <p>Ofrece acceso 24/7 a artículos y guías para resolver problemas frecuentes sin necesidad de soporte en vivo.</p>
+            </div>
+            
+            <!-- Right Card: Image -->
+            <div class="eco-card eco-light" style="background:white; border-color: #fff; display:flex; align-items:center; justify-content:center; padding:20px;">
+                <img src="https://bucket.mlcdn.com/a/3336/3336910/images/d65481c3f9955b6bc98a77491c52958ba6283c24.png" 
+                     alt="Dashboard Base de Conocimientos" 
+                     style="width:100%; height:auto; object-fit:contain; border-radius:8px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    <!-- 10. Ecosystem -->
+    <section class="ecosystem">
+        <div class="container">
+            <h2 style="text-align:center; margin-bottom:40px;">Expande tu ecosistema de herramientas</h2>
+            <div class="grid-2">
+                <div class="eco-card eco-light">
+                    <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
+                        <i class="fa-solid fa-cube" style="font-size: 1.5rem; color: var(--primary-brand);"></i> <strong style="font-size: 1.2rem;">Widgets Web</strong>
+                    </div>
+                    <h3>Convierte visitantes en clientes</h3>
+                    <p>Agrega chat en vivo a tu sitio web y atiende consultas al instante antes de que el usuario decida irse a la competencia.</p>
+                    <div style="background:white; padding:20px; border-radius:12px; margin-top:24px; border: 1px solid #e2e8f0;">
+                         <div class="skeleton-line" style="width: 100%;"></div>
+                         <div class="skeleton-line" style="width: 60%;"></div>
+                    </div>
+                </div>
+               </div> 
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 11. Final Call to Action & Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-cta">
+                <h2 style="font-size: 3rem;">¿Listo para dejar de perder ventas por responder tarde?</h2>
+                <p style="color: #94a3b8; font-size: 1.15rem; margin-bottom: 30px;">Únete a cientos de negocios que ya optimizaron su comunicación.</p>
+                <div style="display:flex; gap:16px; justify-content:center; flex-wrap: wrap;">
+                    <a href="/registro" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 32px;">Pruébalo sin Costo</a>
+                    <a href="/demo" class="btn btn-dark" style="background:transparent; color:white; border-color:#475569; font-size: 1.1rem; padding: 16px 32px;">Agenda una Demostración</a>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.9rem; color: #64748b;">
+                    No tarjeta de crédito. Configúralo en menos de 10 minutos.
+                </p>
+            </div>
+
+
+
+
+            <div class="footer-links">
+                <div class="footer-col">
+                    <a href="/" class="logo">
+                        <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
+                        <div>
+                            <div style="color: white; font-size: 22px;">HelpDesk</div>
+                            <div class="logo-sub">by Bebell Digital Solutions</div>
+                        </div>
+                    </a>                
+                    <p style="color:#64748b; font-size:0.9rem; line-height: 1.6; margin-top: 15px;">La plataforma que ayuda a negocios a ofrecer soporte excepcional y vender más en cada canal.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Plataforma</h4>
+                    <ul>
+                        <li><a href="#">Características</a></li>
+                        <li><a href="#">Integraciones</a></li>
+                        <li><a href="#">Precios</a></li>
+                        <li><a href="#">Seguridad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#">Sobre nosotros</a></li>
+                        <li><a href="#">Blog & Noticias</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#">Centro de Ayuda</a></li>
+                        <li><a href="#">Comunidad</a></li>
+                        <li><a href="#">Guía GRATUITA</a></li>
+                        <li><a href="#">Tickets de Soporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos de Uso</a></li>
+                        <li><a href="#">Política de Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    Desarrollado con 💖 por Bebell Digital Solutions.<br>Copyright © 2024 • HelpDesk® • Todos los derechos reservados.
+                </div>
+                <div style="display: flex; gap: 20px;">
+                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Botón Volver Arriba -->
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+
+<script>
+$(document).ready(function () {
+  const $slides = $(".partner-logo-slide");
+  const cloneCount = 3;
+  for (let i = 0; i < cloneCount; i++) {
+    $slides.children().clone(true).appendTo($slides);
+  }
+});
+
+// Lógica del botón "Volver arriba"
+const backToTopBtn = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.classList.add("show");
+  } else {
+    backToTopBtn.classList.remove("show");
+  }
+});
+
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+</script>
+
+
+
+
+
+
+
+
+<script>(function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://api.helpdesk.icu/widget2/load?id=b248d1b5-317e-3e0d-a6db-c255c207060b&r=' + encodeURIComponent(window.location);
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'anw2-sdk-tdFIsn4xDT6m28JVwgcGCw'));</script>
+
+
+
+
+
+
+
+</body>
+</html>
