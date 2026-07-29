@@ -4,7 +4,7 @@
 ### Tu Centro de Atención al Cliente Todo en Uno
 <br>
 
-<img src="https://github.com/Bebell-Digital-Solutions/ceo/blob/main/assets/images/mediamodifier_image.webp" alt="CEO Dashboard Banner" width="100%">
+<img src="https://ik.imagekit.io/bebell/HelpDesk%20App/mediamodifier_image%20(1).png" alt="CEO Dashboard Banner" width="100%">
 
 <br>
 <br>
