@@ -116,7 +116,12 @@
   
 
 
-  
+
+
+
+
+
+    
 
     <footer>
         <div class="container">
@@ -155,16 +160,16 @@
                 <div class="footer-col">
                     <h4>Empresa</h4>
                     <ul>
-                        <li><a href="#">Sobre nosotros</a></li>
-                        <li><a href="#">Blog & Noticias</a></li>
-                        <li><a href="#">Partners</a></li>
-                        <li><a href="#">Contacto</a></li>
+                        <li><a href="/acerca">Sobre nosotros</a></li>
+                        <li><a href="/blog">Blog & Noticias</a></li>
+                        <li><a href="/partners">Partners</a></li>
+                        <li><a href="/contacto">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Recursos</h4>
                     <ul>
-                        <li><a href="#">Centro de Ayuda</a></li>
+                        <li><a href="https://ayuda.helpdesk.icu">Centro de Ayuda</a></li>
                         <li><a href="#">Comunidad</a></li>
                         <li><a href="#">Guía GRATUITA</a></li>
                         <li><a href="#">Tickets de Soporte</a></li>
@@ -173,9 +178,9 @@
                 <div class="footer-col">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="#">Política de Privacidad</a></li>
-                        <li><a href="#">Términos de Uso</a></li>
-                        <li><a href="#">Política de Cookies</a></li>
+                        <li><a href="/politicas/privacidad">Política de Privacidad</a></li>
+                        <li><a href="/politicas/terminos">Términos de Uso</a></li>
+                        <li><a href="/politicas/cookies">Política de Cookies</a></li>
                     </ul>
                 </div>
             </div>
@@ -193,11 +198,44 @@
         </div>
     </footer>
 
+
+
+
+    
+
     <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
+
+
+
+
+<script>
+
+// Lógica del botón "Volver arriba"
+const backToTopBtn = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.classList.add("show");
+  } else {
+    backToTopBtn.classList.remove("show");
+  }
+});
+
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+    
+</script>
+
+
+
+
+
+    
 </body>
 </html>
