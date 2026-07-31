@@ -209,11 +209,49 @@
         </div>
     </footer>
 
+
+
+
+    
+
     <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
+
+
+
+    
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
+
+
+
+<script>
+
+// Lógica del botón "Volver arriba"
+const backToTopBtn = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.classList.add("show");
+  } else {
+    backToTopBtn.classList.remove("show");
+  }
+});
+
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+    
+</script>
+
+
+
+
+
+
+    
 </body>
 </html>
