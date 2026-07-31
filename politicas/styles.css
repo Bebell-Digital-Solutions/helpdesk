@@ -182,6 +182,8 @@ nav a:hover { color: var(--primary-brand); }
     font-size: 2.8rem;
     margin-bottom: 15px;
     max-width: 650px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .legal-header p {
