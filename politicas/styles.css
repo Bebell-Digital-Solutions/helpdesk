@@ -166,6 +166,7 @@ nav a:hover { color: var(--primary-brand); }
     padding: 80px 0 60px;
     text-align: center;
     border-bottom: 1px solid #f1f5f9;
+    max-width: 650px;
 }
 
 .legal-header h1 {
@@ -204,6 +205,11 @@ nav a:hover { color: var(--primary-brand); }
     margin-left: 20px;
     margin-bottom: 24px;
 }
+
+
+
+
+
 
 /* --- Footer --- */
 footer {
