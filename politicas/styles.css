@@ -173,16 +173,14 @@ nav a:hover { color: var(--primary-brand); }
 /* --- Legal Page Content --- */
 .legal-header {
     background-color: var(--bg-slate-50);
-    padding: 80px 0 65px;
+    padding: 80px 0 50px;
     text-align: center;
     border-bottom: 1px solid #f1f5f9;
-
 }
 
 .legal-header h1 {
     font-size: 2.8rem;
     margin-bottom: 15px;
-    max-width: 650px;
 }
 
 .legal-header p {
