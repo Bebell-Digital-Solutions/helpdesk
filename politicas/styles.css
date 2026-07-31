@@ -166,12 +166,13 @@ nav a:hover { color: var(--primary-brand); }
     padding: 80px 0 60px;
     text-align: center;
     border-bottom: 1px solid #f1f5f9;
-    max-width: 650px;
+
 }
 
 .legal-header h1 {
     font-size: 2.8rem;
     margin-bottom: 15px;
+    max-width: 650px;
 }
 
 .legal-header p {
@@ -181,7 +182,7 @@ nav a:hover { color: var(--primary-brand); }
 
 .legal-content {
     padding: 80px 0;
-    max-width: 650px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
