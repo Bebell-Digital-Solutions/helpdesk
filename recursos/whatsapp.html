@@ -1,1 +1,911 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - HelpDesk</title>
 
+
+
+
+
+  
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            /* Existing Color Scheme */
+            --primary-brand: #e11484; 
+            --primary-hover: #a02b8f; 
+            --accent-color: #df1783; 
+            
+            --text-main: #0f172a; /* Slate 900 */
+            --text-muted: #475569; /* Slate 600 */
+            
+            /* Backgrounds */
+            --bg-white: #ffffff;
+            --bg-slate-50: #f8fafc;
+            --bg-indigo-50: #eef2ff;
+            --bg-dark: #1e293b; /* Slate 800 */
+            
+            --border-radius: 12px;
+            --container-width: 1200px;
+
+            /* ADDED: Missing variables for the WhatsApp Card */
+            --card-bg: var(--bg-white);
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --primary: var(--primary-brand);
+            --primary-light: #fce7f3; /* Light pink for instructions */
+            --text-light: var(--text-muted);
+            --border-color: #cbd5e1;
+            --text: var(--text-main);
+            --secondary: var(--text-main);
+            --bg: var(--bg-slate-50);
+            --accent: var(--accent-color);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            background-color: var(--bg-slate-50); /* Slightly off-white background for better card contrast */
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-brand);
+            color: var(--bg-white);
+            box-shadow: 0 4px 6px -1px rgba(225, 20, 132, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+            color: var(--bg-white);
+        }
+
+        .btn-outline {
+            border: 1px solid #cbd5e1;
+            color: var(--text-main);
+            background: transparent;
+        }
+        
+        .btn-outline:hover {
+            border-color: var(--primary-brand);
+            color: var(--primary-brand);
+        }
+
+        .btn-dark {
+            background-color: var(--bg-white);
+            color: var(--text-main);
+            border: 1px solid var(--bg-white);
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+
+        header {
+            padding: 20px 0;
+            background: var(--bg-white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            height: 42px;
+            width: auto;
+        }
+
+        .logo-sub {
+            font-size: 8px;
+            font-weight: 400;
+            color: #888;
+            letter-spacing: 0.3px;
+            margin-top: -4px;
+        }
+
+        .logo:hover .logo-icon {
+            transform: scale(1.15) rotate(-3deg);
+            transition: transform 0.3s ease;
+        }
+ 
+        nav ul {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: var(--primary-brand); }
+
+        .header-actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--bg-white);
+            min-width: 220px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            z-index: 1000;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 8px 0;
+            border: 1px solid #e2e8f0;
+            margin-top: 15px; 
+        }
+
+        /* Invisible bridge so hover doesn't break when moving mouse down */
+        .dropdown::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 15px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: var(--text-muted);
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: var(--bg-slate-50);
+            color: var(--primary-brand);
+            padding-left: 24px;
+        }
+
+
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 40px;
+            width: 100%;
+            max-width: 800px;
+            margin: 60px auto;
+            border: 1px solid #e2e8f0;
+        }
+        
+        
+
+        .card-icon {
+            width: 200px;
+            height: auto;
+            aspect-ratio: 3 / 1;
+            background-color: #737373;
+            -webkit-mask: url('https://cdn.brandfetch.io/id6Zq084G_/theme/dark/idh6uPVUgE.svg?c=1dxbfHSJFAPEGdCLU4o5B') no-repeat center;
+            mask: url('https://cdn.brandfetch.io/id6Zq084G_/theme/dark/idh6uPVUgE.svg?c=1dxbfHSJFAPEGdCLU4o5B') no-repeat center;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+            margin: 0 auto 16px;
+        }
+        
+
+        .title {
+            color: var(--primary);
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: var(--text-light);
+            font-size: 16px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: var(--card-bg);
+            color: var(--text);
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        input[type="text"]:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(225, 20, 132, 0.15);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .instructions {
+            background-color: var(--primary-light);
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: var(--secondary);
+            line-height: 1.6rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .instructions h4 {
+            margin-bottom: 8px;
+            color: var(--primary);
+            font-size: 15px;
+        }
+
+        .btn-generate {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 16px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.1s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .btn-generate:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-generate:active {
+            transform: translateY(1px);
+        }
+
+        .result-container {
+            margin-top: 30px;
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-label {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        .result-box {
+            display: flex;
+            align-items: center;
+            background-color: var(--bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 15px;
+        }
+
+        .result {
+            flex: 1;
+            word-break: break-all;
+            padding-right: 15px;
+            color: var(--text);
+            font-family: monospace;
+            font-size: 14px;
+        }
+
+        .copy-btn {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+            white-space: nowrap;
+        }
+
+        .copy-btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .tool-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .custom-message-box {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 16px 24px;
+            border-radius: 8px;
+            color: white;
+            font-weight: 600;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transform: translateX(120%);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .custom-message-box.show {
+            transform: translateX(0);
+        }
+
+        .custom-message-box.error { background-color: #ef4444; }
+        .custom-message-box.success { background-color: #10b981; }
+
+        .custom-message-box button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 0;
+            opacity: 0.8;
+        }
+
+        .custom-message-box button:hover { opacity: 1; }
+
+        footer {
+            background-color: var(--bg-dark);
+            color: var(--bg-white);
+            padding: 100px 0 40px;
+            border-radius: 40px 40px 0 0;
+            margin-top: 60px;
+        }
+
+        .footer-cta {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
+
+        .footer-cta h2 {
+            color: var(--bg-white);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 40px;
+            border-top: 1px solid #334155;
+            padding-top: 60px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 5px; }
+
+        .footer-col a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover { color: var(--bg-white); }
+
+        .footer-bottom {
+            margin-top: 60px;
+            border-top: 1px solid #334155;
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            color: #64748b;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-brand);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(225, 20, 132, 0.3);
+            transform: translateY(15px);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 900px) {
+            .footer-links { grid-template-columns: 1fr; }
+            header .container { flex-direction: column; gap: 20px; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 20px; }
+            .footer-links { text-align: center; }
+            .footer-bottom { flex-direction: column; text-align: center; gap: 20px; align-items: center; }
+        }
+
+        @media (max-width: 640px) {
+            .container { padding: 1rem; }
+            .card { padding: 24px; margin-top: 40px; }
+            .title { font-size: 24px; }
+        }
+    </style>
+    
+    
+    
+</head>
+<body>
+
+
+
+    <header>
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
+                <div>
+                    <div>HelpDesk</div>
+                    <div class="logo-sub">by Bebell Digital Solutions</div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/integraciones">Integraciones</a></li>
+                    <li><a href="/canales">Canales</a></li>
+                    <li><a href="/planes">Planes</a></li>
+                    <li class="dropdown">
+                        <a href="/recursos" style="color: var(--primary-brand); cursor: default;">
+                            Recursos <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="/recursos/centro-de-ayuda">Centro de Ayuda</a>
+                            <a href="/recursos/guia">Guía GRATUITA</a>
+                            <a href="/recursos/enlaces-whatsapp" style="color: var(--primary-brand); font-weight: 700;">Enlaces WhatsApp</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="https://app.helpdesk.icu" class="btn btn-outline" style="border-radius: 8px; padding: 10px 20px;"><strong>Iniciar Sesión</strong></a>
+                <a href="/p/reserva" class="btn btn-primary" style="border-radius: 8px; padding: 10px 20px;">Agendar Demo</a>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+  
+
+    <div id="customMessageBox" class="custom-message-box">
+        <span id="messageBoxText">Mensaje</span>
+        <button id="closeMessageBox" aria-label="Cerrar">&times;</button>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-icon" role="img" aria-label="WhatsApp Logo"></div>
+            <h2 class="title">Generador de Enlaces de WhatsApp</h2>
+            <p class="subtitle">Crea una URL personalizada de WhatsApp con un mensaje predefinido</p>
+            
+            <div class="input-group">
+                <label for="phoneNumber">Número de Teléfono</label>
+                <input type="text" id="phoneNumber" placeholder="18008080000" autocomplete="off">
+            </div>
+            
+            <div class="instructions">
+                <h4>Instrucciones Importantes</h4>
+                <p>Incluye el código de país sin el símbolo +. Ej: Si tu código de país es +1 y el número de WhatsApp es 6501234567, entonces escribe 16501234567 arriba.</p>
+            </div>
+            
+            <div class="input-group">
+                <label for="message">Escribe tu Mensaje aquí:</label>
+                <textarea id="message" placeholder="¡Hola! 👋 Estoy interesado/a en tus servicios.">¡Hola! 👋 Estoy interesado/a en tus servicios.</textarea>
+            </div>
+            
+            <button class="btn-generate" id="generateBtn">
+                <i class="fa-brands fa-whatsapp" style="margin-right: 8px; font-size: 20px;"></i> Generar Enlace de WhatsApp
+            </button>
+            
+            <div class="result-container" id="resultContainer">
+                <div class="result-label">URL de WhatsApp Generada:</div>
+                <div class="result-box">
+                    <div class="result" id="result"></div>
+                    <button class="copy-btn" id="copyBtn">Copiar</button>
+                </div>
+            </div>
+
+            <div class="tool-footer">
+                <p>Herramienta simple para generar URLs de WhatsApp con mensajes predefinidos</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+  
+ 
+    <footer>
+        <div class="container">
+            <div class="footer-cta">
+                <h2 style="font-size: 3rem;">¿Listo para dejar de perder ventas por responder tarde?</h2>
+                <p style="color: #94a3b8; font-size: 1.15rem; margin-bottom: 30px;">Únete a cientos de negocios que ya optimizaron su comunicación.</p>
+                <div style="display:flex; gap:16px; justify-content:center; flex-wrap: wrap;">
+                    <a href="/registro" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 32px;">Pruébalo sin Costo</a>
+                    <a href="/demo" class="btn btn-dark" style="background:transparent; color:white; border-color:#475569; font-size: 1.1rem; padding: 16px 32px;">Agenda una Demostración</a>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.9rem; color: #64748b;">
+                    No tarjeta de crédito. Configúralo en menos de 10 minutos.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-col">
+                    <a href="/" class="logo">
+                        <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
+                        <div>
+                            <div style="color: white; font-size: 22px;">HelpDesk</div>
+                            <div class="logo-sub">by Bebell Digital Solutions</div>
+                        </div>
+                    </a>                
+                    <p style="color:#64748b; font-size:0.9rem; line-height: 1.6; margin-top: 15px;">La plataforma que ayuda a negocios a ofrecer soporte excepcional y vender más en cada canal.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Plataforma</h4>
+                    <ul>
+                        <li><a href="#">Características</a></li>
+                        <li><a href="/p/integraciones">Integraciones</a></li>
+                        <li><a href="/p/planes">Precios</a></li>
+                        <li><a href="#">Seguridad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="/p/acerca">Sobre nosotros</a></li>
+                        <li><a href="/blog">Blog & Noticias</a></li>
+                        <li><a href="/p/planes">Partners</a></li>
+                        <li><a href="/p/contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="https://ayuda.helpdesk.icu">Centro de Ayuda</a></li>
+                        <li><a href="#">Comunidad</a></li>
+                        <li><a href="#">Guía GRATUITA</a></li>
+                        <li><a href="#">Tickets de Soporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/politicas/privacidad">Política de Privacidad</a></li>
+                        <li><a href="/politicas/terminos">Términos de Uso</a></li>
+                        <li><a href="/politicas/cookies">Política de Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    Desarrollado con 💖 por Bebell Digital Solutions.<br>Copyright © 2026 • HelpDesk® • Todos los derechos reservados.
+                </div>
+                <div style="display: flex; gap: 20px;">
+                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+
+
+    <script>
+        // Custom Message Box Helper Function (Replaces alert)
+        let messageTimeout;
+        function showMessage(message, isError = true) {
+            const msgBox = document.getElementById('customMessageBox');
+            const msgText = document.getElementById('messageBoxText');
+            
+            msgText.textContent = message;
+            
+            // Toggle classes based on type
+            if (isError) {
+                msgBox.classList.add('error');
+                msgBox.classList.remove('success');
+            } else {
+                msgBox.classList.add('success');
+                msgBox.classList.remove('error');
+            }
+            
+            msgBox.classList.add('show');
+            
+            // Clear previous timeout if spamming
+            clearTimeout(messageTimeout);
+            
+            // Auto hide after 4 seconds
+            messageTimeout = setTimeout(() => {
+                msgBox.classList.remove('show');
+            }, 4000);
+        }
+
+        document.getElementById('closeMessageBox').addEventListener('click', () => {
+            document.getElementById('customMessageBox').classList.remove('show');
+        });
+
+        // "Back to top" functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const backToTopBtn = document.getElementById("backToTop");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.add("show");
+                } else {
+                    backToTopBtn.classList.remove("show");
+                }
+            });
+
+            backToTopBtn.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+
+        // Optional Widget 
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://api.helpdesk.icu/widget2/load?id=b248d1b5-317e-3e0d-a6db-c255c207060b&r=' + encodeURIComponent(window.location);
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'anw2-sdk-tdFIsn4xDT6m28JVwgcGCw'));
+
+        // App Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const generateBtn = document.getElementById('generateBtn');
+            const phoneNumber = document.getElementById('phoneNumber');
+            const message = document.getElementById('message');
+            const resultContainer = document.getElementById('resultContainer');
+            const result = document.getElementById('result');
+            const copyBtn = document.getElementById('copyBtn');
+            
+            // Initialize Icons safely
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            
+            // Safe Dark Mode Toggle initialization
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const body = document.body;
+            
+            if (darkModeToggle) {
+                if (localStorage.getItem('theme') === 'dark') {
+                    body.classList.add('dark-mode');
+                    darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                    darkModeToggle.setAttribute('title', 'Cambiar a Modo Claro');
+                }
+                
+                darkModeToggle.addEventListener('click', () => {
+                    body.classList.toggle('dark-mode');
+                    if (body.classList.contains('dark-mode')) {
+                        localStorage.setItem('theme', 'dark');
+                        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                        darkModeToggle.setAttribute('title', 'Cambiar a Modo Claro');
+                    } else {
+                        localStorage.setItem('theme', 'light');
+                        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                        darkModeToggle.setAttribute('title', 'Cambiar a Modo Oscuro');
+                    }
+                });
+            }
+            
+            // Generate URL Logic
+            generateBtn.addEventListener('click', function() {
+                const phone = phoneNumber.value.trim();
+                const msg = message.value.trim();
+                
+                if (!phone) {
+                    showMessage('Por favor, ingresa un número de teléfono', true);
+                    return;
+                }
+                
+                if (!/^\d+$/.test(phone)) {
+                    showMessage('El número de teléfono debe contener solo dígitos (sin espacios ni caracteres especiales)', true);
+                    return;
+                }
+                
+                const encodedMsg = encodeURIComponent(msg);
+                const whatsappUrl = `https://wa.me/${phone}?text=${encodedMsg}`;
+                
+                result.textContent = whatsappUrl;
+                resultContainer.style.display = 'block';
+            });
+            
+            // Advanced Copy Functionality 
+            copyBtn.addEventListener('click', function() {
+                const textToCopy = result.textContent;
+                
+                // Fallback approach that avoids iframe restrictions via execCommand
+                const textArea = document.createElement("textarea");
+                textArea.value = textToCopy;
+                // Avoid scrolling to bottom
+                textArea.style.top = "0";
+                textArea.style.left = "0";
+                textArea.style.position = "fixed";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+
+                try {
+                    const successful = document.execCommand('copy');
+                    if(successful) {
+                        const originalText = copyBtn.textContent;
+                        copyBtn.textContent = '¡Copiado!';
+                        copyBtn.style.backgroundColor = '#10b981';
+                        
+                        setTimeout(() => {
+                            copyBtn.textContent = originalText;
+                            copyBtn.style.backgroundColor = '';
+                        }, 2000);
+                    } else {
+                        showMessage('Error al copiar al portapapeles. Inténtalo de nuevo.', true);
+                    }
+                } catch (err) {
+                    showMessage('Tu navegador no soporta esta función.', true);
+                }
+                document.body.removeChild(textArea);
+            });
+            
+            // Enter key bindings
+            phoneNumber.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    generateBtn.click();
+                }
+            });
+            
+            message.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' && e.ctrlKey) {
+                    generateBtn.click();
+                }
+            });
+        });
+    </script> 
+
+
+  
+</body>
+</html>
