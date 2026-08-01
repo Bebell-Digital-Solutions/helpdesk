@@ -349,6 +349,8 @@
             letter-spacing: 1px;
             font-weight: 700;
         }
+
+  
         .footer-col ul { list-style: none; }
         .footer-col li { margin-bottom: 5px; }
         .footer-col a {
@@ -357,7 +359,11 @@
             font-size: 0.95rem;
             transition: color 0.2s;
         }
+
+  
         .footer-col a:hover { color: var(--bg-white); }
+
+  
         .footer-bottom {
             margin-top: 60px;
             border-top: 1px solid #334155;
@@ -367,6 +373,48 @@
             font-size: 0.7rem;
             color: #64748b;
         }
+
+
+
+
+        /* --- Back to Top Button --- */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-brand);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(225, 20, 132, 0.3);
+            transform: translateY(15px);
+        }
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .back-to-top:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-3px);
+        }
+
+
+
+
+
+  
 
         /* Responsive */
         @media (max-width: 1024px) {
@@ -609,14 +657,7 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
+ 
 
     <!-- Footer (Exact Match) -->
     <footer>
@@ -681,6 +722,39 @@
             </div>
         </div>
     </footer>
+
+
+
+  <script>
+        // Lógica del botón "Volver arriba"
+        document.addEventListener('DOMContentLoaded', () => {
+            const backToTopBtn = document.getElementById("backToTop");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.add("show");
+                } else {
+                    backToTopBtn.classList.remove("show");
+                }
+            });
+
+            backToTopBtn.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+
+        // Widget de HelpDesk (opcional, como en páginas anteriores)
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://api.helpdesk.icu/widget2/load?id=b248d1b5-317e-3e0d-a6db-c255c207060b&r=' + encodeURIComponent(window.location);
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'anw2-sdk-tdFIsn4xDT6m28JVwgcGCw'));
+    </script>
+
+
+  
 
 </body>
 </html>
