@@ -180,8 +180,13 @@ nav a:hover { color: var(--primary-brand); }
 
 .legal-header h1 {
     font-size: 2.8rem;
-    max-width: 650px;
-    margin: 0 auto 15px; /* "auto" en los lados centra el elemento, y mantiene los 15px debajo */
+    width: 100%;
+    max-width: 650px !important;
+    margin-top: 0 !important;
+    margin-right: auto !important;
+    margin-bottom: 15px !important;
+    margin-left: auto !important;
+    text-align: center;
 }
 
 .legal-header p {
