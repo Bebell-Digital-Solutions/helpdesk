@@ -5,28 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HelpDesk - Canales de comunicación</title>
 
-
 <!-- === FAVICON Y ICONOS DE APLICACIÓN === -->
-<link rel="icon" type="image/x-icon" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
 <link rel="icon" type="image/png" sizes="16x16" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
-
+<link rel="apple-touch-icon" sizes="180x180" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
 
 <!-- === TARJETA DE TWITTER === -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://helpdesk.icu">
-<meta name="twitter:title" content="HelpDesk | Nunca pierdas otro cliente por responder tarde">
+<meta name="twitter:url" content="https://helpdesk.icu/p/canales">
+<meta name="twitter:title" content="Canales HelpDesk | Nunca pierdas otro cliente por responder tarde">
 <meta name="twitter:description" content="Unifica las conversaciones con tus clientes desde WhatsApp, Instagram, Telegram, Facebook Messenger, correo electrónico y chat en vivo. Automatiza respuestas, gestiona tickets y atiende desde un solo panel.">
 <meta name="twitter:image" content="https://bucket.mlcdn.com/a/3336/3336910/images/929e59b8ebaab4772063e0bbf3153da5773b06a3.png">
 <meta name="twitter:creator" content="@helpdesk">
 
- 
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
- 
+
+<!-- === Preconnect for Performance === -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
 <style>
  :root {
             /* New Color Scheme */
@@ -64,6 +63,22 @@
             background-color: var(--bg-white);
         }
 
+        /* Skip to content link - Accessibility */
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            background: var(--primary-brand);
+            color: white;
+            padding: 8px 16px;
+            z-index: 1001;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
         /* Utilities */
         .container {
             max-width: var(--container-width);
@@ -87,7 +102,7 @@
         .btn-primary {
             background-color: var(--primary-brand);
             color: var(--bg-white);
-            box-shadow: 0 4px 6px -1px rgba(225, 20, 132, 0.2);
+            box-shadow: none;
         }
 
         .btn-primary:hover {
@@ -111,6 +126,12 @@
             background-color: var(--bg-white);
             color: var(--text-main);
             border: 1px solid var(--bg-white);
+        }
+
+        /* Focus indicators - Accessibility */
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid var(--primary-brand);
+            outline-offset: 2px;
         }
 
         h1, h2, h3, h4 {
@@ -205,20 +226,25 @@
         /* --- Hero --- */
         .hero {
             padding: 100px 0 80px;
+            text-align: center;
         }
          
         .hero-text {
-            max-width: 540px;
+            max-width: 750px;
+            margin: 0 auto;
+            text-align: center;
         }
         
         .hero-buttons {
             display: flex;
             gap: 15px;
             align-items: center;
+            justify-content: center;
             flex-wrap: wrap;
+            margin-top: 30px;
         }
         
-        /* CSS Mockups (UI Style: Tech Dashboard) */
+        /* CSS Mockups */
         .hero-container, .mockup-container {
             position:relative;
             overflow:hidden;
@@ -286,7 +312,6 @@
             transform:translateX(120%);
         }
 
-        /* Tech Colors for Skeletons */
         .sk-primary { background: #c7d2fe; }
         .sk-accent { background: #fde68a; }
         .sk-success { background: #bbf7d0; }
@@ -298,10 +323,6 @@
             border-radius: 4px;
             margin-bottom: 8px;
         }
-
-
-
- 
 
         /* --- Channels Grid --- */
         .channels-grid {
@@ -318,6 +339,32 @@
             border-radius: 16px;
             padding: 24px;
             transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        .channel-card:nth-child(1) { animation-delay: 0.05s; }
+        .channel-card:nth-child(2) { animation-delay: 0.1s; }
+        .channel-card:nth-child(3) { animation-delay: 0.15s; }
+        .channel-card:nth-child(4) { animation-delay: 0.2s; }
+        .channel-card:nth-child(5) { animation-delay: 0.25s; }
+        .channel-card:nth-child(6) { animation-delay: 0.3s; }
+        .channel-card:nth-child(7) { animation-delay: 0.35s; }
+        .channel-card:nth-child(8) { animation-delay: 0.4s; }
+        .channel-card:nth-child(9) { animation-delay: 0.45s; }
+        .channel-card:nth-child(10) { animation-delay: 0.5s; }
+        .channel-card:nth-child(11) { animation-delay: 0.55s; }
+        .channel-card:nth-child(12) { animation-delay: 0.6s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         .channel-card:hover {
@@ -358,9 +405,6 @@
             line-height: 1.6;
             margin: 0;
         }
-
- 
-
 
         /* Dropdown Styles */
         .dropdown {
@@ -409,11 +453,6 @@
             color: var(--primary-brand);
             padding-left: 24px;
         }
-
-
-
- 
-
 
         /* --- Footer --- */
         footer {
@@ -471,7 +510,22 @@
             color: #64748b;
         }
 
-        /* LLM Integration Logo Slider */
+
+
+.footer-bottom a {
+            color: var(--bg-white);
+            transition: color 0.2s ease;
+        }
+        
+        .footer-bottom a:hover {
+            color: var(--primary-brand);
+        }
+
+
+
+
+
+        /* Partner Logo Slider */
         .partner-logo-slider {
             width: 100%;
             overflow: hidden;
@@ -509,6 +563,11 @@
             from { transform: translateX(0); }
             to { transform: translateX(-50%); }
         }
+
+
+
+
+
 
         /* --- Back to Top Button --- */
         .back-to-top {
@@ -559,12 +618,34 @@
             }
             .hero-buttons .btn { width: 80%; margin-left: 0 !important; }
             .bullets li { text-align: left; }
-            header .container { flex-direction: column; gap: 20px; }
-            nav ul { flex-wrap: wrap; justify-content: center; gap: 20px; }
             .mockup-container { width: 100%; }
             .footer-links { text-align: center; }
             .feature-card-bg { padding: 40px 20px; }
             .back-to-top { width: 45px; height: 45px; }
+            
+            /* Mobile header improvements */
+            header .container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 12px 16px;
+            }
+            
+            nav {
+                order: 3;
+                flex: 0 0 100%;
+            }
+            
+            nav ul {
+                justify-content: center;
+                gap: 16px;
+                padding: 8px 0;
+            }
+            
+            .header-actions .btn {
+                padding: 8px 12px;
+                font-size: 0.85rem;
+            }
         }
 
         @media (max-width: 800px) {
@@ -575,64 +656,80 @@
 
         @media (max-width: 700px) {
             .hover-image-wrapper { max-width: 100%; }
+            .partner-logo-slide img {
+                width: 140px;
+                padding: 12px;
+            }
         }
 
         @media (max-width: 480px) {
             .text-content h2 { font-size: 1.5rem; }
             .btn { width: 100%; text-align: center; }
+            header .container { flex-direction: column; }
+            nav { order: unset; flex: unset; }
+            .header-actions { width: 100%; justify-content: center; flex-wrap: wrap; }
         }
 </style>
 </head>
 <body>
 
+ 
+
+<!-- Skip to content link - Accessibility -->
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<!-- Navigation -->
+<header>
+    <div class="container">
+        <a href="/" class="logo" aria-label="HelpDesk Inicio">
+            <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
+            <div>
+                <div>HelpDesk</div>
+                <div class="logo-sub">by Bebell Digital Solutions</div>
+            </div>
+        </a>
+        
+        <nav aria-label="Navegación principal">
+            <ul role="menubar">
+                <li role="none"><a href="/" role="menuitem">Inicio</a></li>
+                <li role="none"><a href="/p/integraciones" role="menuitem">Integraciones</a></li>
+                <li role="none"><a href="/p/canales" role="menuitem" style="color: var(--primary-brand);" aria-current="page">Canales</a></li>
+                <li role="none"><a href="/p/planes" role="menuitem">Planes</a></li>
+             
+                <li class="dropdown" role="none">
+                    <a href="/recursos" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                        Recursos <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                    </a>
+                 
+                    <div class="dropdown-content" role="menu">
+                        <a href="https://ayuda.helpdesk.icu" role="menuitem">Centro de Ayuda</a>
+                        <a href="/recursos/guia" role="menuitem">Guía GRATUITA</a>
+                        <a href="/recursos/whatsapp" role="menuitem">Enlaces WhatsApp</a>
+                    </div>
+                 
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="header-actions">
+            <a href="https://app.helpdesk.icu" class="btn btn-outline" style="border-radius: 8px; padding: 10px 20px;"><strong>Iniciar Sesión</strong></a>
+            <a href="/p/reserva" class="btn btn-primary" style="border-radius: 8px; padding: 10px 20px;">Agendar Demo</a>
+        </div>
+    </div>
+</header>
+
+
 
 
  
 
-    <!-- Navigation -->
-    <header>
-        <div class="container">
-            <a href="/" class="logo">
-                <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
-                <div>
-                    <div>HelpDesk</div>
-                    <div class="logo-sub">by Bebell Digital Solutions</div>
-                </div>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/">Integraciones</a></li>
-                    <li><a href="/p/canales"  style="color: var(--primary-brand);">Canales</a></li>
-                    <li><a href="/p/planes">Planes</a></li>
-                    <li class="dropdown">
-                        <a href="/recursos" cursor: default;">
-                            Recursos <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="https://ayuda.helpdesk.icu">Centro de Ayuda</a>
-                            <a href="/recursos/guia">Guía GRATUITA</a>
-                            <a href="/recursos/whatsapp" font-weight: 700;">Enlaces WhatsApp</a>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <a href="https://app.helpdesk.icu" class="btn btn-outline" style="border-radius: 8px; padding: 10px 20px;"><strong>Iniciar Sesión</strong></a>
-                <a href="/reserva" class="btn btn-primary" style="border-radius: 8px; padding: 10px 20px;">Agendar Demo</a>
-            </div>
-        </div>
-    </header>
-
-
-
-
-
+<!-- Main Content -->
+<main id="main-content">
     <!-- Canales de Comunicación -->
-    <section class="channels-section">
-        <div class="container">
-            <h2 style="font-size: 2.8rem; margin-bottom: 24px; color: var(--text-main);">Conecta tus Canales de Chat</h2>
-           <p style="max-width: 750px; margin: 0 auto 30px; font-size: 1.25rem; color: var(--text-muted); line-height: 1.8;">
+    <section class="channels-section" aria-labelledby="channels-title">
+        <div class="container" style="text-align: center;">
+            <h1 id="channels-title" style="font-size: 2.8rem; margin-bottom: 24px; color: var(--text-main);">Conecta tus Canales de Chat</h1>
+            <p style="max-width: 750px; margin: 0 auto 30px; font-size: 1.25rem; color: var(--text-muted); line-height: 1.8;">
                 <strong>HelpDesk</strong> reúne todos tus canales en un solo lugar para que nunca vuelvas a perder una oportunidad.
             </p>
 
@@ -642,7 +739,7 @@
                 <div class="channel-card">
                     <div class="channel-header">
                         <div class="channel-icon-wrapper" style="background: var(--bg-slate-50); border: 1px solid #e2e8f0; overflow: hidden;">
-                            <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Live Chat Logo" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div class="channel-title">Live Chat (Web)</div>
                     </div>
@@ -653,7 +750,7 @@
                 <div class="channel-card">
                     <div class="channel-header">
                         <div class="channel-icon-wrapper" style="background: #25D366;">
-                            <i class="fa-brands fa-whatsapp"></i>
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
                         </div>
                         <div class="channel-title">WhatsApp Business</div>
                     </div>
@@ -664,7 +761,7 @@
                 <div class="channel-card">
                     <div class="channel-header">
                         <div class="channel-icon-wrapper" style="background: #0084FF;">
-                            <i class="fa-brands fa-facebook-messenger"></i>
+                            <i class="fa-brands fa-facebook-messenger" aria-hidden="true"></i>
                         </div>
                         <div class="channel-title">Facebook Messenger</div>
                     </div>
@@ -675,7 +772,7 @@
                 <div class="channel-card">
                     <div class="channel-header">
                         <div class="channel-icon-wrapper" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);">
-                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                         </div>
                         <div class="channel-title">Instagram DM</div>
                     </div>
@@ -686,7 +783,7 @@
                 <div class="channel-card">
                     <div class="channel-header">
                         <div class="channel-icon-wrapper" style="background: #F22F46;">
-                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-message" aria-hidden="true"></i>
                         </div>
                         <div class="channel-title">SMS (Twilio)</div>
                     </div>
@@ -697,7 +794,7 @@
                 <div class="channel-card">
                     <div class="channel-header">
                         <div class="channel-icon-wrapper" style="background: #229ED9;">
-                            <i class="fa-brands fa-telegram"></i>
+                            <i class="fa-brands fa-telegram" aria-hidden="true"></i>
                         </div>
                         <div class="channel-title">Telegram</div>
                     </div>
@@ -708,7 +805,7 @@
                 <div class="channel-card">
                     <div class="channel-header">
                         <div class="channel-icon-wrapper" style="background: #7360F2;">
-                            <i class="fa-brands fa-viber"></i>
+                            <i class="fa-brands fa-viber" aria-hidden="true"></i>
                         </div>
                         <div class="channel-title">Viber</div>
                     </div>
@@ -719,7 +816,7 @@
                 <div class="channel-card">
                     <div class="channel-header">
                         <div class="channel-icon-wrapper" style="background: #00C300;">
-                            <i class="fa-brands fa-line"></i>
+                            <i class="fa-brands fa-line" aria-hidden="true"></i>
                         </div>
                         <div class="channel-title">LINE</div>
                     </div>
@@ -730,7 +827,7 @@
                 <div class="channel-card">
                     <div class="channel-header">
                         <div class="channel-icon-wrapper" style="background: #09B83E;">
-                            <i class="fa-brands fa-weixin"></i>
+                            <i class="fa-brands fa-weixin" aria-hidden="true"></i>
                         </div>
                         <div class="channel-title">WeChat</div>
                     </div>
@@ -741,7 +838,7 @@
                 <div class="channel-card">
                     <div class="channel-header">
                         <div class="channel-icon-wrapper" style="background: #0068FF;">
-                            <i class="fa-solid fa-comment-dots"></i>
+                            <i class="fa-solid fa-comment-dots" aria-hidden="true"></i>
                         </div>
                         <div class="channel-title">Zalo</div>
                     </div>
@@ -752,7 +849,7 @@
                 <div class="channel-card">
                     <div class="channel-header">
                         <div class="channel-icon-wrapper" style="background: #EA4335;">
-                            <i class="fa-solid fa-envelope"></i>
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                         </div>
                         <div class="channel-title">Correo Electrónico</div>
                     </div>
@@ -763,7 +860,7 @@
                 <div class="channel-card">
                     <div class="channel-header">
                         <div class="channel-icon-wrapper" style="background: #475569;">
-                            <i class="fa-solid fa-network-wired"></i>
+                            <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
                         </div>
                         <div class="channel-title">API Channel</div>
                     </div>
@@ -772,121 +869,132 @@
             </div>
         </div>
     </section>
-    
-    
+</main>
 
-    
-    
-    
-    
-    
 
-    <!-- 11. Final Call to Action & Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-cta">
-                <h2 style="font-size: 3rem;">¿Listo para dejar de perder ventas por responder tarde?</h2>
-                <p style="color: #94a3b8; font-size: 1.15rem; margin-bottom: 30px;">Únete a cientos de negocios que ya optimizaron su comunicación.</p>
-                <div style="display:flex; gap:16px; justify-content:center; flex-wrap: wrap;">
-                    <a href="/registro" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 32px;">Pruébalo sin Costo</a>
-                    <a href="/demo" class="btn btn-dark" style="background:transparent; color:white; border-color:#475569; font-size: 1.1rem; padding: 16px 32px;">Agenda una Demostración</a>
-                </div>
-                <p style="margin-top: 15px; font-size: 0.9rem; color: #64748b;">
-                    No tarjeta de crédito. Configúralo en menos de 10 minutos.
-                </p>
+
+
+
+ 
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-cta">
+            <h2 style="font-size: 3rem;">¿Listo para dejar de perder ventas por responder tarde?</h2>
+            <p style="color: #94a3b8; font-size: 1.15rem; margin-bottom: 30px;">Únete a cientos de negocios que ya optimizaron su comunicación.</p>
+            <div style="display:flex; gap:16px; justify-content:center; flex-wrap: wrap;">
+                <a href="/registro" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 32px;">Pruébalo sin Costo</a>
+                <a href="/demo" class="btn btn-dark" style="background:transparent; color:white; border-color:#475569; font-size: 1.1rem; padding: 16px 32px;">Agenda una Demostración</a>
             </div>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: #64748b;">
+                No tarjeta de crédito. Configúralo en menos de 10 minutos.
+            </p>
+        </div>
 
-            <div class="footer-links">
-                <div class="footer-col">
-                    <a href="/" class="logo">
-                        <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
-                        <div>
-                            <div style="color: white; font-size: 22px;">HelpDesk</div>
-                            <div class="logo-sub">by Bebell Digital Solutions</div>
-                        </div>
-                    </a>                
-                    <p style="color:#64748b; font-size:0.9rem; line-height: 1.6; margin-top: 15px;">La plataforma que ayuda a negocios a ofrecer soporte excepcional y vender más en cada canal.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Plataforma</h4>
-                    <ul>
-                        <li><a href="#">Características</a></li>
-                        <li><a href="/p/integraciones">Integraciones</a></li>
-                        <li><a href="/p/planes/">Precios</a></li>
-                        <li><a href="#">Seguridad</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Empresa</h4>
-                    <ul>
-                        <li><a href="/acerca">Sobre nosotros</a></li>
-                        <li><a href="/blog">Blog & Noticias</a></li>
-                        <li><a href="#">Partners</a></li>
-                        <li><a href="/p/contacto">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Recursos</h4>
-                    <ul>
-                        <li><a href="https://kb.helpdesk.icu/">Centro de Ayuda</a></li>
-                        <li><a href="#">Comunidad</a></li>
-                        <li><a href="#">Guía GRATUITA</a></li>
-                        <li><a href="#">Tickets de Soporte</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="/politicas/privacidad">Política de Privacidad</a></li>
-                        <li><a href="/politicas/terminos">Términos de Uso</a></li>
-                        <li><a href="/politicas/cookies">Política de Cookies</a></li>
-                    </ul>
-                </div>
+        <div class="footer-links">
+            <div class="footer-col">
+                <a href="/" class="logo" aria-label="HelpDesk Inicio">
+                    <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
+                    <div>
+                        <div style="color: white; font-size: 22px;">HelpDesk</div>
+                        <div class="logo-sub">by Bebell Digital Solutions</div>
+                    </div>
+                </a>                
+                <p style="color:#64748b; font-size:0.9rem; line-height: 1.6; margin-top: 15px;">La plataforma que ayuda a negocios a ofrecer soporte excepcional y vender más en cada canal.</p>
             </div>
-
-            <div class="footer-bottom">
-                <div>
-                    Desarrollado con 💖 por Bebell Digital Solutions.<br>Copyright © 2024 • HelpDesk® • Todos los derechos reservados.
-                </div>
-                <div style="display: flex; gap: 20px;">
-                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-instagram"></i></a>
-                </div>
+            <div class="footer-col">
+                <h4>Plataforma</h4>
+                <ul>
+                    <li><a href="#">Características</a></li>
+                    <li><a href="/p/integraciones">Integraciones</a></li>
+                    <li><a href="/p/planes/">Precios</a></li>
+                    <li><a href="#">Seguridad</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="/p/acerca">Sobre nosotros</a></li>
+                    <li><a href="/blog">Blog & Noticias</a></li>
+                    <li><a href="/p/partners">Partners</a></li>
+                    <li><a href="/p/contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="https://ayuda.helpdesk.icu/">Centro de Ayuda</a></li>
+                    <li><a href="#">Comunidad</a></li>
+                    <li><a href="#">Guía GRATUITA</a></li>
+                    <li><a href="#">Tickets de Soporte</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/politicas/privacidad">Política de Privacidad</a></li>
+                    <li><a href="/politicas/terminos">Términos de Uso</a></li>
+                    <li><a href="/politicas/cookies">Política de Cookies</a></li>
+                </ul>
             </div>
         </div>
-    </footer>
 
-    <!-- Botón Volver Arriba -->
-    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
+        <div class="footer-bottom">
+            <div>
+                Desarrollado con 💖 por Bebell Digital Solutions.<br>Copyright © 2024 • HelpDesk® • Todos los derechos reservados.
+            </div>
+
+
+
+<div style="display: flex; gap: 20px;">
+                <a href="#" aria-label="Twitter" style="color: white;"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn" style="color: white;"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" aria-label="Instagram" style="color: white;"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</button>
 
 <script>
 $(document).ready(function () {
-  const $slides = $(".partner-logo-slide");
-  const cloneCount = 3;
-  for (let i = 0; i < cloneCount; i++) {
-    $slides.children().clone(true).appendTo($slides);
-  }
+    // Partner logo slider
+    const $slides = $(".partner-logo-slide");
+    const cloneCount = 3;
+    for (let i = 0; i < cloneCount; i++) {
+        $slides.children().clone(true).appendTo($slides);
+    }
 });
 
-// Lógica del botón "Volver arriba"
+// Back to top button logic
 const backToTopBtn = document.getElementById("backToTop");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    backToTopBtn.classList.add("show");
-  } else {
-    backToTopBtn.classList.remove("show");
-  }
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 300) {
+        backToTopBtn.classList.add("show");
+    } else {
+        backToTopBtn.classList.remove("show");
+    }
 });
 
-backToTopBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+backToTopBtn.addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
 });
 </script>
 
+<!-- HelpDesk Widget -->
 <script>(function(d, s, id){
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
