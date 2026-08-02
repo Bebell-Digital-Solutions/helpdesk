@@ -82,6 +82,7 @@
             background-color: var(--bg-white);
         }
 
+
         /* Utilities */
         .container {
             max-width: var(--container-width);
@@ -100,6 +101,7 @@
             cursor: pointer;
             font-size: 0.95rem;
             text-align: center;
+            white-space: nowrap; /* Fix 1: Prevent text from wrapping to the next line */
         }
 
         .btn-primary {
@@ -130,6 +132,20 @@
             color: var(--text-main);
             border: 1px solid var(--bg-white);
         }
+        
+        
+        
+
+        /* Add hover effect for dark/transparent button in footer */
+        .btn-dark.footer-demo-btn:hover {
+            background-color: rgba(225, 20, 132, 0.1) !important;
+            border-color: var(--primary-brand) !important;
+            color: var(--primary-brand) !important;
+        }
+        
+        
+
+ 
 
         h1, h2, h3, h4 {
             font-weight: 800;
@@ -153,6 +169,9 @@
             gap: 80px;
             align-items: center;
         }
+
+
+
 
         /* --- Header --- */
         header {
@@ -219,6 +238,55 @@
             gap: 16px;
             align-items: center;
         }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--bg-white);
+            min-width: 220px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            z-index: 1000;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 8px 0;
+            border: 1px solid #e2e8f0;
+            margin-top: 15px; 
+        }
+        .dropdown::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 15px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: var(--text-muted);
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .dropdown-content a:hover {
+            background-color: var(--bg-slate-50);
+            color: var(--primary-brand);
+            padding-left: 24px;
+        }
+
 
         /* --- Hero --- */
         .hero {
@@ -708,57 +776,7 @@
 
 
 
-        /* Dropdown Styles */
-        .dropdown {
-            position: relative;
-            display: flex;
-            align-items: center;
-            height: 100%;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: var(--bg-white);
-            min-width: 220px;
-            box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
-            border-radius: 8px;
-            z-index: 1000;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 8px 0;
-            border: 1px solid #e2e8f0;
-            margin-top: 15px; 
-        }
-        .dropdown::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            height: 15px;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        .dropdown-content a {
-            color: var(--text-muted);
-            padding: 10px 20px;
-            text-decoration: none;
-            display: block;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
-        .dropdown-content a:hover {
-            background-color: var(--bg-slate-50);
-            color: var(--primary-brand);
-            padding-left: 24px;
-        }
-
-
-
-
+      
 
  
 
@@ -807,6 +825,21 @@
             transition: color 0.2s;
         }
         .footer-col a:hover { color: var(--bg-white); }
+
+        
+        /* New styling to center the logo and text in footer on mobile */
+        @media (max-width: 900px) {
+            .footer-col.brand-col {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .footer-col.brand-col .logo {
+                justify-content: center;
+            }
+        }
+
 
         .footer-bottom {
             margin-top: 60px;
@@ -908,11 +941,24 @@
             .bullets li { text-align: left; }
             header .container { flex-direction: column; gap: 20px; }
             nav ul { flex-wrap: wrap; justify-content: center; gap: 20px; }
+
+            /* Fix for header actions on mobile */
+            .header-actions {
+                width: 100%;
+                justify-content: center;
+            }
+         
             .mockup-container { width: 100%; }
             .footer-links { text-align: center; }
             .feature-card-bg { padding: 40px 20px; }
             .back-to-top { width: 45px; height: 45px; }
         }
+
+
+
+
+
+ 
 
         @media (max-width: 800px) {
             .grid-2 { gap: 2rem; }
@@ -964,10 +1010,13 @@
                     </li>
                 </ul>
             </nav>
-            <div class="header-actions">
+             <div class="header-actions">
+                <!-- Add inline styles for nowrap as backup, though CSS class handles it now -->
                 <a href="https://app.helpdesk.icu" class="btn btn-outline" style="border-radius: 8px; padding: 10px 20px;"><strong>Iniciar Sesión</strong></a>
                 <a href="/p/reserva" class="btn btn-primary" style="border-radius: 8px; padding: 10px 20px;">Agendar Demo</a>
             </div>
+
+         
         </div>
     </header>
 
@@ -1431,63 +1480,6 @@
     
 
 
-
-
-
-
-  
-<!-- 11. Base de Conocimientos Section -->
-
-    <section class="feature-section">
-        <div class="container">
-            <div class="feature-card-bg bg-tech-pink">
-                <div class="grid-2">
-                    <!-- Left: text content -->
-                    <div class="text-content">
-
-
-
-<i class="fa-solid fa-book" style="font-size: 1.5rem; color: var(--primary-brand); margin-right: 10px; margin-bottom: 10px;"></i> 
-                        <strong style="font-size: 1.2rem;">Base de Conocimientos</strong>
-
-   <h2>Empodera a tus Clientes con un Centro de Ayuda</h2>
-   <p>Ofrece acceso 24/7 a artículos y guías para resolver problemas frecuentes sin necesidad de soporte en vivo.</p>
-
-                        <ul class="bullets">
-                            <li>Reducir fricciones</li>
-                            <li>Maximizar la eficiencia de agentes</li>
-                            <li>Mapear el viaje del cliente</li>
-                            <li>Mitigar riesgos</li>
-                        </ul>
-
-                    </div>
-
-                    <!-- Right: image instead of workflow mockup -->
-                    <div class="visual-content">
-                        <div class="mockup-container" style="padding: 0; background: transparent; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
-                            <img 
-                                src="https://ik.imagekit.io/bebell/HelpDesk%20App/Image%20Files%20&%20Assets/base-de-conocimientos-banner.webp?updatedAt=1785266352681" 
-                                alt="HelpDesk team collaboration" 
-                                style="display: block; width: 100%; height: auto; object-fit: cover; border-radius: 16px;"
-                                loading="lazy"
-                            >
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
-    
-    
-
-
-
-
-    
-    
-    
     
 
 <section class="ecosystem">
@@ -1599,6 +1591,60 @@
 
 
 
+
+
+
+
+  
+<!-- 11. Base de Conocimientos Section -->
+
+    <section class="feature-section">
+        <div class="container">
+            <div class="feature-card-bg bg-tech-pink">
+                <div class="grid-2">
+                    <!-- Left: text content -->
+                    <div class="text-content">
+
+
+
+<i class="fa-solid fa-book" style="font-size: 1.5rem; color: var(--primary-brand); margin-right: 10px; margin-bottom: 10px;"></i> 
+                        <strong style="font-size: 1.2rem;">Base de Conocimientos</strong>
+
+   <h2>Empodera a tus Clientes con un Centro de Ayuda</h2>
+   <p>Ofrece acceso 24/7 a artículos y guías para resolver problemas frecuentes sin necesidad de soporte en vivo.</p>
+
+                        <ul class="bullets">
+                            <li>Reducir fricciones</li>
+                            <li>Maximizar la eficiencia de agentes</li>
+                            <li>Mapear el viaje del cliente</li>
+                            <li>Mitigar riesgos</li>
+                        </ul>
+
+                    </div>
+
+                    <!-- Right: image instead of workflow mockup -->
+                    <div class="visual-content">
+                        <div class="mockup-container" style="padding: 0; background: transparent; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
+                            <img 
+                                src="https://ik.imagekit.io/bebell/HelpDesk%20App/Image%20Files%20&%20Assets/base-de-conocimientos-banner.webp?updatedAt=1785266352681" 
+                                alt="HelpDesk team collaboration" 
+                                style="display: block; width: 100%; height: auto; object-fit: cover; border-radius: 16px;"
+                                loading="lazy"
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+ 
 
 
 
@@ -1776,15 +1822,18 @@
                 <p style="color: #94a3b8; font-size: 1.15rem; margin-bottom: 30px;">Únete a cientos de negocios que ya optimizaron su comunicación.</p>
                 <div style="display:flex; gap:16px; justify-content:center; flex-wrap: wrap;">
                     <a href="/registro" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 32px;">Pruébalo sin Costo</a>
-                    <a href="/demo" class="btn btn-dark" style="background:transparent; color:white; border-color:#475569; font-size: 1.1rem; padding: 16px 32px;">Agenda una Demostración</a>
+                    <!-- Added class footer-demo-btn for hover styling -->
+                    <a href="/demo" class="btn btn-dark footer-demo-btn" style="background:transparent; color:white; border-color:#475569; font-size: 1.1rem; padding: 16px 32px; transition: all 0.2s ease;">Agenda una Demostración</a>
                 </div>
                 <p style="margin-top: 15px; font-size: 0.9rem; color: #64748b;">
                     No tarjeta de crédito. Configúralo en menos de 10 minutos.
                 </p>
             </div>
 
-            <div class="footer-links">
-                <div class="footer-col">
+
+             <div class="footer-links">
+                <!-- Added brand-col class to center content via CSS -->
+                <div class="footer-col brand-col">
                     <a href="/" class="logo">
                         <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
                         <div>
