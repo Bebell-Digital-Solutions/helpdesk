@@ -75,6 +75,11 @@
             min-height: 100vh;
         }
 
+
+
+
+        
+
         /* Container for Header and Footer */
         .container {
             max-width: var(--container-width);
@@ -94,7 +99,9 @@
             cursor: pointer;
             font-size: 0.95rem;
             text-align: center;
+            white-space: nowrap; /* Fix 1: Prevent text from wrapping to the next line */
         }
+
 
         .btn-primary {
             background-color: var(--primary-brand);
@@ -121,6 +128,24 @@
             border: 1px solid var(--bg-white);
         }
 
+        /* Add hover effect for dark/transparent button in footer */
+        .btn-dark.footer-demo-btn:hover {
+            background-color: rgba(225, 20, 132, 0.1) !important;
+            border-color: var(--primary-brand) !important;
+            color: var(--primary-brand) !important;
+        }
+        
+        
+
+
+
+
+
+
+
+
+        
+        /* --- Header --- */
         header {
             padding: 20px 0;
             background: var(--bg-white);
@@ -349,6 +374,8 @@
             filter: invert(66%);
         }
 
+        
+
         /* 404 Animations */
         @keyframes tiltcard {
             0% { transform: rotateY(0deg); }
@@ -401,25 +428,31 @@
         }
 
 
+
+
+
+        
+
         /* --- FOOTER STYLES --- */
+          /* --- Footer --- */
         footer {
             background-color: var(--bg-dark);
             color: var(--bg-white);
             padding: 100px 0 40px;
             border-radius: 40px 40px 0 0;
-            margin-top: auto; /* Push to bottom naturally */
         }
+
         .footer-cta {
             text-align: center;
             max-width: 800px;
             margin: 0 auto 80px;
         }
+
         .footer-cta h2 {
             color: var(--bg-white);
             margin-bottom: 20px;
-            font-size: 3rem;
-            line-height: 1.2;
         }
+
         .footer-links {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
@@ -427,6 +460,7 @@
             border-top: 1px solid #334155;
             padding-top: 60px;
         }
+
         .footer-col h4 {
             margin-bottom: 20px;
             font-size: 0.85rem;
@@ -435,6 +469,7 @@
             letter-spacing: 1px;
             font-weight: 700;
         }
+
         .footer-col ul { list-style: none; }
         .footer-col li { margin-bottom: 5px; }
         .footer-col a {
@@ -445,6 +480,19 @@
         }
         .footer-col a:hover { color: var(--bg-white); }
         
+        /* New styling to center the logo and text in footer on mobile */
+        @media (max-width: 900px) {
+            .footer-col.brand-col {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .footer-col.brand-col .logo {
+                justify-content: center;
+            }
+        }
+
         .footer-bottom {
             margin-top: 60px;
             border-top: 1px solid #334155;
@@ -454,7 +502,8 @@
             font-size: 0.7rem;
             color: #64748b;
         }
-
+        
+        
 
 
 
