@@ -374,6 +374,55 @@
         
         
 
+
+
+
+        
+           .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-brand);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(225, 20, 132, 0.3);
+            transform: translateY(15px);
+        }
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .back-to-top:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-3px);
+        }     
+        
+        
+       
+
+
+
+
+
+
+
+
+
+
+ 
         
 
         /* --- Footer --- */
@@ -601,14 +650,33 @@
                         <p>Crea prospectos (leads) automáticamente a partir de los envíos de formularios.</p>
                     </div>
 
-                    <!-- Integration 8: OpenRouter -->
+
+                    
+                    
+         <!-- Integration 8: OpenAI -->
+                    <div class="integration-card">
+                        <div class="integration-icon-wrap">
+                            <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/integraciones/openai.svg" alt="OpenAI logo">
+                        </div>
+                        <h3>OpenAI</h3>
+                        <p>Te permite conectar tu cuenta de OpenAI para usar cualquier modelo de ChatGPT.</p>
+                    </div>
+                                
+                    
+                    
+                    
+                      <!-- Integration 9: OpenRouter -->
                     <div class="integration-card">
                         <div class="integration-icon-wrap">
                             <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/integraciones/openrouter.png" alt="OpenRouter logo">
                         </div>
                         <h3>OpenRouter</h3>
                         <p>Te permite conectar tu cuenta de OpenRouter para usar cualquier modelo de Inteligencia Artificial.</p>
-                    </div>
+                    </div>                  
+                    
+                    
+                    
+                    
 
                 </div>
             </div>
@@ -718,40 +786,37 @@
 
 
 
-
-  
-    <!-- Botón Volver Arriba -->
-    <button id="backToTop" class="back-to-top" aria-label="Volver arriba" style="position: fixed; bottom: 20px; right: 20px; background: var(--primary-brand); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; display: none; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 999; justify-content: center; align-items: center;">
+    
+     <!-- Botón Volver Arriba --> 
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
+    
+    
+    
+    
 
+    <script>
+        // Lógica del botón "Volver arriba"
+        document.addEventListener('DOMContentLoaded', () => {
+            const backToTopBtn = document.getElementById("backToTop");
 
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.add("show");
+                } else {
+                    backToTopBtn.classList.remove("show");
+                }
+            });
+
+            backToTopBtn.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+        
+        </script>  
 
   
-<script>
-$(document).ready(function () {
-  const $slides = $(".partner-logo-slide");
-  const cloneCount = 3;
-  for (let i = 0; i < cloneCount; i++) {
-    $slides.children().clone(true).appendTo($slides);
-  }
-});
-
-// Lógica del botón "Volver arriba"
-const backToTopBtn = document.getElementById("backToTop");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    backToTopBtn.style.display = "flex";
-  } else {
-    backToTopBtn.style.display = "none";
-  }
-});
-
-backToTopBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-</script>
 
 
   
