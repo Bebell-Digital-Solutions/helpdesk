@@ -83,6 +83,10 @@
         }
 
 
+
+
+ 
+
         /* Utilities */
         .container {
             max-width: var(--container-width);
@@ -172,6 +176,9 @@
 
 
 
+
+
+ 
 
         /* --- Header --- */
         header {
@@ -288,6 +295,11 @@
         }
 
 
+
+
+
+ 
+
         /* --- Hero --- */
         .hero {
             padding: 100px 0 80px;
@@ -303,6 +315,8 @@
             align-items: center;
             flex-wrap: wrap;
         }
+
+ 
         
         /* CSS Mockups (UI Style: Tech Dashboard) */
         .hero-container, .mockup-container {
@@ -385,6 +399,64 @@
             margin-bottom: 8px;
         }
 
+
+
+
+
+        /* LLM Integration Logo Slider */
+        .partner-logo-slider {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .partner-logo-slider:before, .partner-logo-slider:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 120px;
+            height: 100%;
+            z-index: 9;
+        }
+        .partner-logo-slider:before { left: 0; background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%); }
+        .partner-logo-slider:after { right: 0; background: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 100%); }
+
+        .partner-logo-slide {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            animation: partner-logo 30s linear infinite;
+        }
+        .partner-logo-slide:hover { animation-play-state: paused; }
+        .partner-logo-slide img {
+            width: 200px;
+            border: 1px solid #b2b2b2;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        @keyframes partner-logo {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
         /* --- Channels Grid --- */
         .channels-grid {
             display: grid;
@@ -441,6 +513,14 @@
             margin: 0;
         }
 
+
+
+
+
+
+
+ 
+
         /* --- Social Proof --- */
         .social-proof {
             padding: 40px 0;
@@ -466,6 +546,13 @@
         }
 
         .stat-block.accent h3 { color: var(--accent-color); }
+
+
+
+
+
+
+ 
 
         /* --- Feature Sections --- */
         /* Changed feature-section padding to 50px to ensure equal spacing between stacked cards */
@@ -512,6 +599,13 @@
             font-size: 1rem;
             top: 2px;
         }
+
+
+
+
+
+
+ 
 
         /* Custom Workflow UI */
         .workflow-step {
@@ -619,6 +713,14 @@
             display: block;
         }
 
+
+
+
+
+
+
+ 
+
         /* --- FAQ Section --- */
         .faq-section {
             padding: 100px 0;
@@ -681,6 +783,12 @@
             font-size: 1.05rem;
         }
 
+
+
+
+
+ 
+
         /* --- Testimonials --- */
         .testimonials {
             padding: 100px 0;
@@ -718,6 +826,12 @@
             object-fit: cover;
             border: 1px solid #e2e8f0;
         }
+
+
+
+
+
+ 
 
         /* --- Ecosystem --- */
         .ecosystem {
@@ -851,45 +965,13 @@
             color: #64748b;
         }
 
-        /* LLM Integration Logo Slider */
-        .partner-logo-slider {
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            box-sizing: border-box;
-            position: relative;
-        }
 
-        .partner-logo-slider:before, .partner-logo-slider:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            width: 120px;
-            height: 100%;
-            z-index: 9;
-        }
-        .partner-logo-slider:before { left: 0; background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%); }
-        .partner-logo-slider:after { right: 0; background: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 100%); }
 
-        .partner-logo-slide {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            animation: partner-logo 30s linear infinite;
-        }
-        .partner-logo-slide:hover { animation-play-state: paused; }
-        .partner-logo-slide img {
-            width: 200px;
-            border: 1px solid #b2b2b2;
-            padding: 20px;
-            border-radius: 10px;
-        }
 
-        @keyframes partner-logo {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
-        }
 
+
+ 
+ 
         /* --- Back to Top Button --- */
         .back-to-top {
             position: fixed;
