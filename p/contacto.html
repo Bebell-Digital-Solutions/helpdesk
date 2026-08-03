@@ -73,7 +73,7 @@
             color: var(--text-main);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
-            background-color: var(--bg-white);
+            background-color: var(--bg-slate-50);
         }
 
         /* Utilities */
@@ -132,6 +132,11 @@
             border-color: var(--primary-brand) !important;
             color: var(--primary-brand) !important;
         }
+
+
+
+
+        
         
         h1, h2, h3, h4 {
             font-weight: 800;
@@ -143,6 +148,12 @@
         h2 { font-size: 2.5rem; line-height: 1.2; }
         h3 { font-size: 1.5rem; }
         p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+
+
+
+
+
+
         
         /* --- Header --- */
         header {
@@ -258,14 +269,49 @@
             padding-left: 24px;
         }
 
+
+
+
+
+
+
+
+        
+
         /* --- Seccion de Contacto Específica (1 Columna Centrada) --- */
+
+
+.pill-badge {
+        display: inline-block;
+        padding: 8px 20px;
+        background-color: ; /* #df1783 */
+        color: var(--accent-color); /* Texto blanco */
+        border: 1px solid var(--accent-color);
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 0.85rem;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        /* Transición suave para el efecto de expansión */
+        transition: transform 0.2s ease; 
+    }
+    
+    
+    
+    .pill-badge:hover {
+        transform: scale(1.08); /* Efecto de expansión (aumenta un 8%) */
+    }
+
+
+ 
         .contact-section {
             padding: 80px 0 120px;
             background: linear-gradient(to bottom, var(--bg-slate-50), var(--bg-white));
         }
 
         .contact-container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
@@ -333,6 +379,52 @@
             margin: 0 auto; /* Centra el formulario */
         }
 
+
+
+
+       /* --- Back to Top Button --- */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-brand);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(225, 20, 132, 0.3);
+            transform: translateY(15px);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-3px);
+        }
+
+
+
+
+
+
+
+        
+
         /* --- Footer --- */
         footer {
             background-color: var(--bg-dark);
@@ -391,40 +483,7 @@
             color: #64748b;
         }
 
-        /* --- Back to Top Button --- */
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 10px;
-            width: 50px;
-            height: 50px;
-            background-color: var(--primary-brand);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 999;
-            box-shadow: 0 4px 10px rgba(225, 20, 132, 0.3);
-            transform: translateY(15px);
-        }
-
-        .back-to-top.show {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .back-to-top:hover {
-            background-color: var(--primary-hover);
-            transform: translateY(-3px);
-        }
+ 
 
         /* Responsive Global */
         @media (max-width: 900px) {
@@ -493,6 +552,17 @@
         <div class="container contact-container">
             
             <div class="contact-info">
+
+
+
+        
+<!-- Botón en forma de píldora -->
+<span class="pill-badge">
+    Comunícate con Nosotros
+</span>                      
+            
+
+                
                 <h1>Habla con el equipo HelpDesk</h1>
                 <p>¿Tienes dudas sobre cómo HelpDesk puede ayudar a optimizar la comunicación de tu negocio? Llena el formulario y nuestro equipo se pondrá en contacto contigo lo antes posible.</p>
                 
@@ -620,7 +690,7 @@
                 <div class="footer-col">
                     <h4>Plataforma</h4>
                     <ul>
-                        <li><a href="#">Características</a></li>
+                        <li><a href="p/caracteristicas">Características</a></li>
                         <li><a href="/p/integraciones">Integraciones</a></li>
                         <li><a href="/p/planes">Precios</a></li>
                         <li><a href="#">Seguridad</a></li>
