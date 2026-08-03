@@ -161,6 +161,12 @@
         h2 { font-size: 2.5rem; line-height: 1.2; }
         h3 { font-size: 1.5rem; }
         p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+        
+        
+        
+        
+        
+        
 
         /* Section Layouts */
         section {
@@ -299,7 +305,44 @@
         
         
         
-        
+   
+
+        /* --- Back to Top Button --- */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-brand);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(225, 20, 132, 0.3);
+            transform: translateY(15px);
+        }
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .back-to-top:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-3px);
+        }
+
+     
+
+     
 
         /* --- Footer --- */
         footer {
@@ -346,6 +389,7 @@
             transition: color 0.2s;
         }
         .footer-col a:hover { color: var(--bg-white); }
+
         
         /* New styling to center the logo and text in footer on mobile */
         @media (max-width: 900px) {
@@ -360,6 +404,7 @@
             }
         }
 
+
         .footer-bottom {
             margin-top: 60px;
             border-top: 1px solid #334155;
@@ -369,7 +414,10 @@
             font-size: 0.7rem;
             color: #64748b;
         }
-        
+
+
+
+   
         
         
         
@@ -425,13 +473,10 @@
 </head>
 <body>
 
-
-
-
-  
     <!-- Navigation -->
     <header>
-
+    
+    
         <div class="container">
             <a href="/" class="logo">
                 <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
@@ -465,25 +510,30 @@
             </div>
         </div>
     </header>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
 
     <!-- 11. Final Call to Action & Footer -->
     <footer>
@@ -501,7 +551,8 @@
                 </p>
             </div>
 
-            <div class="footer-links">
+
+             <div class="footer-links">
                 <!-- Added brand-col class to center content via CSS -->
                 <div class="footer-col brand-col">
                     <a href="/" class="logo">
@@ -542,7 +593,7 @@
                     <ul>
                         <li><a href="https://ayuda.helpdesk.icu">Centro de Ayuda</a></li>
                         <li><a href="#">Comunidad</a></li>
-                        <li><a href="#">Guía GRATUITA</a></li>
+                        <li><a href="/recursos/guia">Guía GRATUITA</a></li>
                         <li><a href="#">Tickets de Soporte</a></li>
                     </ul>
                 </div>
@@ -574,18 +625,18 @@
     </footer>
 
 
-
-
-
-  
+    
+    
+    
+    
+    
+    
 
     <!-- Botón Volver Arriba -->
-    <button id="backToTop" class="back-to-top" aria-label="Volver arriba" style="position: fixed; bottom: 20px; right: 20px; background: var(--primary-brand); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; display: none; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 999; justify-content: center; align-items: center;">
+
+   <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
-
-
-
 
 
 
@@ -599,22 +650,35 @@ $(document).ready(function () {
     $slides.children().clone(true).appendTo($slides);
   }
 });
-
-// Lógica del botón "Volver arriba"
-const backToTopBtn = document.getElementById("backToTop");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    backToTopBtn.style.display = "flex";
-  } else {
-    backToTopBtn.style.display = "none";
-  }
-});
-
-backToTopBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
 </script>
+
+
+ <script>
+        // Lógica del botón "Volver arriba"
+        document.addEventListener('DOMContentLoaded', () => {
+            const backToTopBtn = document.getElementById("backToTop");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.add("show");
+                } else {
+                    backToTopBtn.classList.remove("show");
+                }
+            });
+
+            backToTopBtn.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+        
+        </script>
+
+
+
+
+
+
+
 
 <script>(function(d, s, id){
     var js, fjs = d.getElementsByTagName(s)[0];
