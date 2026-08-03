@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contáctanos | HelpDesk</title>
+
+<!-- === META TAGS PRINCIPALES === -->
+<meta name="description" content="Ponte en contacto con el equipo de HelpDesk. Estamos aquí para resolver tus dudas sobre ventas, soporte técnico o nuestra plataforma de atención al cliente.">
+<meta name="keywords" content="contacto HelpDesk, soporte técnico, ventas HelpDesk, atención al cliente, contactar, ayuda software help desk, soporte omnicanal">
+<meta name="author" content="HelpDesk">
+<meta name="robots" content="index, follow">
+
+<!-- === URL CANÓNICA === -->
+<link rel="canonical" href="https://helpdesk.icu/p/contacto">
+
+<!-- === FAVICON E ICONOS DE APLICACIÓN === -->
+<link rel="icon" type="image/x-icon" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
+
+<!-- === OPEN GRAPH / FACEBOOK === -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://helpdesk.icu/p/contacto">
+<meta property="og:title" content="Contáctanos | HelpDesk">
+<meta property="og:description" content="Ponte en contacto con el equipo de HelpDesk. Estamos aquí para resolver tus dudas sobre ventas, soporte técnico o nuestra plataforma de atención al cliente.">
+<meta property="og:image" content="https://bucket.mlcdn.com/a/3336/3336910/images/929e59b8ebaab4772063e0bbf3153da5773b06a3.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="HelpDesk">
+<meta property="og:locale" content="es_ES">
+
+<!-- === TARJETA DE TWITTER === -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://helpdesk.icu/p/contacto">
+<meta name="twitter:title" content="Contáctanos | HelpDesk">
+<meta name="twitter:description" content="Ponte en contacto con el equipo de HelpDesk. Estamos aquí para resolver tus dudas sobre ventas, soporte técnico o nuestra plataforma de atención al cliente.">
+<meta name="twitter:image" content="https://bucket.mlcdn.com/a/3336/3336910/images/929e59b8ebaab4772063e0bbf3153da5773b06a3.png">
+<meta name="twitter:creator" content="@helpdesk">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            /* New Color Scheme */
+            --primary-brand: #e11484; 
+            --primary-hover: #a02b8f; 
+            --accent-color: #df1783; 
+            
+            --text-main: #0f172a; /* Slate 900 */
+            --text-muted: #475569; /* Slate 600 */
+            
+            /* Backgrounds */
+            --bg-white: #ffffff;
+            --bg-slate-50: #f8fafc;
+            --bg-indigo-50: #eef2ff;
+            --bg-dark: #1e293b; /* Slate 800 */
+            
+            --border-radius: 12px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            background-color: var(--bg-white);
+        }
+
+        /* Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            text-align: center;
+            white-space: nowrap; /* Fix 1: Prevent text from wrapping to the next line */
+        }
+
+        .btn-primary {
+            background-color: var(--primary-brand);
+            color: var(--bg-white);
+            box-shadow: 0 4px 6px -1px rgba(225, 20, 132, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+            color: var(--bg-white);
+        }
+
+        .btn-outline {
+            border: 1px solid #cbd5e1;
+            color: var(--text-main);
+            background: transparent;
+        }
+        
+        .btn-outline:hover {
+            border-color: var(--primary-brand);
+            color: var(--primary-brand);
+        }
+
+        .btn-dark {
+            background-color: var(--bg-white);
+            color: var(--text-main);
+            border: 1px solid var(--bg-white);
+        }
+        
+        /* Add hover effect for dark/transparent button in footer */
+        .btn-dark.footer-demo-btn:hover {
+            background-color: rgba(225, 20, 132, 0.1) !important;
+            border-color: var(--primary-brand) !important;
+            color: var(--primary-brand) !important;
+        }
+        
+        h1, h2, h3, h4 {
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+
+        h1 { font-size: 3.5rem; line-height: 1.1; }
+        h2 { font-size: 2.5rem; line-height: 1.2; }
+        h3 { font-size: 1.5rem; }
+        p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+        
+        /* --- Header --- */
+        header {
+            padding: 20px 0;
+            background: var(--bg-white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            height: 42px;
+            width: auto;
+        }
+
+        .logo-sub {
+            font-size: 8px;
+            font-weight: 400;
+            color: #888;
+            letter-spacing: 0.3px;
+            margin-top: -4px;
+        }
+
+        .logo:hover .logo-icon {
+            transform: scale(1.15) rotate(-3deg);
+            transition: transform 0.3s ease;
+        }
+ 
+        nav ul {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: var(--primary-brand); }
+
+        .header-actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--bg-white);
+            min-width: 220px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            z-index: 1000;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 8px 0;
+            border: 1px solid #e2e8f0;
+            margin-top: 15px; 
+        }
+        .dropdown::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 15px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: var(--text-muted);
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .dropdown-content a:hover {
+            background-color: var(--bg-slate-50);
+            color: var(--primary-brand);
+            padding-left: 24px;
+        }
+
+        /* --- Seccion de Contacto Específica (1 Columna Centrada) --- */
+        .contact-section {
+            padding: 80px 0 120px;
+            background: linear-gradient(to bottom, var(--bg-slate-50), var(--bg-white));
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .contact-info h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+            line-height: 1.1;
+        }
+
+        .contact-info p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .contact-methods {
+            list-style: none;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-methods li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        /* Updated styles for custom images replacing FontAwesome icons */
+        .contact-methods li .icon-wrapper {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            overflow: hidden; /* Clips the image cleanly to the rounded container */
+        }
+        
+        .contact-methods li .icon-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the custom image fully covers the container */
+            display: block;
+        }
+
+        .contact-form-wrapper {
+            background: var(--bg-white);
+            padding: 50px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+            border: 1px solid #e2e8f0;
+            max-width: 650px;
+            margin: 0 auto; /* Centra el formulario */
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--bg-dark);
+            color: var(--bg-white);
+            padding: 100px 0 40px;
+            border-radius: 40px 40px 0 0;
+        }
+
+        .footer-cta {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
+
+        .footer-cta h2 {
+            color: var(--bg-white);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 40px;
+            border-top: 1px solid #334155;
+            padding-top: 60px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 5px; }
+
+        .footer-col a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover { color: var(--bg-white); }
+
+        .footer-bottom {
+            margin-top: 60px;
+            border-top: 1px solid #334155;
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        /* --- Back to Top Button --- */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-brand);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(225, 20, 132, 0.3);
+            transform: translateY(15px);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Global */
+        @media (max-width: 900px) {
+            .footer-links { grid-template-columns: 1fr; }
+            header .container { flex-direction: column; gap: 20px; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 20px; }
+            .contact-info h1 { font-size: 2.8rem; }
+            .contact-form-wrapper { padding: 30px 15px; }
+            .footer-links { text-align: center; }
+            .footer-bottom { flex-direction: column; text-align: center; gap: 20px; align-items: center; }
+            .contact-methods { flex-direction: column; gap: 15px; align-items: center; }
+        }
+    </style>
+
+    <style type="text/css">
+      @import url(https://assets.mlcdn.com/fonts.css?version=1785423);
+      .ml-form-embedSubmitLoad{display:inline-block;width:20px;height:20px}.g-recaptcha{transform:scale(1);-webkit-transform:scale(1);transform-origin:0 0;-webkit-transform-origin:0 0}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}.ml-form-embedSubmitLoad:after{content:" ";display:block;width:11px;height:11px;margin:1px;border-radius:50%;border:4px solid #fff;border-color:#fff #fff #fff transparent;animation:ml-form-embedSubmitLoad 1.2s linear infinite}@keyframes ml-form-embedSubmitLoad{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}#mlb2-6133782.ml-form-embedContainer{box-sizing:border-box;display:table;margin:0 auto;position:static;width:100%!important}#mlb2-6133782.ml-form-embedContainer button,#mlb2-6133782.ml-form-embedContainer h4,#mlb2-6133782.ml-form-embedContainer p,#mlb2-6133782.ml-form-embedContainer span{text-transform:none!important;letter-spacing:normal!important}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper{background-color:transparent;border-width:0px;border-color:#dee3e3;border-radius:15px;border-style:solid;box-sizing:border-box;display:inline-block!important;margin:0;padding:0;position:relative}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper.embedDefault,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper.embedPopup{width:100%}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper.embedForm{max-width:100%;width:100%}#mlb2-6133782.ml-form-embedContainer .ml-form-align-left{text-align:left}#mlb2-6133782.ml-form-embedContainer .ml-form-align-center{text-align:center}#mlb2-6133782.ml-form-embedContainer .ml-form-align-default{display:table-cell!important;vertical-align:middle!important;text-align:center!important}#mlb2-6133782.ml-form-align-center { width: 100%; } #mlb2-6133782.ml-form-embedContainer .ml-form-align-right{text-align:right}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedHeader img{border-top-left-radius:15px;border-top-right-radius:15px;height:auto;margin:0 auto!important;max-width:100%;width:undefinedpx}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{padding:20px 20px 0 20px}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody.ml-form-embedBodyHorizontal{padding-bottom:0}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent{text-align:left;margin:0 0 20px 0}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4{color:#0f172a;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:30px;font-weight:800;margin:0 0 10px 0;text-align:center;word-break:break-word}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p{color:#475569;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:22px;margin:0 0 10px 0;text-align:center}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ul,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ul{color:#000;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:16px}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-successBody .ml-form-successContent ol ol{list-style-type:lower-alpha}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol ol,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol ol{list-style-type:lower-roman}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p a,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p a{color:#000;text-decoration:underline}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group{text-align:left!important}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group label{margin-bottom:5px;color:#8f8f8f;font-size:14px;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-weight:700;font-style:normal;text-decoration:none;display:inline-block;line-height:20px}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p:last-child,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p:last-child{margin:0}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form{margin:0;width:100%}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent{margin:0 0 20px 0;width:100%}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow{float:left}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm{margin:0;padding:0 0 20px 0;width:100%;height:auto;float:left}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow{margin:0 0 10px 0;width:100%}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-last-item{margin:0}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-formfieldHorizintal{margin:0}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input{background-color:#f8fafc!important;color:#0f172a!important;border-color:#e2e8f0;border-radius:8px!important;border-style:solid!important;border-width:1px!important;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:16px!important;height:auto;line-height:21px!important;margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;padding:12px 15px!important;width:100%!important;box-sizing:border-box!important;max-width:100%!important}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:focus {border-color: #e11484 !important; outline: none !important; box-shadow: 0 0 0 3px rgba(225, 20, 132, 0.1) !important;} #mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-webkit-input-placeholder,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-webkit-input-placeholder{color:#94a3b8}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-moz-placeholder,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-moz-placeholder{color:#94a3b8}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-ms-input-placeholder,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-ms-input-placeholder{color:#94a3b8}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-moz-placeholder,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-moz-placeholder{color:#94a3b8}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow textarea,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow textarea{background-color:#f8fafc!important;color:#0f172a!important;border-color:#e2e8f0;border-radius:8px!important;border-style:solid!important;border-width:1px!important;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:16px!important;height:120px;line-height:21px!important;margin-bottom:0;margin-top:0;padding:12px 15px!important;width:100%!important;box-sizing:border-box!important;max-width:100%!important}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow textarea:focus {border-color: #e11484 !important; outline: none !important; box-shadow: 0 0 0 3px rgba(225, 20, 132, 0.1) !important;} #mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before{border-color:#d1d3d3!important;background-color:#fff!important}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input.custom-control-input[type=checkbox]{box-sizing:border-box;padding:0;position:absolute;z-index:-1;opacity:0;margin-top:5px;margin-left:-1.5rem;overflow:visible}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before{border-radius:4px!important}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::after,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::after,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::after{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e")}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e")}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input:checked~.custom-control-label::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::before{border-color:#000!important;background-color:#000!important}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::after,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::after,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::after,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::after,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before{top:2px;box-sizing:border-box}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before{top:0!important;box-sizing:border-box!important}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before{top:0!important;box-sizing:border-box!important}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after{top:0!important;box-sizing:border-box!important;position:absolute;left:-1.5rem;display:block;width:1rem;height:1rem;content:""}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before{top:0!important;box-sizing:border-box!important}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::before{position:absolute;top:4px;left:-1.5rem;display:block;width:16px;height:16px;pointer-events:none;content:"";background-color:#fff;border:#adb5bd solid 1px;border-radius:50%}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::after{position:absolute;top:2px!important;left:-1.5rem;display:block;width:1rem;height:1rem;content:""}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before{position:absolute;top:4px;left:-1.5rem;display:block;width:16px;height:16px;pointer-events:none;content:"";background-color:#fff;border:#adb5bd solid 1px;border-radius:50%}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after{position:absolute;top:0!important;left:-1.5rem;display:block;width:1rem;height:1rem;content:""}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after{position:absolute;top:0!important;left:-1.5rem;display:block;width:1rem;height:1rem;content:""}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-radio .custom-control-label::after{background:no-repeat 50%/50% 50%}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-checkbox .custom-control-label::after,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after{background:no-repeat 50%/50% 50%}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-control,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-control{position:relative;display:block;min-height:1.5rem;padding-left:1.5rem}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input{position:absolute;z-index:-1;opacity:0;box-sizing:border-box;padding:0}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label{color:#000;font-size:12px!important;font-family:'Open Sans',Arial,Helvetica,sans-serif;line-height:22px;margin-bottom:0;position:relative;vertical-align:top;font-style:normal;font-weight:700}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-select,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-select{background-color:#f8fafc!important;color:#000!important;border-color:#e2e8f0;border-radius:8px!important;border-style:solid!important;border-width:1px!important;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:16px!important;line-height:20px!important;margin-bottom:0;margin-top:0;padding:12px 28px 12px 15px!important;width:100%!important;box-sizing:border-box!important;max-width:100%!important;height:auto;display:inline-block;vertical-align:middle;background:url(https://assets.mlcdn.com/ml/images/default/dropdown.svg) no-repeat right .75rem center/8px 10px;-webkit-appearance:none;-moz-appearance:none;appearance:none}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-select:focus {border-color: #e11484 !important; outline: none !important; box-shadow: 0 0 0 3px rgba(225, 20, 132, 0.1) !important;} #mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow{height:auto;width:100%;float:left}.ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal{width:70%;float:left}.ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal{width:30%;float:left}.ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal.labelsOn{padding-top:25px}.ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields{box-sizing:border-box;float:left;padding-right:10px}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input{background-color:#fff;color:#000;border-color:#d1d3d3;border-radius:8px;border-style:solid;border-width:1px;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:16px;line-height:20px;margin-bottom:0;margin-top:0;padding:10px 10px;width:100%;box-sizing:border-box;overflow-y:initial}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button{background-color:#df1783!important;border-color:#df1783;border-style:solid;border-width:1px;border-radius:8px;box-shadow:none;color:#fff!important;cursor:pointer;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:18px!important;font-weight:700;line-height:20px;margin:0!important;padding:10px!important;width:100%;height:auto}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button:hover{background-color:#a10b5d!important;border-color:#a10b5d!important}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]{box-sizing:border-box;padding:0;position:absolute;z-index:-1;opacity:0;margin-top:5px;margin-left:-1.5rem;overflow:visible}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description{color:#000;display:block;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:12px;text-align:left;margin-bottom:0;position:relative;vertical-align:top}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label{font-weight:400;margin:0;padding:0;position:relative;display:block;min-height:24px;padding-left:24px}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label a{color:#000;text-decoration:underline}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p{color:#000!important;font-family:'Open Sans',Arial,Helvetica,sans-serif!important;font-size:12px!important;font-weight:400!important;line-height:18px!important;padding:0!important;margin:0 5px 0 0!important}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p:last-child{margin:0}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit{margin:0 0 20px 0;float:left;width:100%}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button{background-color:#e11484!important;border:none!important;border-radius:8px!important;box-shadow: 0 4px 6px -1px rgba(225, 20, 132, 0.2)!important;color:#fff!important;cursor:pointer;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif!important;font-size:18px!important;font-weight:700!important;line-height:21px!important;height:auto;padding:15px!important;width:100%!important;box-sizing:border-box!important; transition: all 0.2s ease;}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.loading{display:none}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover{background-color:#a02b8f!important; transform: translateY(-1px);}.ml-subscribe-close{width:30px;height:30px;background:url(https://assets.mlcdn.com/ml/images/default/modal_close.png) no-repeat;background-size:30px;cursor:pointer;margin-top:-10px;margin-right:-10px;position:absolute;top:0;right:0}.ml-error input,.ml-error select,.ml-error textarea{border-color:red!important}.ml-error .custom-checkbox-radio-list{border:1px solid red!important;border-radius:15px;padding:10px}.ml-error .label-description,.ml-error .label-description p,.ml-error .label-description p a,.ml-error label:first-child{color:red!important}#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p,#mlb2-6133782.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p:first-letter{color:red!important}@media only screen and (max-width:520px){.ml-form-embedWrapper.embedDefault,.ml-form-embedWrapper.embedPopup{width:100%!important}.ml-form-formContent.horozintalForm{float:left!important}.ml-form-formContent.horozintalForm .ml-form-horizontalRow{height:auto!important;width:100%!important;float:left!important}.ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal{width:100%!important}.ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal>div{padding-right:0!important;padding-bottom:10px}.ml-form-formContent.horozintalForm .ml-button-horizontal{width:100%!important}.ml-form-formContent.horozintalForm .ml-button-horizontal.labelsOn{padding-top:0!important}}
+    </style>
+</head>
+<body>
+
+    <header>
+        
+        <div class="container">
+
+          
+            <a href="/" class="logo">
+                <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
+                <div>
+                    <div>HelpDesk®</div>
+                    <div class="logo-sub">by Bebell Digital Solutions</div>
+                </div>
+            </a>
+
+          
+            <nav>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/p/integraciones">Integraciones</a></li>
+                    <li><a href="/p/canales">Canales</a></li>
+                    <li><a href="/p/planes">Planes</a></li>
+                    <li class="dropdown">
+                        <a href="#" style="cursor: default;">
+                            Recursos <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="https://ayuda.helpdesk.icu">Centro de Ayuda</a>
+                            <a href="/recursos/guia">Guía GRATUITA</a>
+                            <a href="/recursos/whatsapp" style="font-weight: 700;">Enlaces WhatsApp</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+          
+            <div class="header-actions">
+                <a href="https://app.helpdesk.icu" class="btn btn-outline" style="border-radius: 8px; padding: 10px 20px;"><strong>Iniciar Sesión</strong></a>
+                <a href="/p/reserva" class="btn btn-primary" style="border-radius: 8px; padding: 10px 20px;">Agendar Demo</a>
+            </div>
+
+          
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="container contact-container">
+            
+            <div class="contact-info">
+                <h1>Habla con el equipo HelpDesk</h1>
+                <p>¿Tienes dudas sobre cómo HelpDesk puede ayudar a optimizar la comunicación de tu negocio? Llena el formulario y nuestro equipo se pondrá en contacto contigo lo antes posible.</p>
+                
+                <ul class="contact-methods">
+                    <li>
+                        <!-- Replaced FontAwesome Icon with Custom Image Container -->
+                        <div class="icon-wrapper">
+                            <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/HelpDesk%20Icons/email.webp" alt="Email Icon" />
+                        </div>
+                        soporte@helpdesk.icu
+                    </li>
+                    <li>
+                        <!-- Replaced FontAwesome Icon with Custom Image Container -->
+                        <div class="icon-wrapper">
+                            <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/HelpDesk%20Icons/soporte.webp" alt="Support Icon" />
+                        </div>
+                        Soporte Técnico 24/7
+                    </li>
+                </ul>
+            </div>
+          
+            <div class="contact-form-wrapper">
+                <div id="mlb2-6133782" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-6133782">
+                  <div class="ml-form-align-center">
+                    <div class="ml-form-embedWrapper embedForm">
+                      <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                        <div class="ml-form-embedContent" style="">
+                          <h4>Envíanos un Mensaje</h4>
+                          <p>¡Por favor completa el siguiente formulario!</p>
+                        </div>
+                        <form class="ml-block-form" action="https://static.mailerlite.com/webforms/submit/f6w7g4" data-code="f6w7g4" method="post" target="_blank">
+                          <div class="ml-form-formContent">
+                            <div class="ml-form-fieldRow">
+                              <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                                <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Correo Electrónico" autocomplete="email">
+                              </div>
+                            </div>
+                            <div class="ml-form-fieldRow">
+                              <div class="ml-field-group ml-field-name ml-validate-required">
+                                <input aria-label="name" aria-required="true" type="text" class="form-control" data-inputmask="" name="fields[name]" placeholder="Nombre" autocomplete="given-name">
+                              </div>
+                            </div>
+                            <div class="ml-form-fieldRow">
+                              <div class="ml-field-group ml-field-last_name ml-validate-required">
+                                <input aria-label="last_name" aria-required="true" type="text" class="form-control" data-inputmask="" name="fields[last_name]" placeholder="Apellidos" autocomplete="family-name">
+                              </div>
+                            </div>
+                            <div class="ml-form-fieldRow">
+                              <div class="ml-field-group ml-field-company">
+                                <input aria-label="company" type="text" class="form-control" data-inputmask="" name="fields[company]" placeholder="Compañía" autocomplete="">
+                              </div>
+                            </div>
+                            <div class="ml-form-fieldRow">
+                              <div class="ml-field-group ml-field-country ml-validate-required">
+                                <label>País</label>
+                                <select class="custom-select" name="fields[country]" aria-label="country" aria-required="true"> <option value="">-</option> <option value="Afghanistan">Afghanistan</option> <option value="Albania">Albania</option> <option value="Algeria">Algeria</option> <option value="American Samoa">American Samoa</option> <option value="Andorra">Andorra</option> <option value="Angola">Angola</option> <option value="Anguilla">Anguilla</option> <option value="Antigua & Barbuda">Antigua & Barbuda</option> <option value="Argentina">Argentina</option> <option value="Armenia">Armenia</option> <option value="Aruba">Aruba</option> <option value="Australia">Australia</option> <option value="Austria">Austria</option> <option value="Azerbaijan">Azerbaijan</option> <option value="Bahamas">Bahamas</option> <option value="Bahrain">Bahrain</option> <option value="Bangladesh">Bangladesh</option> <option value="Barbados">Barbados</option> <option value="Belarus">Belarus</option> <option value="Belgium">Belgium</option> <option value="Belize">Belize</option> <option value="Benin">Benin</option> <option value="Bermuda">Bermuda</option> <option value="Bhutan">Bhutan</option> <option value="Bolivia">Bolivia</option> <option value="Bonaire">Bonaire</option> <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option> <option value="Botswana">Botswana</option> <option value="Brazil">Brazil</option> <option value="British Indian Ocean Ter">British Indian Ocean Ter</option> <option value="Brunei">Brunei</option> <option value="Bulgaria">Bulgaria</option> <option value="Burkina Faso">Burkina Faso</option> <option value="Burundi">Burundi</option> <option value="Cambodia">Cambodia</option> <option value="Cameroon">Cameroon</option> <option value="Canada">Canada</option> <option value="Canary Islands">Canary Islands</option> <option value="Cape Verde">Cape Verde</option> <option value="Cayman Islands">Cayman Islands</option> <option value="Central African Republic">Central African Republic</option> <option value="Chad">Chad</option> <option value="Channel Islands">Channel Islands</option> <option value="Chile">Chile</option> <option value="China">China</option> <option value="Christmas Island">Christmas Island</option> <option value="Cocos Island">Cocos Island</option> <option value="Colombia">Colombia</option> <option value="Comoros">Comoros</option> <option value="Congo">Congo</option> <option value="Cook Islands">Cook Islands</option> <option value="Costa Rica">Costa Rica</option> <option value="Ivory Coast">Ivory Coast</option> <option value="Croatia">Croatia</option> <option value="Cuba">Cuba</option> <option value="Curacao">Curacao</option> <option value="Cyprus">Cyprus</option> <option value="Czech Republic">Czech Republic</option> <option value="Denmark">Denmark</option> <option value="Djibouti">Djibouti</option> <option value="Dominica">Dominica</option> <option value="Dominican Republic">Dominican Republic</option> <option value="East Timor">East Timor</option> <option value="Ecuador">Ecuador</option> <option value="Egypt">Egypt</option> <option value="El Salvador">El Salvador</option> <option value="Equatorial Guinea">Equatorial Guinea</option> <option value="Eritrea">Eritrea</option> <option value="Estonia">Estonia</option> <option value="Ethiopia">Ethiopia</option> <option value="Falkland Islands">Falkland Islands</option> <option value="Faroe Islands">Faroe Islands</option> <option value="Fiji">Fiji</option> <option value="Finland">Finland</option> <option value="France">France</option> <option value="French Guiana">French Guiana</option> <option value="French Polynesia">French Polynesia</option> <option value="French Southern Ter">French Southern Ter</option> <option value="Gabon">Gabon</option> <option value="Gambia">Gambia</option> <option value="Georgia">Georgia</option> <option value="Germany">Germany</option> <option value="Ghana">Ghana</option> <option value="Gibraltar">Gibraltar</option> <option value="Great Britain">Great Britain</option> <option value="Greece">Greece</option> <option value="Greenland">Greenland</option> <option value="Grenada">Grenada</option> <option value="Guadeloupe">Guadeloupe</option> <option value="Guam">Guam</option> <option value="Guatemala">Guatemala</option> <option value="Guinea">Guinea</option> <option value="Guyana">Guyana</option> <option value="Haiti">Haiti</option> <option value="Hawaii">Hawaii</option> <option value="Honduras">Honduras</option> <option value="Hong Kong">Hong Kong</option> <option value="Hungary">Hungary</option> <option value="Iceland">Iceland</option> <option value="Indonesia">Indonesia</option> <option value="India">India</option> <option value="Iran">Iran</option> <option value="Iraq">Iraq</option> <option value="Ireland">Ireland</option> <option value="Isle of Man">Isle of Man</option> <option value="Israel">Israel</option> <option value="Italy">Italy</option> <option value="Jamaica">Jamaica</option> <option value="Japan">Japan</option> <option value="Jordan">Jordan</option> <option value="Kazakhstan">Kazakhstan</option> <option value="Kenya">Kenya</option> <option value="Kiribati">Kiribati</option> <option value="Korea North">Korea North</option> <option value="Korea South">Korea South</option> <option value="Kuwait">Kuwait</option> <option value="Kyrgyzstan">Kyrgyzstan</option> <option value="Laos">Laos</option> <option value="Latvia">Latvia</option> <option value="Lebanon">Lebanon</option> <option value="Lesotho">Lesotho</option> <option value="Liberia">Liberia</option> <option value="Libya">Libya</option> <option value="Liechtenstein">Liechtenstein</option> <option value="Lithuania">Lithuania</option> <option value="Luxembourg">Luxembourg</option> <option value="Macau">Macau</option> <option value="Macedonia">Macedonia</option> <option value="Madagascar">Madagascar</option> <option value="Malaysia">Malaysia</option> <option value="Malawi">Malawi</option> <option value="Maldives">Maldives</option> <option value="Mali">Mali</option> <option value="Malta">Malta</option> <option value="Marshall Islands">Marshall Islands</option> <option value="Martinique">Martinique</option> <option value="Mauritania">Mauritania</option> <option value="Mauritius">Mauritius</option> <option value="Mayotte">Mayotte</option> <option value="Mexico">Mexico</option> <option value="Midway Islands">Midway Islands</option> <option value="Moldova">Moldova</option> <option value="Monaco">Monaco</option> <option value="Mongolia">Mongolia</option> <option value="Montserrat">Montserrat</option> <option value="Morocco">Morocco</option> <option value="Mozambique">Mozambique</option> <option value="Myanmar">Myanmar</option> <option value="Namibia">Namibia</option> <option value="Nauru">Nauru</option> <option value="Nepal">Nepal</option> <option value="Netherland Antilles">Netherland Antilles</option> <option value="Netherlands">Netherlands (Holland, Europe)</option> <option value="Nevis">Nevis</option> <option value="New Caledonia">New Caledonia</option> <option value="New Zealand">New Zealand</option> <option value="Nicaragua">Nicaragua</option> <option value="Niger">Niger</option> <option value="Nigeria">Nigeria</option> <option value="Niue">Niue</option> <option value="Norfolk Island">Norfolk Island</option> <option value="Norway">Norway</option> <option value="Oman">Oman</option> <option value="Pakistan">Pakistan</option> <option value="Palau Island">Palau Island</option> <option value="Palestine">Palestine</option> <option value="Panama">Panama</option> <option value="Papua New Guinea">Papua New Guinea</option> <option value="Paraguay">Paraguay</option> <option value="Peru">Peru</option> <option value="Philippines">Philippines</option> <option value="Pitcairn Island">Pitcairn Island</option> <option value="Poland">Poland</option> <option value="Portugal">Portugal</option> <option value="Puerto Rico">Puerto Rico</option> <option value="Qatar">Qatar</option> <option value="Republic of Montenegro">Republic of Montenegro</option> <option value="Republic of Serbia">Republic of Serbia</option> <option value="Reunion">Reunion</option> <option value="Romania">Romania</option> <option value="Russia">Russia</option> <option value="Rwanda">Rwanda</option> <option value="St Barthelemy">St Barthelemy</option> <option value="St Eustatius">St Eustatius</option> <option value="St Helena">St Helena</option> <option value="St Kitts-Nevis">St Kitts-Nevis</option> <option value="St Lucia">St Lucia</option> <option value="St Maarten">St Maarten</option> <option value="St Pierre & Miquelon">St Pierre & Miquelon</option> <option value="St Vincent & Grenadines">St Vincent & Grenadines</option> <option value="Saipan">Saipan</option> <option value="Samoa">Samoa</option> <option value="Samoa American">Samoa American</option> <option value="San Marino">San Marino</option> <option value="Sao Tome & Principe">Sao Tome & Principe</option> <option value="Saudi Arabia">Saudi Arabia</option> <option value="Senegal">Senegal</option> <option value="Seychelles">Seychelles</option> <option value="Sierra Leone">Sierra Leone</option> <option value="Singapore">Singapore</option> <option value="Slovakia">Slovakia</option> <option value="Slovenia">Slovenia</option> <option value="Solomon Islands">Solomon Islands</option> <option value="Somalia">Somalia</option> <option value="South Africa">South Africa</option> <option value="Spain">Spain</option> <option value="Sri Lanka">Sri Lanka</option> <option value="Sudan">Sudan</option> <option value="Suriname">Suriname</option> <option value="Swaziland">Swaziland</option> <option value="Sweden">Sweden</option> <option value="Switzerland">Switzerland</option> <option value="Syria">Syria</option> <option value="Tahiti">Tahiti</option> <option value="Taiwan">Taiwan</option> <option value="Tajikistan">Tajikistan</option> <option value="Tanzania">Tanzania</option> <option value="Thailand">Thailand</option> <option value="Togo">Togo</option> <option value="Tokelau">Tokelau</option> <option value="Tonga">Tonga</option> <option value="Trinidad & Tobago">Trinidad & Tobago</option> <option value="Tunisia">Tunisia</option> <option value="Turkey">Turkey</option> <option value="Turkmenistan">Turkmenistan</option> <option value="Turks & Caicos Is">Turks & Caicos Is</option> <option value="Tuvalu">Tuvalu</option> <option value="Uganda">Uganda</option> <option value="United Kingdom">United Kingdom</option> <option value="Ukraine">Ukraine</option> <option value="United Arab Emirates">United Arab Emirates</option> <option value="United States of America">United States of America</option> <option value="Uruguay">Uruguay</option> <option value="Uzbekistan">Uzbekistan</option> <option value="Vanuatu">Vanuatu</option> <option value="Vatican City State">Vatican City State</option> <option value="Venezuela">Venezuela</option> <option value="Vietnam">Vietnam</option> <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option> <option value="Virgin Islands (USA)">Virgin Islands (USA)</option> <option value="Wake Island">Wake Island</option> <option value="Wallis and Futuna Islands">Wallis and Futuna Islands</option> <option value="Yemen">Yemen</option> <option value="Zambia">Zambia</option> <option value="Zimbabwe">Zimbabwe</option> </select>
+                              </div>
+                            </div>
+                            <div class="ml-form-fieldRow ml-last-item">
+                              <div class="ml-field-group ml-field-message ml-validate-required">
+                                <textarea class="form-control" name="fields[message]" aria-label="message" aria-required="true" maxlength="1024" placeholder="Mensaje"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ml-form-recaptcha ml-validate-required" style="float:left">
+                            <style type="text/css">
+                              .ml-form-recaptcha{margin-bottom:20px}.ml-form-recaptcha.ml-error iframe{border:solid 1px red}@media screen and (max-width:480px){.ml-form-recaptcha{width:220px!important}.g-recaptcha{transform:scale(.78);-webkit-transform:scale(.78);transform-origin:0 0;-webkit-transform-origin:0 0}}
+                            </style>
+                            <script src="https://www.google.com/recaptcha/api.js"></script>
+                            <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
+                          </div>
+                          <input type="hidden" name="ml-submit" value="1">
+                          <div class="ml-form-embedSubmit">
+                            <button type="submit" class="primary">Enviar Mensaje</button>
+                            <button disabled="disabled" style="display:none" type="button" class="loading"> <div class="ml-form-embedSubmitLoad"></div> <span class="sr-only">Loading...</span> </button>
+                          </div>
+                          <input type="hidden" name="anticsrf" value="true">
+                        </form>
+                      </div>
+                      <div class="ml-form-successBody row-success" style="display:none">
+                        <div class="ml-form-successContent">
+                          <h4>¡Mensaje Enviado!</h4>
+                          <p>Hemos recibido tu mensaje y nos pondremos en contacto contigo pronto.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+   <!-- 11. Final Call to Action & Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-cta">
+                <h2 style="font-size: 3rem;">¿Listo para dejar de perder ventas por responder tarde?</h2>
+                <p style="color: #94a3b8; font-size: 1.15rem; margin-bottom: 30px;">Únete a cientos de negocios que ya optimizaron su comunicación.</p>
+                <div style="display:flex; gap:16px; justify-content:center; flex-wrap: wrap;">
+                    <a href="/registro" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 32px;">Pruébalo sin Costo</a>
+                    <!-- Added class footer-demo-btn for hover styling -->
+                    <a href="/demo" class="btn btn-dark footer-demo-btn" style="background:transparent; color:white; border-color:#475569; font-size: 1.1rem; padding: 16px 32px; transition: all 0.2s ease;">Agenda una Demostración</a>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.9rem; color: #64748b;">
+                    No tarjeta de crédito. Configúralo en menos de 10 minutos.
+                </p>
+            </div>
+
+
+             <div class="footer-links">
+                <!-- Added brand-col class to center content via CSS -->
+                <div class="footer-col brand-col">
+                    <a href="/" class="logo">
+                        <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
+                        <div>
+                            <div style="color: white; font-size: 22px;">HelpDesk®</div>
+                            <div class="logo-sub">by Bebell Digital Solutions</div>
+                        </div>
+                    </a>                
+                    <p style="color:#64748b; font-size:0.9rem; line-height: 1.6; margin-top: 15px;">La plataforma que ayuda a negocios a ofrecer soporte excepcional y vender más en cada canal.</p>
+                </div>
+
+                
+                <div class="footer-col">
+                    <h4>Plataforma</h4>
+                    <ul>
+                        <li><a href="#">Características</a></li>
+                        <li><a href="/p/integraciones">Integraciones</a></li>
+                        <li><a href="/p/planes">Precios</a></li>
+                        <li><a href="#">Seguridad</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="/p/acerca">Sobre nosotros</a></li>
+                        <li><a href="/blog">Blog & Noticias</a></li>
+                        <li><a href="/p/partners">Partners</a></li>
+                        <li><a href="/p/contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="https://ayuda.helpdesk.icu">Centro de Ayuda</a></li>
+                        <li><a href="#">Comunidad</a></li>
+                        <li><a href="/recursos/guia">Guía GRATUITA</a></li>
+                        <li><a href="#">Tickets de Soporte</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/politicas/privacidad">Política de Privacidad</a></li>
+                        <li><a href="/politicas/terminos">Términos de Uso</a></li>
+                        <li><a href="/politicas/cookies">Política de Cookies</a></li>
+                    </ul>
+                </div>
+
+                
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    Desarrollado con 💖 por Bebell Digital Solutions.<br>Copyright © 2026 • Todos los derechos reservados.
+                </div>
+                
+                <div style="display: flex; gap: 20px;">
+                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                
+            </div>
+
+            
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script>
+      function ml_webform_success_6133782(){
+          var r=ml_jQuery||jQuery;
+          r(".ml-subscribe-form-6133782 .row-success").show();
+          r(".ml-subscribe-form-6133782 .row-form").hide();
+      }
+    </script>
+    
+    <img src="https://track.mailerlite.com/webforms/o/6133782/f6w7g4?v1785547685" width="1" height="1" style="max-width:1px;max-height:1px;visibility:hidden;padding:0;margin:0;display:block" alt="." border="0">
+    <script src="https://static.mailerlite.com/js/w/webforms.min.js?vd4de52e171e8eb9c47c0c20caf367ddf" type="text/javascript"></script>
+
+    <script>
+        // Lógica del botón "Volver arriba"
+        document.addEventListener('DOMContentLoaded', () => {
+            const backToTopBtn = document.getElementById("backToTop");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.add("show");
+                } else {
+                    backToTopBtn.classList.remove("show");
+                }
+            });
+
+            backToTopBtn.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+
+        // Widget de HelpDesk (opcional, como en páginas anteriores)
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://api.helpdesk.icu/widget2/load?id=b248d1b5-317e-3e0d-a6db-c255c207060b&r=' + encodeURIComponent(window.location);
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'anw2-sdk-tdFIsn4xDT6m28JVwgcGCw'));
+    </script>
+
+</body>
+</html>
