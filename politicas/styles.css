@@ -265,7 +265,7 @@ nav a:hover { color: var(--primary-brand); }
 /* --- Legal Page Content --- */
 .legal-header {
     background-color: var(--bg-slate-50);
-    padding: 0 50px;
+    padding: 30px 20px;
     text-align: center;
     border-bottom: 1px solid #f1f5f9;
 }
