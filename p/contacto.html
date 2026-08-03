@@ -56,7 +56,7 @@
       
 
         /* Utilities */
-        .container {
+ .container {
             max-width: var(--container-width);
             margin: 0 auto;
             padding: 0 24px;
@@ -73,6 +73,7 @@
             cursor: pointer;
             font-size: 0.95rem;
             text-align: center;
+            white-space: nowrap; /* Fix 1: Prevent text from wrapping to the next line */
         }
 
         .btn-primary {
@@ -103,6 +104,24 @@
             color: var(--text-main);
             border: 1px solid var(--bg-white);
         }
+        
+  
+        /* Add hover effect for dark/transparent button in footer */
+        .btn-dark.footer-demo-btn:hover {
+            background-color: rgba(225, 20, 132, 0.1) !important;
+            border-color: var(--primary-brand) !important;
+            color: var(--primary-brand) !important;
+        }
+        
+
+
+
+
+
+
+
+
+        
 
         h1, h2, h3, h4 {
             font-weight: 800;
