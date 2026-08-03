@@ -56,13 +56,17 @@
             background-color: var(--bg-slate-50); /* slightly off-white for pricing page */
         }
 
-        .container {
+
+
+
+
+
+   .container {
             max-width: var(--container-width);
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* Buttons */
         .btn {
             display: inline-block;
             padding: 14px 28px;
@@ -74,31 +78,56 @@
             cursor: pointer;
             font-size: 0.95rem;
             text-align: center;
+            white-space: nowrap; /* Fix 1: Prevent text from wrapping to the next line */
         }
+
         .btn-primary {
             background-color: var(--primary-brand);
             color: var(--bg-white);
             box-shadow: 0 4px 6px -1px rgba(225, 20, 132, 0.2);
         }
+
         .btn-primary:hover {
             background-color: var(--primary-hover);
             transform: translateY(-1px);
             color: var(--bg-white);
         }
+
         .btn-outline {
             border: 1px solid #cbd5e1;
             color: var(--text-main);
             background: transparent;
         }
+        
         .btn-outline:hover {
             border-color: var(--primary-brand);
             color: var(--primary-brand);
-            background: white;
         }
+
         .btn-block {
             display: block;
             width: 100%;
         }
+
+        .btn-dark {
+            background-color: var(--bg-white);
+            color: var(--text-main);
+            border: 1px solid var(--bg-white);
+        }
+
+        /* Add hover effect for dark/transparent button in footer */
+        .btn-dark.footer-demo-btn:hover {
+            background-color: rgba(225, 20, 132, 0.1) !important;
+            border-color: var(--primary-brand) !important;
+            color: var(--primary-brand) !important;
+        }
+
+
+
+
+  
+
+
 
         h1, h2, h3, h4 {
             font-weight: 800;
