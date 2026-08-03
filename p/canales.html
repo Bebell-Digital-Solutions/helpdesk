@@ -87,7 +87,7 @@
             color: var(--text-main);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
-            background-color: var(--bg-white);
+            background-color: var(--bg-slate-50);
         }
 
         /* Skip to content link - Accessibility */
@@ -275,8 +275,107 @@
             gap: 16px;
             align-items: center;
         }
+ /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--bg-white);
+            min-width: 220px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            z-index: 1000;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 8px 0;
+            border: 1px solid #e2e8f0;
+            margin-top: 15px; 
+        }
+        .dropdown::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 15px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: var(--text-muted);
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .dropdown-content a:hover {
+            background-color: var(--bg-slate-50);
+            color: var(--primary-brand);
+            padding-left: 24px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
         /* --- Hero --- */
+
+
+        /* --- Hero --- */
+        
+.pill-badge {
+        display: inline-block;
+        padding: 8px 20px;
+        background-color: ; /* #df1783 */
+        color: var(--accent-color); /* Texto blanco */
+        border: 1px solid var(--accent-color);
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 0.85rem;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        /* Transición suave para el efecto de expansión */
+        transition: transform 0.2s ease; 
+    }
+    
+    
+    
+    .pill-badge:hover {
+        transform: scale(1.08); /* Efecto de expansión (aumenta un 8%) */
+    }
+
+
+ 
         .hero {
             padding: 100px 0 80px;
             text-align: center;
@@ -377,6 +476,16 @@
             margin-bottom: 8px;
         }
 
+
+
+
+
+
+
+
+
+ 
+
         /* --- Channels Grid --- */
         .channels-grid {
             display: grid;
@@ -459,53 +568,58 @@
             margin: 0;
         }
 
-        /* Dropdown Styles */
-        .dropdown {
-            position: relative;
+
+
+
+
+
+
+   /* --- Back to Top Button --- */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-brand);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.2rem;
             display: flex;
             align-items: center;
-            height: 100%;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(225, 20, 132, 0.3);
+            transform: translateY(15px);
         }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: var(--bg-white);
-            min-width: 220px;
-            box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
-            border-radius: 8px;
-            z-index: 1000;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 8px 0;
-            border: 1px solid #e2e8f0;
-            margin-top: 15px; 
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
         }
-        .dropdown::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            height: 15px;
+        .back-to-top:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-3px);
         }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        .dropdown-content a {
-            color: var(--text-muted);
-            padding: 10px 20px;
-            text-decoration: none;
-            display: block;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
-        .dropdown-content a:hover {
-            background-color: var(--bg-slate-50);
-            color: var(--primary-brand);
-            padding-left: 24px;
-        }
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
 
         /* --- Footer --- */
         footer {
@@ -571,83 +685,12 @@
 
 
 
-        /* Partner Logo Slider */
-        .partner-logo-slider {
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            box-sizing: border-box;
-            position: relative;
-        }
-
-        .partner-logo-slider:before, .partner-logo-slider:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            width: 120px;
-            height: 100%;
-            z-index: 9;
-        }
-        .partner-logo-slider:before { left: 0; background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%); }
-        .partner-logo-slider:after { right: 0; background: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 100%); }
-
-        .partner-logo-slide {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            animation: partner-logo 30s linear infinite;
-        }
-        .partner-logo-slide:hover { animation-play-state: paused; }
-        .partner-logo-slide img {
-            width: 200px;
-            border: 1px solid #b2b2b2;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        @keyframes partner-logo {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
-        }
+     
 
 
 
 
-
-
-        /* --- Back to Top Button --- */
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 10px;
-            width: 50px;
-            height: 50px;
-            background-color: var(--primary-brand);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 999;
-            box-shadow: 0 4px 10px rgba(225, 20, 132, 0.3);
-            transform: translateY(15px);
-        }
-        .back-to-top.show {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-        .back-to-top:hover {
-            background-color: var(--primary-hover);
-            transform: translateY(-3px);
-        }
-
+     
         /* Responsive Settings */
         @media (max-width: 900px) {
             .grid-2, .proof-grid, .features-grid, .audience-grid, .footer-links {
@@ -774,6 +817,21 @@
     <!-- Canales de Comunicación -->
     <section class="channels-section" aria-labelledby="channels-title">
         <div class="container" style="text-align: center;">
+
+
+
+        
+<!-- Botón en forma de píldora -->
+<span class="pill-badge">
+    Canales de Comunicación
+</span>                      
+            
+        
+
+
+
+
+         
             <h1 id="channels-title" style="font-size: 2.8rem; margin-bottom: 24px; color: var(--text-main);">Conecta tus Canales de Chat</h1>
             <p style="max-width: 750px; margin: 0 auto 30px; font-size: 1.25rem; color: var(--text-muted); line-height: 1.8;">
                 <strong>HelpDesk</strong> reúne todos tus canales en un solo lugar para que nunca vuelvas a perder una oportunidad.
@@ -958,7 +1016,7 @@
                 <div class="footer-col">
                     <h4>Plataforma</h4>
                     <ul>
-                        <li><a href="#">Características</a></li>
+                        <li><a href="p/caracteristicas">Características</a></li>
                         <li><a href="/p/integraciones">Integraciones</a></li>
                         <li><a href="/p/planes">Precios</a></li>
                         <li><a href="#">Seguridad</a></li>
