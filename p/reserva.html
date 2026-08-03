@@ -173,16 +173,10 @@
 
         /* Section Layouts */
         section {
-            padding: 90px 0;
+            padding: 20px 10px;
         }
 
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
+  
 
 
 
@@ -305,9 +299,52 @@
         
         
         
+
+
+        /* --- Hero --- */
         
+.pill-badge {
+        display: inline-block;
+        padding: 8px 20px;
+        background-color: ; /* #df1783 */
+        color: var(--accent-color); /* Texto blanco */
+        border: 1px solid var(--accent-color);
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 0.85rem;
+        margin-top: 50px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        /* Transición suave para el efecto de expansión */
+        transition: transform 0.2s ease; 
+    }
+    
+    
+    
+    .pill-badge:hover {
+        transform: scale(1.08); /* Efecto de expansión (aumenta un 8%) */
+    }
+
+
+  
+        .hero {
+            padding: 0px 0 0px;
+            text-align: center;
+        }
+         
+        .hero-text {
+            max-width: 750px;
+            margin: 0 auto;
+            text-align: center;
+        }
         
-        
+
+
+
+
+
+   
         
 
         /* --- Footer --- */
@@ -482,9 +519,38 @@
 
 
 
+<!-- Main Content -->
+<main id="main-content">
+    <!-- Canales de Comunicación -->
+    <section class="channels-section" aria-labelledby="channels-title">
+        <div class="container" style="text-align: center;">
+
+
+
+        
+<!-- Botón en forma de píldora -->
+<span class="pill-badge">
+    Solicita una Demostración
+</span>                      
+            
+        
+
+         
+            <h1 id="channels-title" style="font-size: 2.8rem; margin-bottom: 24px; color: var(--text-main);">Descubre el Poder de HelpDesk</h1>
+            <p style="max-width: 750px; margin: 0 auto 30px; font-size: 1.25rem; color: var(--text-muted); line-height: 1.8;">
+                 Reserva una demostración y permite que nuestros especialistas te muestren cómo superar tus retos más difíciles con solo unos clics.
+            </p>
+
+                   
+        </div>
+    </section>
+</main>
+
+
+
 
 <!-- Cal inline embed code begins -->
-<div style="width:100%;height:100%;overflow:scroll; margin-top: 100px; margin-bottom: 100px; background-color: var(--bg-slate-50);" id="my-cal-inline-consulta-gratuita"></div>
+<div style="width:100%;height:100%;overflow:scroll; margin-top: 0px; margin-bottom: 100px; padding: 0 20px; background-color: var(--bg-slate-50);" id="my-cal-inline-consulta-gratuita"></div>
 
 
 
@@ -545,7 +611,7 @@ Cal.config.forwardQueryParams = true;
                 <div class="footer-col">
                     <h4>Plataforma</h4>
                     <ul>
-                        <li><a href="#">Características</a></li>
+                        <li><a href="/p/caracteristicas">Características</a></li>
                         <li><a href="/p/integraciones">Integraciones</a></li>
                         <li><a href="/p/planes">Precios</a></li>
                         <li><a href="#">Seguridad</a></li>
