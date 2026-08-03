@@ -42,7 +42,7 @@ body {
 /* Utilities */
  .container {
             max-width: var(--container-width);
-            margin: 30 auto;
+            margin: 0 auto;
             padding: 0 24px;
         }
 
@@ -247,7 +247,7 @@ nav a:hover { color: var(--primary-brand); }
         border-radius: 50px;
         font-weight: 700;
         font-size: 0.85rem;
-        margin-top: 0px;
+        margin-top: 40px;
         margin-bottom: 16px;
         text-transform: uppercase;
         letter-spacing: 0.5px;
