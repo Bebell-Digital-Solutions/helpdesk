@@ -187,6 +187,31 @@ nav a:hover { color: var(--primary-brand); }
 
 
 
+        /* --- Hero --- */
+        
+.pill-badge {
+        display: inline-block;
+        padding: 8px 20px;
+        background-color: ; /* #df1783 */
+        color: var(--accent-color); /* Texto blanco */
+        border: 1px solid var(--accent-color);
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 0.85rem;
+        margin-top: 50px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        /* Transición suave para el efecto de expansión */
+        transition: transform 0.2s ease; 
+    }
+    
+    
+    
+    .pill-badge:hover {
+        transform: scale(1.08); /* Efecto de expansión (aumenta un 8%) */
+    }
+
 
 
 
