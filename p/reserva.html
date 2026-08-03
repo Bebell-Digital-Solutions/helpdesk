@@ -3,16 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HelpDesk - Nunca pierdas otro cliente por responder tarde</title>
+
+<title>Reserva una Demostración | HelpDesk</title>
 
 <!-- === META TAGS PRINCIPALES === -->
-<meta name="description" content="Unifica las conversaciones con tus clientes desde WhatsApp, Instagram, Telegram, Facebook Messenger, correo electrónico y chat en vivo. Automatiza respuestas, gestiona tickets y atiende desde un solo panel.">
-<meta name="keywords" content="servicio al cliente, help desk, atención multicanal, chat en vivo, gestión de tickets, automatización, integración WhatsApp, mensajería social, base de conocimientos, CRM">
+<meta name="description" content="Agenda una demostración personalizada de HelpDesk. Descubre en vivo cómo unificar tus canales de atención, automatizar respuestas y gestionar tickets desde un solo panel.">
+<meta name="keywords" content="reservar demostración, agenda demo, demostración en vivo, tour HelpDesk, servicio al cliente, atención multicanal, chat en vivo, gestión de tickets">
 <meta name="author" content="HelpDesk">
 <meta name="robots" content="index, follow">
 
 <!-- === URL CANÓNICA === -->
-<link rel="canonical" href="https://helpdesk.icu">
+<!-- Nota: Asegúrate de que esta URL coincida con la ruta real de tu página de reserva -->
+<link rel="canonical" href="https://helpdesk.icu/reservar-demostracion">
 
 <!-- === FAVICON Y ICONOS DE APLICACIÓN === -->
 <link rel="icon" type="image/x-icon" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
@@ -22,9 +24,9 @@
 
 <!-- === OPEN GRAPH / FACEBOOK === -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://helpdesk.icu">
-<meta property="og:title" content="HelpDesk | Nunca pierdas otro cliente por responder tarde">
-<meta property="og:description" content="Unifica las conversaciones con tus clientes desde WhatsApp, Instagram, Telegram, Facebook Messenger, correo electrónico y chat en vivo. Automatiza respuestas, gestiona tickets y atiende desde un solo panel.">
+<meta property="og:url" content="https://helpdesk.icu/reservar-demostracion">
+<meta property="og:title" content="Reserva una Demostración | HelpDesk">
+<meta property="og:description" content="Agenda una demostración personalizada de HelpDesk. Descubre en vivo cómo unificar tus canales de atención, automatizar respuestas y gestionar tickets desde un solo panel.">
 <meta property="og:image" content="https://bucket.mlcdn.com/a/3336/3336910/images/929e59b8ebaab4772063e0bbf3153da5773b06a3.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -33,14 +35,20 @@
 
 <!-- === TARJETA DE TWITTER === -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://helpdesk.icu">
-<meta name="twitter:title" content="HelpDesk | Nunca pierdas otro cliente por responder tarde">
-<meta name="twitter:description" content="Unifica las conversaciones con tus clientes desde WhatsApp, Instagram, Telegram, Facebook Messenger, correo electrónico y chat en vivo. Automatiza respuestas, gestiona tickets y atiende desde un solo panel.">
+<meta name="twitter:url" content="https://helpdesk.icu/reservar-demostracion">
+<meta name="twitter:title" content="Reserva una Demostración | HelpDesk">
+<meta name="twitter:description" content="Agenda una demostración personalizada de HelpDesk. Descubre en vivo cómo unificar tus canales de atención, automatizar respuestas y gestionar tickets desde un solo panel.">
 <meta name="twitter:image" content="https://bucket.mlcdn.com/a/3336/3336910/images/929e59b8ebaab4772063e0bbf3153da5773b06a3.png">
 <meta name="twitter:creator" content="@helpdesk">
 
+
+
+
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 <style>
@@ -79,7 +87,7 @@
             color: var(--text-main);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
-            background-color: var(--bg-white);
+            background-color: var(--bg-slate-50);
         }
         
         
@@ -91,7 +99,7 @@
             max-width: var(--container-width);
             margin: 0 auto;
             padding: 0 24px;
-        }
+                    }
 
         .btn {
             display: inline-block;
@@ -136,9 +144,6 @@
             border: 1px solid var(--bg-white);
         }
         
-        
-        
-
         /* Add hover effect for dark/transparent button in footer */
         .btn-dark.footer-demo-btn:hover {
             background-color: rgba(225, 20, 132, 0.1) !important;
@@ -161,6 +166,10 @@
         h2 { font-size: 2.5rem; line-height: 1.2; }
         h3 { font-size: 1.5rem; }
         p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+        
+        
+        
+        
 
         /* Section Layouts */
         section {
@@ -425,6 +434,10 @@
 </head>
 <body>
 
+
+
+
+
     <!-- Navigation -->
     <header>
     
@@ -471,7 +484,10 @@
 
 
 <!-- Cal inline embed code begins -->
-<div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-consulta-gratuita"></div>
+<div style="width:100%;height:100%;overflow:scroll; margin-top: 100px; margin-bottom: 100px; background-color: var(--bg-slate-50);" id="my-cal-inline-consulta-gratuita"></div>
+
+
+
 <script type="text/javascript">
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
 Cal("init", "consulta-gratuita", {origin:"https://app.cal.com"});
@@ -540,7 +556,7 @@ Cal.config.forwardQueryParams = true;
                 <div class="footer-col">
                     <h4>Empresa</h4>
                     <ul>
-                        <li><a href="/acerca">Sobre nosotros</a></li>
+                        <li><a href="/p/acerca">Sobre nosotros</a></li>
                         <li><a href="/blog">Blog & Noticias</a></li>
                         <li><a href="/p/partners">Partners</a></li>
                         <li><a href="/p/contacto">Contacto</a></li>
@@ -553,7 +569,7 @@ Cal.config.forwardQueryParams = true;
                     <ul>
                         <li><a href="https://ayuda.helpdesk.icu">Centro de Ayuda</a></li>
                         <li><a href="#">Comunidad</a></li>
-                        <li><a href="#">Guía GRATUITA</a></li>
+                        <li><a href="/recursos/guia">Guía GRATUITA</a></li>
                         <li><a href="#">Tickets de Soporte</a></li>
                     </ul>
                 </div>
@@ -627,13 +643,21 @@ backToTopBtn.addEventListener("click", () => {
 });
 </script>
 
+
+ 
+
 <script>(function(d, s, id){
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
     js.src = 'https://api.helpdesk.icu/widget2/load?id=b248d1b5-317e-3e0d-a6db-c255c207060b&r=' + encodeURIComponent(window.location);
     fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'anw2-sdk-tdFIsn4xDT6m28JVwgcGCw'));</script>
+}(document, 'script', 'anw2-sdk-tdFIsn4xDT6m28JVwgcGCw'));
+</script>
+
+
+
+ 
 
 </body>
 </html>
