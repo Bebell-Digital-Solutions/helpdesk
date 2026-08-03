@@ -254,6 +254,42 @@
             padding-left: 24px;
         }
 
+
+
+
+
+
+
+       /* --- Hero --- */
+
+.pill-badge {
+        display: inline-block;
+        padding: 8px 20px;
+        background-color: ; /* #df1783 */
+        color: var(--accent-color); /* Texto blanco */
+        border: 1px solid var(--accent-color);
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 0.85rem;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        /* Transición suave para el efecto de expansión */
+        transition: transform 0.2s ease; 
+    }
+    
+    
+    
+    .pill-badge:hover {
+        transform: scale(1.08); /* Efecto de expansión (aumenta un 8%) */
+    }
+
+
+
+
+
+        
+
         .pricing-hero {
             text-align: center;
             padding: 80px 0 40px;
@@ -655,12 +691,28 @@
 
     <section class="pricing-hero">
         <div class="container">
+
+
+
+
+
+
+
+            
             <h1>Planes simples que escalan con tu negocio</h1>
             <p style="max-width: 600px; margin: 0 auto;">Sin contratos ocultos. Empieza gratis, actualiza cuando lo necesites. Todas las herramientas que necesitas para no perder ninguna venta.</p>
         </div>
     </section>
     
     
+
+        
+<!-- Botón en forma de píldora -->
+<span class="pill-badge">
+    Planes y Precio de Servicios
+</span>                      
+            
+        
     
     
     
@@ -916,7 +968,7 @@
                 <div class="footer-col">
                     <h4>Plataforma</h4>
                     <ul>
-                        <li><a href="#">Características</a></li>
+                        <li><a href="/p/caracteristicas">Características</a></li>
                         <li><a href="/p/integraciones">Integraciones</a></li>
                         <li><a href="/p/planes">Precios</a></li>
                         <li><a href="#">Seguridad</a></li>
