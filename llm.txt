@@ -1,0 +1,82 @@
+# HelpDesk
+
+> Nunca pierdas otro cliente por responder tarde.
+> Unified customer communication and operations platform that centralises messaging channels into a single inbox.
+
+Developed by: Bebell Digital Solutions
+Website: https://helpdesk.icu/
+Target Audience: Clinics, Restaurants, Retail/eCommerce, and Service Offices.
+
+---
+
+## Core Value Proposition
+HelpDesk unifies communication from WhatsApp, Instagram, Facebook, Telegram, Email, and more into a single collaborative inbox, allowing teams to respond faster, automate workflows, and boost sales without changing their existing WhatsApp numbers.
+
+---
+
+## Key Capabilities & Features
+
+### 1. Multichannel Unified Inbox
+Centralise customer conversations across 12 distinct communication vectors:
+- **WhatsApp Business:** Official integration via WhatsApp Business API (supports multiple simultaneous agents on the same number).
+- **Instagram DM:** Conversational tool designed for product discovery and building relationships.
+- **Facebook Messenger:** High-engagement platform with over 1 billion active users.
+- **Live Chat (Web):** Full live chat widget to embed on websites to capture and engage visitors in real-time.
+- **SMS (via Twilio):** High open-rate offline notifications.
+- **Telegram:** Speed and privacy-focused communication.
+- **Viber:** Multimedia-rich messaging, widely used in Europe and Asia.
+- **LINE:** Highly popular business integration channel in Japan and Southeast Asia.
+- **WeChat:** Crucial ecosystem for Chinese consumer support and messaging.
+- **Zalo:** Vietnamese leading messaging app with 79 million active users.
+- **Email:** Manage support emails in the same interface without tab switching.
+- **API Channel:** Unifies custom external software or third-party applications.
+
+### 2. No-Code Visual Chat Automations
+- Drag-and-drop conversational flow builder.
+- Visual workflow configuration (e.g., Welcome Message -> Real-time Notification -> AI Agent Assignment -> Ticket Creation -> Sync to Google Sheets).
+- Automated ticket distribution, priority settings (urgency/skill/channel), and intelligent routing.
+
+### 3. AI-Powered Support Agents
+- Integrate smart, AI-driven assistants directly into conversational flows to resolve queries and handle front-line support automatically.
+
+### 4. Advanced Lead Capture & Utilities
+- **Custom Forms:** Gather structured data using conditional, dynamic fields before starting a conversation to eliminate repetitive questions.
+- **Knowledge Base:** 24/7 self-service help center to empower customers and reduce support friction.
+- **Web Widgets / Private Chat:** Live widgets designed to prevent cart abandonment and retain site visitors.
+
+### 5. Performance Analytics
+- Track average agent response times (targeting under 2 minutes).
+- Detailed message volumes broken down per communication channel.
+- Performance metrics tracked per individual agent.
+
+---
+
+## Industry Solutions
+- **Clinics:** Schedule appointments and manage patient records without losing communication history.
+- **Restaurants:** Manage delivery and takeaway orders centrally from multiple platforms.
+- **Stores & eCommerce:** Answer stock queries, send product images, and close sales directly inside chat.
+- **Offices / Service Providers:** Structured ticketing, IT support, and personalized technical assistance.
+
+---
+
+## Security & Compliance
+- Compliant with strict data protection laws, including **GDPR**.
+- Fully encrypted data transit with continuous, secure server backups.
+
+---
+
+## Key Offer & Onboarding
+- **14-day free trial** with full premium features.
+- No credit card required.
+- Configuration time is under 10 minutes.
+
+---
+
+## Navigation & Resources Map
+- **Main App:** https://app.helpdesk.icu/ (Login)
+- **Help Center / Documentation:** https://ayuda.helpdesk.icu/
+- **Pricing & Plans:** https://helpdesk.icu/p/planes
+- **Integrations Hub:** https://helpdesk.icu/p/integraciones
+- **Free WhatsApp Tools:** https://helpdesk.icu/recursos/whatsapp
+- **Free Strategy Guide:** https://helpdesk.icu/recursos/guia
+- **Book a Live Demo:** https://helpdesk.icu/p/reserva
