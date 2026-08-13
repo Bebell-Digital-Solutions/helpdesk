@@ -1,0 +1,31 @@
+# Robots.txt for HelpDesk.icu
+# Optimized for search engine crawler efficiency and indexing
+
+User-agent: *
+
+# ----------------------------------------------------
+# ALLOW: High-Value Marketing & Informational Pages
+# ----------------------------------------------------
+Allow: /
+Allow: /p/caracteristicas
+Allow: /p/canales
+Allow: /p/integraciones
+Allow: /p/planes
+Allow: /p/acerca
+Allow: /p/partners
+Allow: /p/contacto
+Allow: /blog
+Allow: /recursos/
+
+# ----------------------------------------------------
+# DISALLOW: Thin Utility, Booking, and Signup Pages
+# ----------------------------------------------------
+# These pages contain forms and thin content; they should not compete for SEO rankings.
+Disallow: /registro
+Disallow: /demo
+Disallow: /p/reserva
+
+# ----------------------------------------------------
+# SITEMAP LOCATION
+# ----------------------------------------------------
+Sitemap: https://helpdesk.icu/sitemap.xml
