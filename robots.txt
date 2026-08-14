@@ -2,6 +2,7 @@
 # Optimized for search engine crawler efficiency and indexing
 
 User-agent: *
+Content-Signal: search=yes, ai-train=no, use=reference
 
 # ----------------------------------------------------
 # ALLOW: High-Value Marketing & Informational Pages
