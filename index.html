@@ -1155,6 +1155,195 @@
             .btn { width: 100%; text-align: center; }
         }
 </style>
+
+
+<!-- ========================================== -->
+    <!-- 1. COPY THIS CSS TO YOUR <style> SECTION   -->
+    <!-- ========================================== -->
+    <style>
+        /* Chat Simulator Specific Styles */
+        .simulator-wrapper {
+            background: var(--bg-white);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px -12px rgba(0,0,0,0.15);
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+            max-width: 450px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .sim-header {
+            background: var(--bg-white);
+            padding: 16px 20px;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 10;
+        }
+
+        .sim-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--bg-green-50);
+        }
+
+        .sim-agent-info {
+            flex: 1;
+        }
+
+        .sim-agent-name {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--text-main);
+            line-height: 1.2;
+        }
+
+        .sim-agent-status {
+            font-size: 0.8rem;
+            color: #10b981;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 600;
+        }
+        
+        .sim-agent-status::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background-color: #10b981;
+            border-radius: 50%;
+        }
+
+        .sim-chat-body {
+            flex: 1;
+            padding: 20px;
+            background: #f8fafc;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            scroll-behavior: smooth;
+        }
+
+        /* Hide scrollbar for cleaner look */
+        .sim-chat-body::-webkit-scrollbar { width: 6px; }
+        .sim-chat-body::-webkit-scrollbar-track { background: transparent; }
+        .sim-chat-body::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+
+        .sim-msg {
+            max-width: 85%;
+            padding: 12px 16px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        .sim-msg-bot {
+            background: var(--bg-white);
+            color: var(--text-main);
+            border-radius: 16px 16px 16px 4px;
+            border: 1px solid #e2e8f0;
+            align-self: flex-start;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .sim-msg-user {
+            background: var(--primary-brand);
+            color: var(--bg-white);
+            border-radius: 16px 16px 4px 16px;
+            align-self: flex-end;
+            box-shadow: 0 4px 10px rgba(225, 20, 132, 0.2);
+        }
+
+        .sim-quick-replies {
+            padding: 16px 20px;
+            background: var(--bg-white);
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .sim-qr-btn {
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            color: var(--text-main);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .sim-qr-btn:hover {
+            background: var(--bg-green-50);
+            border-color: #10b981;
+            color: #047857;
+            transform: translateY(-2px);
+        }
+
+        .sim-qr-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Typing Indicator */
+        .sim-typing {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            padding: 16px !important;
+            width: fit-content;
+        }
+
+        .sim-dot {
+            width: 6px;
+            height: 6px;
+            background-color: #94a3b8;
+            border-radius: 50%;
+            animation: simBounce 1.4s infinite ease-in-out both;
+        }
+
+        .sim-dot:nth-child(1) { animation-delay: -0.32s; }
+        .sim-dot:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes simBounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .sim-hidden {
+            display: none !important;
+        }
+    </style>
+
+
+
+
+
+
+
+
+  
 </head>
 <body>
 
@@ -1704,12 +1893,94 @@
     </section>
     
     
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+  
+
+<!-- ========================================== -->
+    <!-- 2. COPY THIS <section> TO YOUR HTML BODY   -->
+    <!-- ========================================== -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="feature-card-bg bg-tech-green">
+                <div class="grid-2">
+                    
+                    <!-- Left: Text content -->
+                    <div class="text-content">
+                        <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
+                            <i class="fa-solid fa-bolt" style="font-size: 1.5rem; color: var(--primary-brand);"></i> 
+                            <strong style="font-size: 1.2rem; color: var(--primary-brand);">IA y Respuestas Rápidas</strong>
+                        </div>
+                        
+                        <h2>Responde al instante y ahorra horas de trabajo</h2>
+                        
+                        <p style="font-size: 1.05rem; line-height: 1.7; color: #4a5568;">
+                            Configura atajos para tus preguntas más frecuentes o deja que nuestros Asistentes de IA analicen el contexto y mantengan conversaciones fluidas 24/7. 
+                            Interacciona con el simulador para ver cómo funciona en tiempo real.
+                        </p>
+                        
+                        <ul class="bullets">
+                            <li><strong>Pre-grabadas:</strong> Respuestas exactas a 1 clic.</li>
+                            <li><strong>Asistente IA:</strong> Entrenado con la información de tu negocio.</li>
+                            <li><strong>Transición perfecta:</strong> Deriva a un agente humano cuando sea necesario.</li>
+                            <li><strong>Multi-canal:</strong> Funciona en WhatsApp, Instagram, Web y más.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Right: Chat Simulator Mockup -->
+                    <div class="visual-content">
+                        <div class="simulator-wrapper">
+                            
+                            <!-- Header -->
+                            <div class="sim-header">
+                                <!-- Demo Avatar image, replace src as needed -->
+                                <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/Image%20Files%20&%20Assets/business-woman.png" alt="IA Avatar" class="sim-avatar">
+                                <div class="sim-agent-info">
+                                    <div class="sim-agent-name">Asistente HelpDesk IA</div>
+                                    <div class="sim-agent-status">En línea</div>
+                                </div>
+                                <i class="fa-solid fa-ellipsis-vertical" style="color: #cbd5e1; cursor: pointer; padding: 0 10px;"></i>
+                            </div>
+
+                            <!-- Chat Messages Area -->
+                            <div class="sim-chat-body" id="simChatBody">
+                                <!-- Initial Bot Message -->
+                                <div class="sim-msg sim-msg-bot">
+                                    ¡Hola! 👋 Soy el asistente virtual de prueba. Estoy entrenado para ayudarte a entender cómo funcionan las respuestas rápidas de HelpDesk. ¿Qué te gustaría saber?
+                                </div>
+                            </div>
+
+                            <!-- Interactive Quick Replies Area -->
+                            <div class="sim-quick-replies" id="simQuickReplies">
+                                <button class="sim-qr-btn" data-reply="pricing">
+                                    💳 Ver planes y precios
+                                </button>
+                                <button class="sim-qr-btn" data-reply="human">
+                                    👨‍💻 Hablar con ventas
+                                </button>
+                                <button class="sim-qr-btn" data-reply="setup">
+                                    ⚙️ ¿Es difícil de configurar?
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
 
 
   
@@ -2156,6 +2427,104 @@
     <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
+
+
+
+
+
+
+   <!-- ========================================== -->
+    <!-- 3. COPY THIS <script> BEFORE YOUR </body>  -->
+    <!-- ========================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatBody = document.getElementById('simChatBody');
+            const quickRepliesContainer = document.getElementById('simQuickReplies');
+            const quickReplyBtns = document.querySelectorAll('.sim-qr-btn');
+
+            // Pre-defined Bot Responses corresponding to the quick replies
+            const botResponses = {
+                'pricing': 'Nuestros planes comienzan desde $0 por 14 días con nuestra prueba gratuita. Después, tenemos planes adaptables al tamaño de tu equipo. ¿Te gustaría agendar una demo para ver la plataforma por dentro? 🚀',
+                'human': '¡Claro! En un entorno real, al hacer clic aquí, la conversación se asignaría inmediatamente al buzón de tu equipo humano, pausando la IA para que un asesor tome el control. 🤝',
+                'setup': '¡Para nada! HelpDesk es "Plug & Play". No necesitas saber de código. Conectar tu WhatsApp o Instagram toma literalmente menos de 5 minutos. ⏱️'
+            };
+
+            // Helper: Scroll chat to bottom
+            function scrollToBottom() {
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }
+
+            // Helper: Create and append a message
+            function appendMessage(text, type) {
+                const msgDiv = document.createElement('div');
+                msgDiv.className = `sim-msg sim-msg-${type}`;
+                msgDiv.innerHTML = text; // allow basic HTML like emojis or bold
+                chatBody.appendChild(msgDiv);
+                scrollToBottom();
+            }
+
+            // Helper: Show typing indicator
+            function showTypingIndicator() {
+                const typingDiv = document.createElement('div');
+                typingDiv.className = 'sim-msg sim-msg-bot sim-typing';
+                typingDiv.id = 'simTypingIndicator';
+                typingDiv.innerHTML = `
+                    <div class="sim-dot"></div>
+                    <div class="sim-dot"></div>
+                    <div class="sim-dot"></div>
+                `;
+                chatBody.appendChild(typingDiv);
+                scrollToBottom();
+            }
+
+            // Helper: Remove typing indicator
+            function removeTypingIndicator() {
+                const typingDiv = document.getElementById('simTypingIndicator');
+                if (typingDiv) {
+                    typingDiv.remove();
+                }
+            }
+
+            // Handle Quick Reply Clicks
+            quickReplyBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const replyKey = this.getAttribute('data-reply');
+                    const userText = this.innerText;
+
+                    // 1. Add User Message
+                    appendMessage(userText, 'user');
+                    
+                    // 2. Hide buttons momentarily to prevent spam clicking
+                    quickRepliesContainer.style.opacity = '0.5';
+                    quickRepliesContainer.style.pointerEvents = 'none';
+
+                    // 3. Show typing indicator
+                    setTimeout(() => {
+                        showTypingIndicator();
+                        
+                        // 4. Send Bot Response after a random delay (800ms - 1500ms for realism)
+                        const delay = Math.floor(Math.random() * 700) + 800;
+                        setTimeout(() => {
+                            removeTypingIndicator();
+                            appendMessage(botResponses[replyKey], 'bot');
+                            
+                            // Restore buttons
+                            quickRepliesContainer.style.opacity = '1';
+                            quickRepliesContainer.style.pointerEvents = 'all';
+                            
+                            // Optional: Hide the clicked button so they try other options
+                            btn.style.display = 'none';
+                            
+                        }, delay);
+
+                    }, 400); // short delay before typing starts
+                });
+            });
+        });
+    </script>
+
+
+
 
 
  
