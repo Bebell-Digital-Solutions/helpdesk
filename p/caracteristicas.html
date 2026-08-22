@@ -645,47 +645,78 @@
 <!-- Skip to content link - Accessibility -->
 <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-<!-- Navigation -->
-<header>
-    <div class="container">
-        <a href="/" class="logo" aria-label="HelpDesk Inicio">
-            <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
-            <div>
-                <div>HelpDesk®</div>
-                <div class="logo-sub">by Bebell Digital Solutions</div>
+
+    <!-- Navigation -->
+    <header>
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
+                <div>
+                    <div>HelpDesk®</div>
+                    <div class="logo-sub">by Bebell Digital Solutions</div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                                       
+                    <li><a href="/p/acerca">Acerca</a></li>                          
+
+                     <li class="dropdown">
+                        <a href="#" cursor: default; style="color: var(--primary-brand); font-weight: 700;">
+                            Producto <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="/p/caracteristicas" style="color: var(--primary-brand); font-weight: 700;">Características</a>
+                            <a href="/p/canales">Canales</a>
+                            <a href="/p/integraciones">Integraciones</a>
+                        </div>
+                    </li>                   
+                              
+                    
+                    <li class="dropdown">
+                        <a href="#" cursor: default;">
+                            Recursos <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="/blog">Blog y Noticias</a>
+                            <a href="/recursos/guia">Guía GRATUITA</a>
+                            <a href="/recursos/whatsapp">Enlaces WhatsApp</a>
+                        </div>
+                    </li>
+                    
+
+
+                    <li><a href="/p/planes">planes</a></li>  
+                  
+
+                    <li class="dropdown">
+                        <a href="#" cursor: default;">
+                            Ayuda <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                        </a>
+                        <div class="dropdown-content">
+                        
+                            <a href="https://ayuda.helpdesk.icu">Centro de Ayuda</a>
+                            <a href="/ayuda/soporte">Soporte Online</a>
+                            <a href="/ayuda/ticket">Ticket de Soporte</a>
+                            <a href="/p/reserva">Agendar una Demo</a>    
+                        </div>
+                    </li>
+
+
+                </ul>
+            </nav>
+            
+             <div class="header-actions">
+                <!-- Add inline styles for nowrap as backup, though CSS class handles it now -->
+                <a href="https://app.helpdesk.icu" class="btn btn-outline" style="border-radius: 8px; padding: 10px 20px;"><strong>Iniciar Sesión</strong></a>
+                <a href="/p/reserva" class="btn btn-primary" style="border-radius: 8px; padding: 10px 20px;">Agendar Demo</a>
             </div>
-        </a>
-        
-        <nav aria-label="Navegación principal">
-            <ul role="menubar">
-                <li role="none"><a href="/" role="menuitem">Inicio</a></li>
 
-                    <li><a href="/p/canales">Canales</a></li>             
-             <li role="none"><a href="/p/integraciones" role="menuitem">Integraciones</a></li>
-
-                <li role="none"><a href="/p/planes" role="menuitem">Planes</a></li>
-             
-                <li class="dropdown" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">
-                        Recursos <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
-                    </a>
-                 
-                    <div class="dropdown-content" role="menu">
-                        <a href="https://ayuda.helpdesk.icu" role="menuitem">Centro de Ayuda</a>
-                        <a href="/recursos/guia" role="menuitem">Guía GRATUITA</a>
-                        <a href="/recursos/whatsapp" role="menuitem">Enlaces WhatsApp</a>
-                    </div>
-                 
-                </li>
-            </ul>
-        </nav>
-        
-        <div class="header-actions">
-            <a href="https://app.helpdesk.icu" class="btn btn-outline" style="border-radius: 8px; padding: 10px 20px;"><strong>Iniciar Sesión</strong></a>
-            <a href="/p/reserva" class="btn btn-primary" style="border-radius: 8px; padding: 10px 20px;">Agendar Demo</a>
+         
         </div>
-    </div>
-</header>
+    </header>
+
 
 
 
