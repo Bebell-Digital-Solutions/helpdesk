@@ -649,6 +649,7 @@
 
 
 
+    <!-- Navigation -->
     <header>
         <div class="container">
             <a href="/" class="logo">
@@ -660,29 +661,65 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/p/canales">Canales</a></li>                    
-                    <li><a href="/p/integraciones">Integraciones</a></li>
+                    <li><a href="#">Inicio</a></li>
+                                       
+                    <li><a href="/p/acerca">Acerca</a></li>                          
 
-                    <li><a href="/p/planes" style="color: var(--primary-brand);">Planes</a></li>
+                     <li class="dropdown">
+                        <a href="#" cursor: default;">
+                            Producto <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="/p/caracteristicas">Características</a>
+                            <a href="/p/canales">Canales</a>
+                            <a href="/p/integraciones">Integraciones</a>
+                        </div>
+                    </li>                   
+                              
+                    
                     <li class="dropdown">
-                        <a href="#" style="cursor: default;">
+                        <a href="#" cursor: default;">
                             Recursos <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
                         </a>
                         <div class="dropdown-content">
-                            <a href="https://ayuda.helpdesk.icu">Centro de Ayuda</a>
+                            <a href="/blog">Blog y Noticias</a>
                             <a href="/recursos/guia">Guía GRATUITA</a>
-                            <a href="/recursos/whatsapp" style="font-weight: 700;">Enlaces WhatsApp</a>
+                            <a href="/recursos/whatsapp">Enlaces WhatsApp</a>
                         </div>
                     </li>
+                    
+
+
+                    <li><a href="/p/planes" style="color: var(--primary-brand); font-weight: 700;">planes</a></li>  
+                  
+
+                    <li class="dropdown">
+                        <a href="#" cursor: default;">
+                            Ayuda <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                        </a>
+                        <div class="dropdown-content">
+                        
+                            <a href="https://ayuda.helpdesk.icu">Centro de Ayuda</a>
+                            <a href="/ayuda/soporte">Soporte Online</a>
+                            <a href="/ayuda/ticket">Ticket de Soporte</a>
+                            <a href="/p/reserva">Agendar una Demo</a>    
+                        </div>
+                    </li>
+
+
                 </ul>
             </nav>
-            <div class="header-actions">
+            
+             <div class="header-actions">
+                <!-- Add inline styles for nowrap as backup, though CSS class handles it now -->
                 <a href="https://app.helpdesk.icu" class="btn btn-outline" style="border-radius: 8px; padding: 10px 20px;"><strong>Iniciar Sesión</strong></a>
                 <a href="/p/reserva" class="btn btn-primary" style="border-radius: 8px; padding: 10px 20px;">Agendar Demo</a>
             </div>
+
+         
         </div>
     </header>
+
     
     
     
