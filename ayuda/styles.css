@@ -379,6 +379,13 @@ footer {
     color: #64748b;
 }
 
+        .footer-bottom i:hover {
+            color: #fff;
+        }
+
+
+
+
 /* --- Back to Top Button --- */
 .back-to-top {
     position: fixed;
