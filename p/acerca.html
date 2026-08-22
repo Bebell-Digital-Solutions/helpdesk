@@ -1,1 +1,1022 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HelpDesk - Nunca pierdas otro cliente por responder tarde</title>
+
+<!-- === META TAGS PRINCIPALES === -->
+<meta name="description" content="Unifica las conversaciones con tus clientes desde WhatsApp, Instagram, Telegram, Facebook Messenger, correo electrónico y chat en vivo. Automatiza respuestas, gestiona tickets y atiende desde un solo panel.">
+<meta name="keywords" content="servicio al cliente, help desk, atención multicanal, chat en vivo, gestión de tickets, automatización, integración WhatsApp, mensajería social, base de conocimientos, CRM">
+<meta name="author" content="HelpDesk">
+<meta name="robots" content="index, follow">
+
+<!-- === URL CANÓNICA === -->
+<link rel="canonical" href="https://helpdesk.icu">
+
+<!-- === FAVICON Y ICONOS DE APLICACIÓN === -->
+<link rel="icon" type="image/x-icon" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
+
+<!-- === OPEN GRAPH / FACEBOOK === -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://helpdesk.icu">
+<meta property="og:title" content="HelpDesk | Nunca pierdas otro cliente por responder tarde">
+<meta property="og:description" content="Unifica las conversaciones con tus clientes desde WhatsApp, Instagram, Telegram, Facebook Messenger, correo electrónico y chat en vivo. Automatiza respuestas, gestiona tickets y atiende desde un solo panel.">
+<meta property="og:image" content="https://bucket.mlcdn.com/a/3336/3336910/images/929e59b8ebaab4772063e0bbf3153da5773b06a3.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="HelpDesk">
+<meta property="og:locale" content="es_ES">
+
+<!-- === TARJETA DE TWITTER === -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://helpdesk.icu">
+<meta name="twitter:title" content="HelpDesk | Nunca pierdas otro cliente por responder tarde">
+<meta name="twitter:description" content="Unifica las conversaciones con tus clientes desde WhatsApp, Instagram, Telegram, Facebook Messenger, correo electrónico y chat en vivo. Automatiza respuestas, gestiona tickets y atiende desde un solo panel.">
+<meta name="twitter:image" content="https://bucket.mlcdn.com/a/3336/3336910/images/929e59b8ebaab4772063e0bbf3153da5773b06a3.png">
+<meta name="twitter:creator" content="@helpdesk">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+ :root {
+            /* New Color Scheme */
+            --primary-brand: #e11484; 
+            --primary-hover: #a02b8f; 
+            --accent-color: #df1783; 
+            
+            --text-main: #0f172a; /* Slate 900 */
+            --text-muted: #475569; /* Slate 600 */
+            
+            /* Backgrounds */
+            --bg-white: #ffffff;
+            --bg-slate-50: #f8fafc;
+            --bg-indigo-50: #eef2ff;
+            --bg-blue-50: #eff6ff;
+            --bg-purple-50: #f5f3ff;
+            --bg-orange-50: #fff7ed;
+            --bg-pink-50: #ffecfb;
+            --bg-green-50: #ecfff1;
+            --bg-dark: #1e293b; /* Slate 800 */
+            
+            --border-radius: 12px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            background-color: var(--bg-white);
+        }
+        
+        
+        
+        
+
+        /* Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            text-align: center;
+            white-space: nowrap; /* Fix 1: Prevent text from wrapping to the next line */
+        }
+
+        .btn-primary {
+            background-color: var(--primary-brand);
+            color: var(--bg-white);
+            box-shadow: 0 4px 6px -1px rgba(225, 20, 132, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+            color: var(--bg-white);
+        }
+
+        .btn-outline {
+            border: 1px solid #cbd5e1;
+            color: var(--text-main);
+            background: transparent;
+        }
+        
+        .btn-outline:hover {
+            border-color: var(--primary-brand);
+            color: var(--primary-brand);
+        }
+
+        .btn-dark {
+            background-color: var(--bg-white);
+            color: var(--text-main);
+            border: 1px solid var(--bg-white);
+        }
+        
+        
+        
+
+        /* Add hover effect for dark/transparent button in footer */
+        .btn-dark.footer-demo-btn:hover {
+            background-color: rgba(225, 20, 132, 0.1) !important;
+            border-color: var(--primary-brand) !important;
+            color: var(--primary-brand) !important;
+        }
+        
+        
+        
+        
+        
+
+        h1, h2, h3, h4 {
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+
+        h1 { font-size: 3.5rem; line-height: 1.1; }
+        h2 { font-size: 2.5rem; line-height: 1.2; }
+        h3 { font-size: 1.5rem; }
+        p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+        
+        
+        
+        
+        
+        
+
+        /* Section Layouts */
+        section {
+            padding: 90px 0;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+
+
+
+
+
+
+        /* --- Header --- */
+        header {
+            padding: 20px 0;
+            background: var(--bg-white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            height: 42px;
+            width: auto;
+        }
+
+        .logo-sub {
+            font-size: 8px;
+            font-weight: 400;
+            color: #888;
+            letter-spacing: 0.3px;
+            margin-top: -4px;
+        }
+
+        .logo:hover .logo-icon {
+            transform: scale(1.15) rotate(-3deg);
+            transition: transform 0.3s ease;
+        }
+ 
+        nav ul {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: var(--primary-brand); }
+
+        .header-actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--bg-white);
+            min-width: 220px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            z-index: 1000;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 8px 0;
+            border: 1px solid #e2e8f0;
+            margin-top: 15px; 
+        }
+        .dropdown::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 15px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: var(--text-muted);
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .dropdown-content a:hover {
+            background-color: var(--bg-slate-50);
+            color: var(--primary-brand);
+            padding-left: 24px;
+        }
+        
+        
+        
+        
+    
+    
+    
+          /* --- About Page Specific Styles --- */
+        .text-center { text-align: center; }
+        .badge {
+            background-color: var(--bg-white);
+            color: var(--primary-brand);
+            padding: 8px 20px;
+            border: 1px solid var(--accent-color);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        letter-spacing: 0.5px;
+        /* Transición suave para el efecto de expansión */
+        transition: transform 0.2s ease; 
+        }
+        
+        
+    .badge:hover {
+        transform: scale(1.08); /* Efecto de expansión (aumenta un 8%) */
+    }
+        
+        
+        
+        .hero-text {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        
+        .feature-card {
+            background: var(--bg-white);
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            border: 1px solid #f1f5f9;
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-card .icon-box {
+            width: 60px;
+            height: 60px;
+            background: var(--bg-pink-50);
+            color: var(--primary-brand);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+        }
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+        .feature-card p {
+            font-size: 1rem;
+            margin-bottom: 0;
+            color: var(--text-muted);
+        }
+
+        .blockquote {
+            font-size: 1.8rem;
+            line-height: 1.4;
+            font-weight: 800;
+            color: var(--primary-brand);
+            margin: 50px auto;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .channel-icons {
+            display: flex;
+            gap: 15px;
+            font-size: 2.5rem;
+            color: var(--primary-brand);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .vision-section {
+            background-color: var(--bg-dark);
+            color: var(--bg-white);
+            border-radius: 30px;
+            padding: 80px 40px;
+            text-align: center;
+            margin: 40px auto;
+            max-width: 1000px;
+        }
+        .vision-section h2, .vision-section h3 { color: var(--bg-white); }
+        .vision-section p { color: #94a3b8; }
+        .vision-section h3 {
+            color: var(--primary-brand);
+            margin-top: 40px;
+            font-size: 1.8rem;
+        }
+        
+        
+          
+    
+    
+    
+    
+    
+    
+    
+    
+        
+   
+
+        /* --- Back to Top Button --- */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-brand);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(225, 20, 132, 0.3);
+            transform: translateY(15px);
+        }
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .back-to-top:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-3px);
+        }
+
+     
+
+     
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--bg-dark);
+            color: var(--bg-white);
+            padding: 100px 0 40px;
+            border-radius: 40px 40px 0 0;
+        }
+
+        .footer-cta {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
+
+        .footer-cta h2 {
+            color: var(--bg-white);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 40px;
+            border-top: 1px solid #334155;
+            padding-top: 60px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 5px; }
+        .footer-col a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .footer-col a:hover { color: var(--bg-white); }
+
+
+        .footer-bottom {
+            margin-top: 60px;
+            border-top: 1px solid #334155;
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            color: #64748b;
+        }
+
+
+
+
+
+        
+        /* New styling to center the logo and text in footer on mobile */
+        @media (max-width: 900px) {
+            .footer-col.brand-col {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .footer-col.brand-col .logo {
+                justify-content: center;
+            }
+        }
+
+
+
+   
+        
+        
+        
+        
+
+        /* Responsive Settings */
+        @media (max-width: 900px) {
+            .grid-2, .proof-grid, .features-grid, .audience-grid, .footer-links {
+                grid-template-columns: 1fr;
+            }
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            .hero { text-align: center; padding: 60px 0; }
+            .hero-text { margin: 0 auto; }
+            .hero-buttons {
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+            }
+            .hero-buttons .btn { width: 80%; margin-left: 0 !important; }
+            .bullets li { text-align: left; }
+            header .container { flex-direction: column; gap: 20px; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 20px; }
+            
+            /* Fix for header actions on mobile */
+            .header-actions {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .mockup-container { width: 100%; }
+            .footer-links { text-align: center; }
+            .feature-card-bg { padding: 40px 20px; }
+            .back-to-top { width: 45px; height: 45px; }
+            
+            .blockquote { font-size: 1.4rem; padding: 0 20px; }            
+            .vision-section { padding: 40px 20px; border-radius: 20px; }            
+            
+            
+            
+        }
+        
+        
+        
+
+        @media (max-width: 800px) {
+            .grid-2 { gap: 2rem; }
+            .text-content h2 { font-size: 1.8rem; }
+            .feature-card-bg { padding: 1.8rem 1.2rem; }
+            .channel-icons { justify-content: center; }
+            .text-center-mobile { text-align: center; }            
+        }
+        
+        
+      
+
+        @media (max-width: 700px) {
+            .hover-image-wrapper { max-width: 100%; }
+        }
+
+        @media (max-width: 480px) {
+            .text-content h2 { font-size: 1.5rem; }
+            .btn { width: 100%; text-align: center; }
+                
+        }
+</style>
+</head>
+<body>
+
+       
+       <!-- Navigation -->
+    <header>
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
+                <div>
+                    <div>HelpDesk®</div>
+                    <div class="logo-sub">by Bebell Digital Solutions</div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                                       
+                    <li><a href="/p/acerca" style="color: var(--primary-brand); font-weight: 700;">Acerca</a></li>                          
+
+                     <li class="dropdown">
+                        <a href="#" cursor: default;">
+                            Producto <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="/p/caracteristicas">Características</a>
+                            <a href="/p/canales">Canales</a>
+                            <a href="/p/integraciones" font-weight: 700;">Integraciones</a>
+                        </div>
+                    </li>                   
+                              
+                    
+                    <li class="dropdown">
+                        <a href="#" cursor: default;">
+                            Recursos <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="/blog">Blog y Noticias</a>
+                            <a href="/recursos/guia">Guía GRATUITA</a>
+                            <a href="/recursos/whatsapp">Enlaces WhatsApp</a>
+                        </div>
+                    </li>
+                    
+
+
+                    <li><a href="/p/planes">planes</a></li>  
+                  
+
+                    <li class="dropdown">
+                        <a href="#" cursor: default;">
+                            Ayuda <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                        </a>
+                        <div class="dropdown-content">
+                        
+                            <a href="https://ayuda.helpdesk.icu">Centro de Ayuda</a>
+                            <a href="/ayuda/soporte">Soporte Online</a>
+                            <a href="/ayuda/ticket">Ticket de Soporte</a>
+                            <a href="/p/reserva">Agendar una Demo</a>    
+                        </div>
+                    </li>
+
+
+                </ul>
+            </nav>
+            
+             <div class="header-actions">
+                <!-- Add inline styles for nowrap as backup, though CSS class handles it now -->
+                <a href="https://app.helpdesk.icu" class="btn btn-outline" style="border-radius: 8px; padding: 10px 20px;"><strong>Iniciar Sesión</strong></a>
+                <a href="/p/reserva" class="btn btn-primary" style="border-radius: 8px; padding: 10px 20px;">Agendar Demo</a>
+            </div>
+
+         
+        </div>
+    </header>
+
+    
+    
+    
+    
+    
+    
+    
+      <!-- MAIN CONTENT: ACERCA DE -->
+
+    <!-- Section 1: Hero -->
+    <section class="text-center" style="padding: 80px 0 0; background-color: #fbfbfb;">
+        <div class="container">
+            <span class="badge">Acerca de HelpDesk</span>
+            <h1>Tu Centro de Comunicación<br><span style="color: var(--primary-brand);">Todo en Uno</span></h1>
+            
+            <p class="hero-text" style="margin-top: 20px;">
+                Hoy, tus clientes pueden escribirte por WhatsApp, Instagram, Facebook Messenger o desde tu sitio web. Para tu equipo, eso puede significar conversaciones dispersas, información perdida y clientes que esperan una respuesta.<br><br>
+                <strong>HelpDesk nace para cambiar eso.</strong> Reunimos tus canales de comunicación en un solo espacio para que puedas gestionar cada conversación con mayor orden, contexto y control.
+            </p>
+            
+            <a href="/p/reserva" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.1rem;">Solicita una Demostración</a>
+            
+            <div style="margin-top: 60px; padding: 0; line-height: 0;">
+                <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/Image%20Files%20&%20Assets/hero-banner-acerca-de.webp" alt="Interfaz de HelpDesk mostrando canales unificados" style="display: block; width: 100%; max-width: 100%; height: auto; border: none; padding: 0; margin: 0 auto;">
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Section 2: Simplificar -->
+    <section style="background-color: #0f172a;">
+        <div class="container grid-2">
+            <div class="text-center-mobile">
+                <h2 style="color: white;">Creado para simplificar la atención al cliente</h2>
+                <p style="color: #94a3b8;">La comunicación con tus clientes no debería depender de cuántas aplicaciones tengas abiertas.</p>
+                <p style="color: #94a3b8;">HelpDesk centraliza tus conversaciones para que tu equipo pueda responder desde un solo lugar, mantener el contexto de cada cliente y trabajar de forma organizada.</p>
+                
+          <div class="channel-icons">
+                <i class="fa-solid fa-globe"></i>
+                <i class="fa-brands fa-line"></i>                
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook-messenger"></i>
+                <i class="fa-brands fa-viber"></i>                
+                <i class="fa-brands fa-telegram"></i>
+
+
+                <i class="fa-brands fa-"></i>
+                    
+                </div>
+                <p style="font-size: 14px; font-weight: 600; color: white;">Un solo espacio para gestionarlos.</p>
+            </div>
+            <div>
+                <img src="https://ik.imagekit.io/bebell/HelpDesk%20App/Image%20Files%20&%20Assets/8ae71d2d-34d2-4862-b214-c148d099e8e9.webp" alt="Personaje de soporte HelpDesk" style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.4));">
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Section 3: Por qué existe -->
+    <section class="text-center">
+        <div class="container" style="max-width: 900px;">
+            <h2>¿Por qué existe HelpDesk?</h2>
+            <p>Las empresas comenzaron a comunicarse con sus clientes a través de más canales. El problema es que cada canal creó una nueva bandeja, una nueva notificación y una nueva forma de trabajar. Eso hace que atender clientes sea más complicado de lo necesario.</p>
+            
+            <div class="blockquote">
+                "Tu equipo debería adaptarse a tus clientes, no tus clientes a tus herramientas."
+            </div>
+            
+            <p style="font-size: 1.25rem;">Por eso construimos una plataforma que reúne las conversaciones en un solo lugar y facilita el trabajo diario de quienes están detrás de cada respuesta.</p>
+        </div>
+    </section>
+
+    <!-- Section 4: Una mejor forma de trabajar (Features Grid) -->
+    <section style="background-color: var(--bg-pink-50);">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 60px;">
+                <h2>Una mejor forma de trabajar</h2>
+                <p style="max-width: 600px; margin: 0 auto;">HelpDesk ayuda a tu equipo a tener una visión completa de sus conversaciones.</p>
+            </div>
+            
+            <div class="grid-2" style="gap: 30px;">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-inbox"></i>
+                    </div>
+                    <h3>Todo en un solo lugar</h3>
+                    <p>Consulta y responde conversaciones de diferentes canales desde una única bandeja, sin saltar entre pestañas.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-address-card"></i>
+                    </div>
+                    <h3>Contexto cuando lo necesitas</h3>
+                    <p>Mantén la información e historial de cada conversación disponible para que tu equipo pueda responder con mayor precisión.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+                    <h3>Trabajo organizado</h3>
+                    <p>Distribuye conversaciones, asigna responsabilidades a agentes específicos y evita que los mensajes queden sin atender.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+                    <h3>Una experiencia consistente</h3>
+                    <p>Ofrece a tus clientes una atención fluida y profesional sin importar desde qué canal decidan contactarte.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Equipos y Crecimiento -->
+    <section class="text-center">
+        <div  class="container" style="max-width: 900px;">
+
+            <div>
+                <h2 style="margin-top: 30px;">Construimos HelpDesk para crecer contigo</h2>
+                <p>Tu negocio puede comenzar atendiendo unas pocas conversaciones al día y terminar gestionando cientos. La forma de trabajar también debe poder evolucionar.</p>
+                <p>Por eso HelpDesk está pensado para acompañar el crecimiento de tus operaciones, desde la organización básica de conversaciones hasta una gestión más estructurada de equipos y clientes.</p>
+            </div>
+           <div style="margin-top: 40px;">
+                <a href="/p/reserva" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.1rem;">Agendar Demo Personalizada</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 6: Nuestra Visión -->
+    <section style="padding: 0 24px;">
+        <div class="vision-section container">
+            <h2>Nuestra visión</h2>
+            <p style="font-size: 1.25rem; margin-top: 20px;">Creemos que la tecnología debe hacer más sencilla la forma en que las empresas se relacionan con sus clientes. No necesitas más aplicaciones para gestionar tus conversaciones. Necesitas que las herramientas que ya utilizas trabajen juntas.</p>
+            <p style="font-size: 1.25rem;">HelpDesk busca convertirse en ese punto central donde tu equipo pueda ver, gestionar y dar seguimiento a cada conversación.</p>
+            
+            <h3>Una plataforma. Todos tus canales.<br>Cada conversación bajo control.</h3>
+        </div>
+    </section>
+
+    <!-- Section 7: Final CTA (Pre-footer) -->
+    <section class="text-center" style="padding-bottom: 0; margin-bottom: 40px;">
+        <div class="container" style="max-width: 900px;">
+            <h2>El futuro de la atención comienza con una conversación</h2>
+            <p>Cada cliente que escribe representa una oportunidad para responder, ayudar, vender o construir una relación.</p>
+            <p>HelpDesk te ayuda a asegurarte de que esa conversación no se pierda entre aplicaciones, notificaciones y bandejas separadas. Centraliza tus conversaciones y dale a tu equipo un mejor lugar para atenderlas.</p>
+ 
+        </div>
+    </section>  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+
+    <!-- 11. Final Call to Action & Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-cta">
+                <h2 style="font-size: 3rem;">¿Listo para dejar de perder ventas por responder tarde?</h2>
+                <p style="color: #94a3b8; font-size: 1.15rem; margin-bottom: 30px;">Únete a cientos de negocios que ya optimizaron su comunicación.</p>
+                <div style="display:flex; gap:16px; justify-content:center; flex-wrap: wrap;">
+                    <a href="/p/planes" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 32px;">Pruébalo sin Costo</a>
+                    <!-- Added class footer-demo-btn for hover styling -->
+                    <a href="/p/reserva" class="btn btn-dark footer-demo-btn" style="background:transparent; color:white; border-color:#475569; font-size: 1.1rem; padding: 16px 32px; transition: all 0.2s ease;">Agenda una Demostración</a>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.9rem; color: #64748b;">
+                    No tarjeta de crédito. Configúralo en menos de 10 minutos.
+                </p>
+            </div>
+
+
+             <div class="footer-links">
+                <!-- Added brand-col class to center content via CSS -->
+                <div class="footer-col brand-col">
+                    <a href="/" class="logo">
+                        <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
+                        <div>
+                            <div style="color: white; font-size: 22px;">HelpDesk®</div>
+                            <div class="logo-sub">by Bebell Digital Solutions</div>
+                        </div>
+                    </a>                
+                    <p style="color:#64748b; font-size:0.9rem; line-height: 1.6; margin-top: 15px;">La plataforma que ayuda a negocios a ofrecer soporte excepcional y vender más en cada canal.</p>
+                </div>
+
+                
+                <div class="footer-col">
+                    <h4>Plataforma</h4>
+                    <ul>
+                        <li><a href="#">Características</a></li>
+                        <li><a href="/p/integraciones">Integraciones</a></li>
+                        <li><a href="/p/planes">Precios</a></li>
+                        <li><a href="#">Seguridad</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="/acerca">Sobre nosotros</a></li>
+                        <li><a href="/blog">Blog & Noticias</a></li>
+                        <li><a href="/p/partners">Partners</a></li>
+                        <li><a href="/p/contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="https://ayuda.helpdesk.icu">Centro de Ayuda</a></li>
+                        <li><a href="#">Comunidad</a></li>
+                        <li><a href="/recursos/guia">Guía GRATUITA</a></li>
+                        <li><a href="#">Tickets de Soporte</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/politicas/privacidad">Política de Privacidad</a></li>
+                        <li><a href="/politicas/terminos">Términos de Uso</a></li>
+                        <li><a href="/politicas/cookies">Política de Cookies</a></li>
+                    </ul>
+                </div>
+
+                
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    Desarrollado con 💖 por Bebell Digital Solutions.<br>Copyright © 2026 • Todos los derechos reservados.
+                </div>
+                <div style="display: flex; gap: 20px;">
+                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    
+    
+    
+    
+    
+    
+
+    <!-- Botón Volver Arriba -->
+
+   <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+
+
+
+<script>
+$(document).ready(function () {
+  const $slides = $(".partner-logo-slide");
+  const cloneCount = 3;
+  for (let i = 0; i < cloneCount; i++) {
+    $slides.children().clone(true).appendTo($slides);
+  }
+});
+</script>
+
+
+ <script>
+        // Lógica del botón "Volver arriba"
+        document.addEventListener('DOMContentLoaded', () => {
+            const backToTopBtn = document.getElementById("backToTop");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.add("show");
+                } else {
+                    backToTopBtn.classList.remove("show");
+                }
+            });
+
+            backToTopBtn.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+        
+        </script>
+
+
+
+
+
+
+
+
+<script>(function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://api.helpdesk.icu/widget2/load?id=b248d1b5-317e-3e0d-a6db-c255c207060b&r=' + encodeURIComponent(window.location);
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'anw2-sdk-tdFIsn4xDT6m28JVwgcGCw'));</script>
+
+</body>
+</html>
 
