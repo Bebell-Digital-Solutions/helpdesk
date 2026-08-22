@@ -377,6 +377,13 @@ footer {
     font-size: 0.7rem;
     color: #64748b;
 }
+        .footer-bottom i:hover {
+            color: #fff;
+        }
+
+
+
+
 
 /* --- Back to Top Button --- */
 .back-to-top {
