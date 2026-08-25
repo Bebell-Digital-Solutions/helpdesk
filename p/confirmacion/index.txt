@@ -1,0 +1,909 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¡Pago Confirmado! - HelpDesk</title>
+
+<!-- === META TAGS PRINCIPALES === -->
+<meta name="description" content="Tu pago ha sido procesado con éxito. Bienvenido a HelpDesk, la plataforma para unificar tus canales de atención y no perder más clientes.">
+<meta name="keywords" content="confirmacion de pago, exito, helpdesk, bienvenido, suscripcion confirmada">
+<meta name="author" content="HelpDesk">
+<meta name="robots" content="noindex, follow">
+
+<!-- === URL CANÓNICA === -->
+<link rel="canonical" href="https://helpdesk.icu/confirmacion">
+
+<!-- === FAVICON Y ICONOS DE APLICACIÓN === -->
+<link rel="icon" type="image/x-icon" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
+
+<!-- === OPEN GRAPH / FACEBOOK === -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://helpdesk.icu/confirmacion">
+<meta property="og:title" content="¡Pago Confirmado! | HelpDesk">
+<meta property="og:description" content="Tu pago ha sido procesado con éxito. Comienza a gestionar tus clientes desde un solo panel.">
+<meta property="og:image" content="https://bucket.mlcdn.com/a/3336/3336910/images/929e59b8ebaab4772063e0bbf3153da5773b06a3.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="HelpDesk">
+<meta property="og:locale" content="es_ES">
+
+<!-- === TARJETA DE TWITTER === -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://helpdesk.icu/confirmacion">
+<meta name="twitter:title" content="¡Pago Confirmado! | HelpDesk">
+<meta name="twitter:description" content="Tu pago ha sido procesado con éxito. Comienza a gestionar tus clientes desde un solo panel.">
+<meta name="twitter:image" content="https://bucket.mlcdn.com/a/3336/3336910/images/929e59b8ebaab4772063e0bbf3153da5773b06a3.png">
+<meta name="twitter:creator" content="@helpdesk">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+
+<style>
+ :root {
+            /* New Color Scheme */
+            --primary-brand: #e11484; 
+            --primary-hover: #a02b8f; 
+            --accent-color: #df1783; 
+            
+            --text-main: #0f172a; /* Slate 900 */
+            --text-muted: #475569; /* Slate 600 */
+            
+            /* Backgrounds */
+            --bg-white: #ffffff;
+            --bg-slate-50: #f8fafc;
+            --bg-indigo-50: #eef2ff;
+            --bg-blue-50: #eff6ff;
+            --bg-purple-50: #f5f3ff;
+            --bg-orange-50: #fff7ed;
+            --bg-pink-50: #ffecfb;
+            --bg-green-50: #ecfff1;
+            --bg-dark: #1e293b; /* Slate 800 */
+            
+            --border-radius: 12px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            background-color: var(--bg-slate-50);
+        }
+        
+        
+        
+        
+
+        /* Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            text-align: center;
+            white-space: nowrap; /* Fix 1: Prevent text from wrapping to the next line */
+        }
+
+        .btn-primary {
+            background-color: var(--primary-brand);
+            color: var(--bg-white);
+            box-shadow: 0 4px 6px -1px rgba(225, 20, 132, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+            color: var(--bg-white);
+        }
+
+        .btn-outline {
+            border: 1px solid #cbd5e1;
+            color: var(--text-main);
+            background: transparent;
+        }
+        
+        .btn-outline:hover {
+            border-color: var(--primary-brand);
+            color: var(--primary-brand);
+        }
+
+        .btn-dark {
+            background-color: var(--bg-white);
+            color: var(--text-main);
+            border: 1px solid var(--bg-white);
+        }
+        
+        
+        
+
+        /* Add hover effect for dark/transparent button in footer */
+        .btn-dark.footer-demo-btn:hover {
+            background-color: rgba(225, 20, 132, 0.1) !important;
+            border-color: var(--primary-brand) !important;
+            color: var(--primary-brand) !important;
+        }
+        
+        
+        
+        
+        
+
+        h1, h2, h3, h4 {
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+
+        h1 { font-size: 2.5rem; line-height: 1.1; }
+        h2 { font-size: 2rem; line-height: 1.2; }
+        h3 { font-size: 1.5rem; }
+        p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+        
+        
+        
+        
+        
+        
+
+        /* Section Layouts */
+        section {
+            padding: 90px 0;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+
+
+
+
+
+
+        /* --- Header --- */
+        header {
+            padding: 20px 0;
+            background: var(--bg-white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            height: 42px;
+            width: auto;
+        }
+
+        .logo-sub {
+            font-size: 8px;
+            font-weight: 400;
+            color: #888;
+            letter-spacing: 0.3px;
+            margin-top: -4px;
+        }
+
+        .logo:hover .logo-icon {
+            transform: scale(1.15) rotate(-3deg);
+            transition: transform 0.3s ease;
+        }
+ 
+        nav ul {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: var(--primary-brand); }
+
+        .header-actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--bg-white);
+            min-width: 220px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            z-index: 1000;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 8px 0;
+            border: 1px solid #e2e8f0;
+            margin-top: 15px; 
+        }
+        .dropdown::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 15px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: var(--text-muted);
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .dropdown-content a:hover {
+            background-color: var(--bg-slate-50);
+            color: var(--primary-brand);
+            padding-left: 24px;
+        }
+        
+        
+        
+        
+    
+    
+    
+        /* --- Confirmation Section Custom Styles --- */
+        .success-card {
+            background: var(--bg-white);
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 40px -15px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .success-icon-wrapper {
+            width: 90px;
+            height: 90px;
+            background: var(--bg-pink-50);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px auto;
+            color: var(--primary-brand);
+            font-size: 2.5rem;
+            box-shadow: 0 10px 20px rgba(225, 20, 132, 0.15);
+            animation: pulse-ring 2s infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% { box-shadow: 0 0 0 0 rgba(225, 20, 132, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(225, 20, 132, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(225, 20, 132, 0); }
+        }
+
+        .receipt-box {
+            background-color: var(--bg-slate-50);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            margin: 30px 0;
+            text-align: left;
+            border: 1px dashed #cbd5e1;
+        }
+
+        .receipt-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.95rem;
+        }
+
+        .receipt-row:last-child {
+            border-bottom: none;
+            font-weight: 700;
+            color: var(--text-main);
+            font-size: 1.05rem;
+            padding-top: 12px;
+        }
+
+        .receipt-label { color: var(--text-muted); }
+        .receipt-value { font-weight: 600; color: var(--text-main); }
+
+        .next-steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .step-card {
+            background: var(--bg-slate-50);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border: 1px solid #f1f5f9;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            background: var(--primary-brand);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+    
+    
+    
+    
+    
+        
+   
+
+        /* --- Back to Top Button --- */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-brand);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(225, 20, 132, 0.3);
+            transform: translateY(15px);
+        }
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .back-to-top:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-3px);
+        }
+
+     
+
+     
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--bg-dark);
+            color: var(--bg-white);
+            padding: 100px 0 40px;
+            border-radius: 40px 40px 0 0;
+        }
+
+        .footer-cta {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
+
+        .footer-cta h2 {
+            color: var(--bg-white);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 40px;
+            border-top: 1px solid #334155;
+            padding-top: 60px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 5px; }
+        .footer-col a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .footer-col a:hover { color: var(--bg-white); }
+
+
+        .footer-bottom {
+            margin-top: 60px;
+            border-top: 1px solid #334155;
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            color: #64748b;
+        }
+
+
+
+
+
+        
+        /* New styling to center the logo and text in footer on mobile */
+        @media (max-width: 900px) {
+            .footer-col.brand-col {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .footer-col.brand-col .logo {
+                justify-content: center;
+            }
+        }
+
+
+
+   
+        
+        
+        
+        
+
+        /* Responsive Settings */
+        @media (max-width: 900px) {
+            .grid-2, .proof-grid, .features-grid, .audience-grid, .footer-links {
+                grid-template-columns: 1fr;
+            }
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            .hero { text-align: center; padding: 60px 0; }
+            .hero-text { margin: 0 auto; }
+            .hero-buttons {
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+            }
+            .hero-buttons .btn { width: 80%; margin-left: 0 !important; }
+            .bullets li { text-align: left; }
+            header .container { flex-direction: column; gap: 20px; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 20px; }
+            
+            /* Fix for header actions on mobile */
+            .header-actions {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .mockup-container { width: 100%; }
+            .footer-links { text-align: center; }
+            .feature-card-bg { padding: 40px 20px; }
+            .back-to-top { width: 45px; height: 45px; }
+            
+            .blockquote { font-size: 1.4rem; padding: 0 20px; }            
+            .vision-section { padding: 40px 20px; border-radius: 20px; }            
+            
+            
+            
+        }
+        
+        
+        
+
+        @media (max-width: 800px) {
+            .grid-2 { gap: 2rem; }
+            .text-content h2 { font-size: 1.8rem; }
+            .feature-card-bg { padding: 1.8rem 1.2rem; }
+            .channel-icons { justify-content: center; }
+            .text-center-mobile { text-align: center; }            
+        }
+        
+        
+      
+
+        @media (max-width: 700px) {
+            .hover-image-wrapper { max-width: 100%; }
+        }
+
+        @media (max-width: 480px) {
+            .text-content h2 { font-size: 1.5rem; }
+            .btn { width: 100%; text-align: center; }
+                
+        }
+</style>
+</head>
+<body>
+
+       
+       <!-- Navigation -->
+    <header>
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
+                <div>
+                    <div>HelpDesk®</div>
+                    <div class="logo-sub">by Bebell Digital Solutions</div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                                       
+                    <li><a href="/p/acerca">Acerca</a></li>                          
+
+                     <li class="dropdown">
+                        <a href="#" cursor: default;">
+                            Producto <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="/p/caracteristicas">Características</a>
+                            <a href="/p/canales">Canales</a>
+                            <a href="/p/integraciones" font-weight: 700;">Integraciones</a>
+                        </div>
+                    </li>                   
+                              
+                    
+                    <li class="dropdown">
+                        <a href="#" cursor: default;">
+                            Recursos <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="/blog">Blog y Noticias</a>
+                            <a href="/recursos/guia">Guía GRATUITA</a>
+                            <a href="/recursos/whatsapp">Enlaces WhatsApp</a>
+                        </div>
+                    </li>
+                    
+
+
+                    <li><a href="/p/planes">planes</a></li>  
+                  
+
+                    <li class="dropdown">
+                        <a href="#" cursor: default;">
+                            Ayuda <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                        </a>
+                        <div class="dropdown-content">
+                        
+                            <a href="https://ayuda.helpdesk.icu">Centro de Ayuda</a>
+                            <a href="/ayuda/soporte">Soporte Online</a>
+                            <a href="/ayuda/ticket">Ticket de Soporte</a>
+                            <a href="/p/reserva">Agendar una Demo</a>    
+                        </div>
+                    </li>
+
+
+                </ul>
+            </nav>
+            
+             <div class="header-actions">
+                <!-- Add inline styles for nowrap as backup, though CSS class handles it now -->
+                <a href="https://app.helpdesk.icu" class="btn btn-outline" style="border-radius: 8px; padding: 10px 20px;"><strong>Iniciar Sesión</strong></a>
+                <a href="/p/reserva" class="btn btn-primary" style="border-radius: 8px; padding: 10px 20px;">Agendar Demo</a>
+            </div>
+
+         
+        </div>
+    </header>
+
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Main Success / Payment Confirmation Section -->
+    <section>
+        <div class="container">
+            <div class="success-card">
+                <div class="success-icon-wrapper">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                
+                <h1>¡Pago Confirmado con Éxito!</h1>
+                <p>Gracias por confiar en <strong>HelpDesk</strong>. Tu suscripción ha sido activada correctamente y ya puedes comenzar a unificar tus canales de atención.</p>
+
+                <!-- Receipt Details -->
+                <div class="receipt-box">
+                    <div class="receipt-row">
+                        <span class="receipt-label">Producto:</span>
+                        <span class="receipt-value">HelpDesk</span>
+                    </div>
+                    <div class="receipt-row">
+                        <span class="receipt-label">Plan Adquirido:</span>
+                        <span class="receipt-value">Plan Básico (Mensual)</span>
+                    </div>
+                    <div class="receipt-row">
+                        <span class="receipt-label">Fecha:</span>
+                        <span class="receipt-value">24 de Agosto, 2026</span>
+                    </div>
+                    <div class="receipt-row">
+                        <span class="receipt-label">Método de Pago:</span>
+                        <span class="receipt-value">PayPal</span>
+                    </div>
+                    <div class="receipt-row">
+                        <span class="receipt-label">Monto Total Processado:</span>
+                        <span class="receipt-value" style="color: var(--primary-brand);"><strong>$48.00 USD</strong></span>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+                    <a href="https://app.helpdesk.icu" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">
+                        <i class="fa-solid fa-rocket" style="margin-right: 8px;"></i> Panel de Control
+                    </a>
+                    <a href="https://ayuda.helpdesk.icu" class="btn btn-outline" style="padding: 16px 28px; font-size: 1.05rem;">
+                        <i class="fa-solid fa-book" style="margin-right: 8px;"></i> Guía de Uso Rápido
+                    </a>
+                </div>
+
+                <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 40px 0 30px 0;">
+
+                <!-- Next Steps -->
+                <h2 style="text-align: center; margin-bottom: 24px;">Próximos Pasos</h2>
+                <div class="next-steps-grid">
+                    <div class="step-card">
+                        <span class="step-number">1</span>
+                        <h4 style="font-size: 1.05rem; margin-bottom: 8px;">Revisa tu Correo</h4>
+                        <p style="font-size: 0.9rem; margin-bottom: 0;">Hemos enviado la factura de compra y las credenciales de acceso directo a tu email.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-number">2</span>
+                        <h4 style="font-size: 1.05rem; margin-bottom: 8px;">Conecta tus Canales</h4>
+                        <p style="font-size: 0.9rem; margin-bottom: 0;">Inicia sesión en tu panel e integra WhatsApp, Instagram y Correo en menos de 5 minutos.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-number">3</span>
+                        <h4 style="font-size: 1.05rem; margin-bottom: 8px;">Invita a tu Equipo</h4>
+                        <p style="font-size: 0.9rem; margin-bottom: 0;">Agrega a tus agentes de soporte y asigna roles para comenzar a atender mensajes juntos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+
+    <!-- 11. Final Call to Action & Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-cta">
+                <h2 style="font-size: 3rem;">¿Listo para dejar de perder ventas por responder tarde?</h2>
+                <p style="color: #94a3b8; font-size: 1.15rem; margin-bottom: 30px;">Únete a cientos de negocios que ya optimizaron su comunicación.</p>
+                <div style="display:flex; gap:16px; justify-content:center; flex-wrap: wrap;">
+                    <a href="/p/planes" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 32px;">Pruébalo sin Costo</a>
+                    <!-- Added class footer-demo-btn for hover styling -->
+                    <a href="/p/reserva" class="btn btn-dark footer-demo-btn" style="background:transparent; color:white; border-color:#475569; font-size: 1.1rem; padding: 16px 32px; transition: all 0.2s ease;">Agenda una Demostración</a>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.9rem; color: #64748b;">
+                    No tarjeta de crédito. Configúralo en menos de 10 minutos.
+                </p>
+            </div>
+
+
+             <div class="footer-links">
+                <!-- Added brand-col class to center content via CSS -->
+                <div class="footer-col brand-col">
+                    <a href="/" class="logo">
+                        <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
+                        <div>
+                            <div style="color: white; font-size: 22px;">HelpDesk®</div>
+                            <div class="logo-sub">by Bebell Digital Solutions</div>
+                        </div>
+                    </a>                
+                    <p style="color:#64748b; font-size:0.9rem; line-height: 1.6; margin-top: 15px;">La plataforma que ayuda a negocios a ofrecer soporte excepcional y vender más en cada canal.</p>
+                </div>
+
+                
+                <div class="footer-col">
+                    <h4>Plataforma</h4>
+                    <ul>
+                        <li><a href="#">Características</a></li>
+                        <li><a href="/p/integraciones">Integraciones</a></li>
+                        <li><a href="/p/planes">Precios</a></li>
+                        <li><a href="#">Seguridad</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="/acerca">Sobre nosotros</a></li>
+                        <li><a href="/blog">Blog & Noticias</a></li>
+                        <li><a href="/p/partners">Partners</a></li>
+                        <li><a href="/p/contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="https://ayuda.helpdesk.icu">Centro de Ayuda</a></li>
+                        <li><a href="#">Comunidad</a></li>
+                        <li><a href="/recursos/guia">Guía GRATUITA</a></li>
+                        <li><a href="#">Tickets de Soporte</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/politicas/privacidad">Política de Privacidad</a></li>
+                        <li><a href="/politicas/terminos">Términos de Uso</a></li>
+                        <li><a href="/politicas/cookies">Política de Cookies</a></li>
+                    </ul>
+                </div>
+
+                
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    Desarrollado con 💖 por Bebell Digital Solutions.<br>Copyright © 2026 • Todos los derechos reservados.
+                </div>
+                <div style="display: flex; gap: 20px;">
+                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    
+    
+    
+    
+    
+    
+
+    <!-- Botón Volver Arriba -->
+
+   <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+
+
+
+<script>
+$(document).ready(function () {
+  const $slides = $(".partner-logo-slide");
+  const cloneCount = 3;
+  for (let i = 0; i < cloneCount; i++) {
+    $slides.children().clone(true).appendTo($slides);
+  }
+});
+</script>
+
+
+ <script>
+        // Lógica del botón "Volver arriba"
+        document.addEventListener('DOMContentLoaded', () => {
+            const backToTopBtn = document.getElementById("backToTop");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.add("show");
+                } else {
+                    backToTopBtn.classList.remove("show");
+                }
+            });
+
+            backToTopBtn.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+        
+        </script>
+
+
+
+
+
+
+
+
+<script>(function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://api.helpdesk.icu/widget2/load?id=b248d1b5-317e-3e0d-a6db-c255c207060b&r=' + encodeURIComponent(window.location);
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'anw2-sdk-tdFIsn4xDT6m28JVwgcGCw'));</script>
+
+</body>
+</html>
