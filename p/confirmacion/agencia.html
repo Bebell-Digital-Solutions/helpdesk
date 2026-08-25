@@ -38,7 +38,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-
+<!-- Load the lightweight confetti script -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 <style>
  :root {
@@ -690,7 +691,7 @@
                         <span class="receipt-value">PayPal</span>
                     </div>
                     <div class="receipt-row">
-                        <span class="receipt-label">Monto Total Processado:</span>
+                        <span class="receipt-label">Monto Total Procesado:</span>
                         <span class="receipt-value" style="color: var(--primary-brand);"><strong>$150.00 USD</strong></span>
                     </div>
                 </div>
@@ -840,15 +841,51 @@
 
 
 <script>
-$(document).ready(function () {
-  const $slides = $(".partner-logo-slide");
-  const cloneCount = 3;
-  for (let i = 0; i < cloneCount; i++) {
-    $slides.children().clone(true).appendTo($slides);
-  }
-});
-</script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Set animation duration to 5 seconds
+    const duration = 5 * 1000;
+    const animationEnd = Date.now() + duration;
 
+    // A vibrant, multi-colored rainbow palette
+    const colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FFA500', '#FF00FF', '#00FFFF'];
+
+    function triggerConfetti() {
+      const timeLeft = animationEnd - Date.now();
+
+      // Stop the function when 5 seconds have passed
+      if (timeLeft <= 0) {
+        return;
+      }
+
+      // Dynamically calculate particle count so it trails off naturally
+      const particleCount = 50 * (timeLeft / duration);
+
+      // Left edge cannon
+      confetti({
+        particleCount,
+        angle: 60,
+        spread: 360,
+        origin: { x: 0, y: 0.8 },
+        colors: colors
+      });
+
+      // Right edge cannon
+      confetti({
+        particleCount,
+        angle: 120,
+        spread: 360,
+        origin: { x: 1, y: 0.8 }, 
+        colors: colors
+      });
+
+      // Loop the frame until the time runs out
+      requestAnimationFrame(triggerConfetti);
+    }
+
+    // Initialize the animation
+    triggerConfetti();
+  });
+</script>
  <script>
         // Lógica del botón "Volver arriba"
         document.addEventListener('DOMContentLoaded', () => {
