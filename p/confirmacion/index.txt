@@ -1,27 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>¡Pago Confirmado! - HelpDesk</title>
+<title>¡Pago Confirmado! | HelpDesk</title>
 
-<!-- === META TAGS PRINCIPALES === -->
 <meta name="description" content="Tu pago ha sido procesado con éxito. Bienvenido a HelpDesk, la plataforma para unificar tus canales de atención y no perder más clientes.">
 <meta name="keywords" content="confirmacion de pago, exito, helpdesk, bienvenido, suscripcion confirmada">
 <meta name="author" content="HelpDesk">
 <meta name="robots" content="noindex, follow">
 
-<!-- === URL CANÓNICA === -->
 <link rel="canonical" href="https://helpdesk.icu/confirmacion">
 
-<!-- === FAVICON Y ICONOS DE APLICACIÓN === -->
 <link rel="icon" type="image/x-icon" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
 <link rel="apple-touch-icon" sizes="180x180" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
 <link rel="icon" type="image/png" sizes="16x16" href="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png">
 
-<!-- === OPEN GRAPH / FACEBOOK === -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://helpdesk.icu/confirmacion">
 <meta property="og:title" content="¡Pago Confirmado! | HelpDesk">
@@ -32,7 +27,6 @@
 <meta property="og:site_name" content="HelpDesk">
 <meta property="og:locale" content="es_ES">
 
-<!-- === TARJETA DE TWITTER === -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://helpdesk.icu/confirmacion">
 <meta name="twitter:title" content="¡Pago Confirmado! | HelpDesk">
@@ -43,8 +37,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 <style>
  :root {
@@ -84,10 +77,6 @@
             -webkit-font-smoothing: antialiased;
             background-color: var(--bg-slate-50);
         }
-        
-        
-        
-        
 
         /* Utilities */
         .container {
@@ -107,7 +96,7 @@
             cursor: pointer;
             font-size: 0.95rem;
             text-align: center;
-            white-space: nowrap; /* Fix 1: Prevent text from wrapping to the next line */
+            white-space: nowrap;
         }
 
         .btn-primary {
@@ -138,21 +127,12 @@
             color: var(--text-main);
             border: 1px solid var(--bg-white);
         }
-        
-        
-        
 
-        /* Add hover effect for dark/transparent button in footer */
         .btn-dark.footer-demo-btn:hover {
             background-color: rgba(225, 20, 132, 0.1) !important;
             border-color: var(--primary-brand) !important;
             color: var(--primary-brand) !important;
         }
-        
-        
-        
-        
-        
 
         h1, h2, h3, h4 {
             font-weight: 800;
@@ -164,12 +144,6 @@
         h2 { font-size: 2rem; line-height: 1.2; }
         h3 { font-size: 1.5rem; }
         p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 1.5rem; }
-        
-        
-        
-        
-        
-        
 
         /* Section Layouts */
         section {
@@ -182,12 +156,6 @@
             gap: 80px;
             align-items: center;
         }
-
-
-
-
-
-
 
         /* --- Header --- */
         header {
@@ -302,13 +270,7 @@
             color: var(--primary-brand);
             padding-left: 24px;
         }
-        
-        
-        
-        
-    
-    
-    
+
         /* --- Confirmation Section Custom Styles --- */
         .success-card {
             background: var(--bg-white);
@@ -321,25 +283,19 @@
             text-align: center;
         }
 
-        .success-icon-wrapper {
-            width: 90px;
-            height: 90px;
-            background: var(--bg-pink-50);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 24px auto;
-            color: var(--primary-brand);
-            font-size: 2.5rem;
-            box-shadow: 0 10px 20px rgba(225, 20, 132, 0.15);
-            animation: pulse-ring 2s infinite;
+        /* New Animation for the Emoji Image */
+        @keyframes expand-shrink {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
         }
 
-        @keyframes pulse-ring {
-            0% { box-shadow: 0 0 0 0 rgba(225, 20, 132, 0.4); }
-            70% { box-shadow: 0 0 0 15px rgba(225, 20, 132, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(225, 20, 132, 0); }
+        .emoji-icon {
+            width: 100px;
+            height: auto;
+            margin: 0 auto 24px auto;
+            display: block;
+            animation: expand-shrink 2s ease-in-out infinite;
         }
 
         .receipt-box {
@@ -398,13 +354,6 @@
             font-size: 0.85rem;
             margin-bottom: 12px;
         }
-    
-    
-    
-    
-    
-        
-   
 
         /* --- Back to Top Button --- */
         .back-to-top {
@@ -438,10 +387,6 @@
             background-color: var(--primary-hover);
             transform: translateY(-3px);
         }
-
-     
-
-     
 
         /* --- Footer --- */
         footer {
@@ -489,7 +434,6 @@
         }
         .footer-col a:hover { color: var(--bg-white); }
 
-
         .footer-bottom {
             margin-top: 60px;
             border-top: 1px solid #334155;
@@ -500,11 +444,10 @@
             color: #64748b;
         }
 
+        .footer-bottom i:hover {
+            color: #fff;
+        }
 
-
-
-
-        
         /* New styling to center the logo and text in footer on mobile */
         @media (max-width: 900px) {
             .footer-col.brand-col {
@@ -517,14 +460,6 @@
                 justify-content: center;
             }
         }
-
-
-
-   
-        
-        
-        
-        
 
         /* Responsive Settings */
         @media (max-width: 900px) {
@@ -555,16 +490,9 @@
             .footer-links { text-align: center; }
             .feature-card-bg { padding: 40px 20px; }
             .back-to-top { width: 45px; height: 45px; }
-            
             .blockquote { font-size: 1.4rem; padding: 0 20px; }            
             .vision-section { padding: 40px 20px; border-radius: 20px; }            
-            
-            
-            
         }
-        
-        
-        
 
         @media (max-width: 800px) {
             .grid-2 { gap: 2rem; }
@@ -573,9 +501,6 @@
             .channel-icons { justify-content: center; }
             .text-center-mobile { text-align: center; }            
         }
-        
-        
-      
 
         @media (max-width: 700px) {
             .hover-image-wrapper { max-width: 100%; }
@@ -584,318 +509,333 @@
         @media (max-width: 480px) {
             .text-content h2 { font-size: 1.5rem; }
             .btn { width: 100%; text-align: center; }
-                
         }
 </style>
 </head>
 <body>
 
-       
-       <!-- Navigation -->
-    <header>
-        <div class="container">
-            <a href="/" class="logo">
-                <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
-                <div>
-                    <div>HelpDesk®</div>
-                    <div class="logo-sub">by Bebell Digital Solutions</div>
-                </div>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="/">Inicio</a></li>
-                                       
-                    <li><a href="/p/acerca">Acerca</a></li>                          
+<header>
+    <div class="container">
+        <a href="/" class="logo">
+            <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
+            <div>
+                <div>HelpDesk®</div>
+                <div class="logo-sub">by Bebell Digital Solutions</div>
+            </div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/p/acerca">Acerca</a></li>                          
+                <li class="dropdown">
+                    <a href="#" style="cursor: default;">
+                        Producto <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="/p/caracteristicas">Características</a>
+                        <a href="/p/canales">Canales</a>
+                        <a href="/p/integraciones" style="font-weight: 700;">Integraciones</a>
+                    </div>
+                </li>                   
+                <li class="dropdown">
+                    <a href="#" style="cursor: default;">
+                        Recursos <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="/blog">Blog y Noticias</a>
+                        <a href="/recursos/guia">Guía GRATUITA</a>
+                        <a href="/recursos/whatsapp">Enlaces WhatsApp</a>
+                    </div>
+                </li>
+                <li><a href="/p/planes">Planes</a></li>  
+                <li class="dropdown">
+                    <a href="#" style="cursor: default;">
+                        Ayuda <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="https://ayuda.helpdesk.icu">Centro de Ayuda</a>
+                        <a href="/ayuda/soporte">Soporte Online</a>
+                        <a href="/ayuda/ticket">Ticket de Soporte</a>
+                        <a href="/p/reserva">Agendar una Demo</a>   
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="header-actions">
+            <a href="https://app.helpdesk.icu" class="btn btn-outline" style="border-radius: 8px; padding: 10px 20px;"><strong>Iniciar Sesión</strong></a>
+            <a href="/p/reserva" class="btn btn-primary" style="border-radius: 8px; padding: 10px 20px;">Agendar Demo</a>
+        </div>
+    </div>
+</header>
 
-                     <li class="dropdown">
-                        <a href="#" cursor: default;">
-                            Producto <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="/p/caracteristicas">Características</a>
-                            <a href="/p/canales">Canales</a>
-                            <a href="/p/integraciones" font-weight: 700;">Integraciones</a>
-                        </div>
-                    </li>                   
-                              
-                    
-                    <li class="dropdown">
-                        <a href="#" cursor: default;">
-                            Recursos <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="/blog">Blog y Noticias</a>
-                            <a href="/recursos/guia">Guía GRATUITA</a>
-                            <a href="/recursos/whatsapp">Enlaces WhatsApp</a>
-                        </div>
-                    </li>
-                    
-
-
-                    <li><a href="/p/planes">planes</a></li>  
-                  
-
-                    <li class="dropdown">
-                        <a href="#" cursor: default;">
-                            Ayuda <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
-                        </a>
-                        <div class="dropdown-content">
-                        
-                            <a href="https://ayuda.helpdesk.icu">Centro de Ayuda</a>
-                            <a href="/ayuda/soporte">Soporte Online</a>
-                            <a href="/ayuda/ticket">Ticket de Soporte</a>
-                            <a href="/p/reserva">Agendar una Demo</a>    
-                        </div>
-                    </li>
-
-
-                </ul>
-            </nav>
+<section>
+    <div class="container">
+        <div class="success-card">
             
-             <div class="header-actions">
-                <!-- Add inline styles for nowrap as backup, though CSS class handles it now -->
-                <a href="https://app.helpdesk.icu" class="btn btn-outline" style="border-radius: 8px; padding: 10px 20px;"><strong>Iniciar Sesión</strong></a>
-                <a href="/p/reserva" class="btn btn-primary" style="border-radius: 8px; padding: 10px 20px;">Agendar Demo</a>
+            <!-- Replaced Icon with requested Animated Emoji -->
+            <img src="https://storage.mlcdn.com/account_image/2621140/w5U64XzOCf7sQZJQODLviGmxEoFUoLMkoq948GJe.png" class="emoji-icon" alt="¡Éxito!" />
+            
+            <h1>¡Pago Confirmado con Éxito!</h1>
+            <p>Gracias por confiar en <strong>HelpDesk</strong>. Tu suscripción ha sido procesada correctamente y ya puedes comenzar a unificar tus canales de atención.</p>
+
+            <!-- Generic Receipt Box - No specific plans or prices -->
+            <div class="receipt-box">
+                <div class="receipt-row">
+                    <span class="receipt-label">Producto:</span>
+                    <span class="receipt-value">HelpDesk</span>
+                </div>
+                <div class="receipt-row">
+                    <span class="receipt-label">Estado de la suscripción:</span>
+                    <span class="receipt-value" style="color: #16a34a;">Activa y Confirmada</span>
+                </div>
+                <div class="receipt-row">
+                    <span class="receipt-label">Fecha de activación:</span>
+                    <span class="receipt-value" id="dynamic-date">...</span>
+                </div>
+                <div class="receipt-row">
+                    <span class="receipt-label">Detalles de Facturación:</span>
+                    <span class="receipt-value" style="color: var(--primary-brand);"><strong>Enviados por Correo</strong></span>
+                </div>
             </div>
+            
+            
+            
+            
 
-         
-        </div>
-    </header>
-
-    
-    
-    
-    
-    
-    
-    
-
-    <!-- Main Success / Payment Confirmation Section -->
-    <section>
-        <div class="container">
-            <div class="success-card">
-                <div class="success-icon-wrapper">
-                    <i class="fa-solid fa-circle-check"></i>
-                </div>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+            
+            
+            
+                <a href="https://app.helpdesk.icu" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">
+                    <i class="fa-solid fa-rocket" style="margin-right: 8px;"></i> Panel de Control
+                </a>
                 
-                <h1>¡Pago Confirmado con Éxito!</h1>
-                <p>Gracias por confiar en <strong>HelpDesk</strong>. Tu suscripción ha sido activada correctamente y ya puedes comenzar a unificar tus canales de atención.</p>
+                
+                
+                <a href="https://ayuda.helpdesk.icu" class="btn btn-outline" style="padding: 16px 28px; font-size: 1.05rem;">
+                    <i class="fa-solid fa-book" style="margin-right: 8px;"></i> Guía de Uso Rápido
+                </a>
+                
+            </div>
+            
+            
+            
 
-                <!-- Receipt Details -->
-                <div class="receipt-box">
-                    <div class="receipt-row">
-                        <span class="receipt-label">Producto:</span>
-                        <span class="receipt-value">HelpDesk</span>
-                    </div>
-                    <div class="receipt-row">
-                        <span class="receipt-label">Plan Adquirido:</span>
-                        <span class="receipt-value">Plan Básico (Mensual)</span>
-                    </div>
-                    <div class="receipt-row">
-                        <span class="receipt-label">Fecha:</span>
-                        <span class="receipt-value">24 de Agosto, 2026</span>
-                    </div>
-                    <div class="receipt-row">
-                        <span class="receipt-label">Método de Pago:</span>
-                        <span class="receipt-value">PayPal</span>
-                    </div>
-                    <div class="receipt-row">
-                        <span class="receipt-label">Monto Total Processado:</span>
-                        <span class="receipt-value" style="color: var(--primary-brand);"><strong>$48.00 USD</strong></span>
-                    </div>
+            <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 40px 0 30px 0;">
+
+            <h2 style="text-align: center; margin-bottom: 24px;">Próximos Pasos</h2>
+            <div class="next-steps-grid">
+                <div class="step-card">
+                    <span class="step-number">1</span>
+                    <h4 style="font-size: 1.05rem; margin-bottom: 8px;">Revisa tu Correo</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 0;">Hemos enviado el comprobante de pago y las credenciales de acceso directo a tu email.</p>
                 </div>
-
-                <!-- Action Buttons -->
-                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
-                    <a href="https://app.helpdesk.icu" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">
-                        <i class="fa-solid fa-rocket" style="margin-right: 8px;"></i> Panel de Control
-                    </a>
-                    <a href="https://ayuda.helpdesk.icu" class="btn btn-outline" style="padding: 16px 28px; font-size: 1.05rem;">
-                        <i class="fa-solid fa-book" style="margin-right: 8px;"></i> Guía de Uso Rápido
-                    </a>
+                <div class="step-card">
+                    <span class="step-number">2</span>
+                    <h4 style="font-size: 1.05rem; margin-bottom: 8px;">Conecta tus Canales</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 0;">Inicia sesión en tu panel e integra WhatsApp, Instagram y Correo en menos de 5 minutos.</p>
                 </div>
-
-                <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 40px 0 30px 0;">
-
-                <!-- Next Steps -->
-                <h2 style="text-align: center; margin-bottom: 24px;">Próximos Pasos</h2>
-                <div class="next-steps-grid">
-                    <div class="step-card">
-                        <span class="step-number">1</span>
-                        <h4 style="font-size: 1.05rem; margin-bottom: 8px;">Revisa tu Correo</h4>
-                        <p style="font-size: 0.9rem; margin-bottom: 0;">Hemos enviado la factura de compra y las credenciales de acceso directo a tu email.</p>
-                    </div>
-                    <div class="step-card">
-                        <span class="step-number">2</span>
-                        <h4 style="font-size: 1.05rem; margin-bottom: 8px;">Conecta tus Canales</h4>
-                        <p style="font-size: 0.9rem; margin-bottom: 0;">Inicia sesión en tu panel e integra WhatsApp, Instagram y Correo en menos de 5 minutos.</p>
-                    </div>
-                    <div class="step-card">
-                        <span class="step-number">3</span>
-                        <h4 style="font-size: 1.05rem; margin-bottom: 8px;">Invita a tu Equipo</h4>
-                        <p style="font-size: 0.9rem; margin-bottom: 0;">Agrega a tus agentes de soporte y asigna roles para comenzar a atender mensajes juntos.</p>
-                    </div>
+                <div class="step-card">
+                    <span class="step-number">3</span>
+                    <h4 style="font-size: 1.05rem; margin-bottom: 8px;">Invita a tu Equipo</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 0;">Agrega a tus agentes de soporte y asigna roles para comenzar a atender mensajes juntos.</p>
                 </div>
             </div>
         </div>
-    </section>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-   
+    </div>
+</section>
 
-    <!-- 11. Final Call to Action & Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-cta">
-                <h2 style="font-size: 3rem;">¿Listo para dejar de perder ventas por responder tarde?</h2>
-                <p style="color: #94a3b8; font-size: 1.15rem; margin-bottom: 30px;">Únete a cientos de negocios que ya optimizaron su comunicación.</p>
-                <div style="display:flex; gap:16px; justify-content:center; flex-wrap: wrap;">
-                    <a href="/p/planes" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 32px;">Pruébalo sin Costo</a>
-                    <!-- Added class footer-demo-btn for hover styling -->
-                    <a href="/p/reserva" class="btn btn-dark footer-demo-btn" style="background:transparent; color:white; border-color:#475569; font-size: 1.1rem; padding: 16px 32px; transition: all 0.2s ease;">Agenda una Demostración</a>
-                </div>
-                <p style="margin-top: 15px; font-size: 0.9rem; color: #64748b;">
-                    No tarjeta de crédito. Configúralo en menos de 10 minutos.
-                </p>
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="footer-cta">
+            <h2 style="font-size: 3rem;">¿Listo para dejar de perder ventas por responder tarde?</h2>
+            <p style="color: #94a3b8; font-size: 1.15rem; margin-bottom: 30px;">Únete a cientos de negocios que ya optimizaron su comunicación.</p>
+            <div style="display:flex; gap:16px; justify-content:center; flex-wrap: wrap;">
+                <a href="/p/planes" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 32px;">Pruébalo sin Costo</a>
+                <a href="/p/reserva" class="btn btn-dark footer-demo-btn" style="background:transparent; color:white; border-color:#475569; font-size: 1.1rem; padding: 16px 32px; transition: all 0.2s ease;">Agenda una Demostración</a>
             </div>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: #64748b;">
+                No tarjeta de crédito. Configúralo en menos de 10 minutos.
+            </p>
+        </div>
 
-
-             <div class="footer-links">
-                <!-- Added brand-col class to center content via CSS -->
-                <div class="footer-col brand-col">
-                    <a href="/" class="logo">
-                        <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
-                        <div>
-                            <div style="color: white; font-size: 22px;">HelpDesk®</div>
-                            <div class="logo-sub">by Bebell Digital Solutions</div>
-                        </div>
-                    </a>                
-                    <p style="color:#64748b; font-size:0.9rem; line-height: 1.6; margin-top: 15px;">La plataforma que ayuda a negocios a ofrecer soporte excepcional y vender más en cada canal.</p>
-                </div>
-
-                
-                <div class="footer-col">
-                    <h4>Plataforma</h4>
-                    <ul>
-                        <li><a href="#">Características</a></li>
-                        <li><a href="/p/integraciones">Integraciones</a></li>
-                        <li><a href="/p/planes">Precios</a></li>
-                        <li><a href="#">Seguridad</a></li>
-                    </ul>
-                </div>
-
-                
-                <div class="footer-col">
-                    <h4>Empresa</h4>
-                    <ul>
-                        <li><a href="/acerca">Sobre nosotros</a></li>
-                        <li><a href="/blog">Blog & Noticias</a></li>
-                        <li><a href="/p/partners">Partners</a></li>
-                        <li><a href="/p/contacto">Contacto</a></li>
-                    </ul>
-                </div>
-
-                
-                <div class="footer-col">
-                    <h4>Recursos</h4>
-                    <ul>
-                        <li><a href="https://ayuda.helpdesk.icu">Centro de Ayuda</a></li>
-                        <li><a href="#">Comunidad</a></li>
-                        <li><a href="/recursos/guia">Guía GRATUITA</a></li>
-                        <li><a href="#">Tickets de Soporte</a></li>
-                    </ul>
-                </div>
-
-                
-                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="/politicas/privacidad">Política de Privacidad</a></li>
-                        <li><a href="/politicas/terminos">Términos de Uso</a></li>
-                        <li><a href="/politicas/cookies">Política de Cookies</a></li>
-                    </ul>
-                </div>
-
-                
+        <div class="footer-links">
+            <div class="footer-col brand-col">
+                <a href="/" class="logo">
+                    <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1ea6c41da3544c958ba611015aae9ea3e7a7499a.png" alt="HelpDesk Logo" class="logo-icon" />
+                    <div>
+                        <div style="color: white; font-size: 22px;">HelpDesk®</div>
+                        <div class="logo-sub">by Bebell Digital Solutions</div>
+                    </div>
+                </a>                
+                <p style="color:#64748b; font-size:0.9rem; line-height: 1.6; margin-top: 15px;">La plataforma que ayuda a negocios a ofrecer soporte excepcional y vender más en cada canal.</p>
             </div>
-
-            <div class="footer-bottom">
-                <div>
-                    Desarrollado con 💖 por Bebell Digital Solutions.<br>Copyright © 2026 • Todos los derechos reservados.
-                </div>
-                <div style="display: flex; gap: 20px;">
-                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" style="color: #64748b;"><i class="fa-brands fa-instagram"></i></a>
-                </div>
+            
+            <div class="footer-col">
+                <h4>Plataforma</h4>
+                <ul>
+                    <li><a href="#">Características</a></li>
+                    <li><a href="/p/integraciones">Integraciones</a></li>
+                    <li><a href="/p/planes">Precios</a></li>
+                    <li><a href="#">Seguridad</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="/acerca">Sobre nosotros</a></li>
+                    <li><a href="/blog">Blog & Noticias</a></li>
+                    <li><a href="/p/partners">Partners</a></li>
+                    <li><a href="/p/contacto">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="https://ayuda.helpdesk.icu">Centro de Ayuda</a></li>
+                    <li><a href="#">Comunidad</a></li>
+                    <li><a href="/recursos/guia">Guía GRATUITA</a></li>
+                    <li><a href="#">Tickets de Soporte</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/politicas/privacidad">Política de Privacidad</a></li>
+                    <li><a href="/politicas/terminos">Términos de Uso</a></li>
+                    <li><a href="/politicas/cookies">Política de Cookies</a></li>
+                </ul>
             </div>
         </div>
-    </footer>
+
+        <div class="footer-bottom">
+            <div>
+                Desarrollado con 💖 por Bebell Digital Solutions.<br>Copyright © 2026 • Todos los derechos reservados.
+            </div>
+            <div style="display: flex; gap: 20px;">
+                <a href="#" style="color: #64748b;"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" style="color: #64748b;"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" style="color: #64748b;"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
-    
-    
-    
-    
-    
-    
 
-    <!-- Botón Volver Arriba -->
 
-   <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
+
+
+
+
+<button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
 
 
 
 
 
 <script>
-$(document).ready(function () {
-  const $slides = $(".partner-logo-slide");
-  const cloneCount = 3;
-  for (let i = 0; i < cloneCount; i++) {
-    $slides.children().clone(true).appendTo($slides);
-  }
-});
+ document.addEventListener('DOMContentLoaded', () => {
+    // Set animation duration to 5 seconds
+    const duration = 5 * 1000;
+    const animationEnd = Date.now() + duration;
+
+    // A vibrant, multi-colored rainbow palette
+    const colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FFA500', '#FF00FF', '#00FFFF'];
+
+    function triggerConfetti() {
+      const timeLeft = animationEnd - Date.now();
+
+      // Stop the function when 5 seconds have passed
+      if (timeLeft <= 0) {
+        return;
+      }
+
+      // Dynamically calculate particle count so it trails off naturally
+      const particleCount = 50 * (timeLeft / duration);
+
+      // Left edge cannon
+      confetti({
+        particleCount,
+        angle: 60,
+        spread: 360,
+        origin: { x: 0, y: 0.8 },
+        colors: colors
+      });
+
+      // Right edge cannon
+      confetti({
+        particleCount,
+        angle: 120,
+        spread: 360,
+        origin: { x: 1, y: 0.8 }, 
+        colors: colors
+      });
+
+      // Loop the frame until the time runs out
+      requestAnimationFrame(triggerConfetti);
+    }
+
+    // Initialize the animation
+    triggerConfetti();
+  });
 </script>
 
+<script>
+    // Lógica del botón "Volver arriba"
+    document.addEventListener('DOMContentLoaded', () => {
+        const backToTopBtn = document.getElementById("backToTop");
 
- <script>
-        // Lógica del botón "Volver arriba"
-        document.addEventListener('DOMContentLoaded', () => {
-            const backToTopBtn = document.getElementById("backToTop");
-
-            window.addEventListener("scroll", () => {
-                if (window.scrollY > 300) {
-                    backToTopBtn.classList.add("show");
-                } else {
-                    backToTopBtn.classList.remove("show");
-                }
-            });
-
-            backToTopBtn.addEventListener("click", () => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-            });
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add("show");
+            } else {
+                backToTopBtn.classList.remove("show");
+            }
         });
+
+        backToTopBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const dateElement = document.getElementById('dynamic-date');
+    if (dateElement) {
+        const today = new Date();
+        const day = today.getDate();
+        const year = today.getFullYear();
         
-        </script>
-
-
-
-
-
-
-
+        // Array de meses para asegurar el formato exacto solicitado ("Agosto")
+        const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+        const month = months[today.getMonth()];
+        
+        dateElement.textContent = `${day} de ${month}, ${year}`;
+    }
+});
+</script>
 
 <script>(function(d, s, id){
     var js, fjs = d.getElementsByTagName(s)[0];
