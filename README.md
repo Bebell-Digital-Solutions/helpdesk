@@ -28,7 +28,7 @@ CRM, projects, contacts, AI assistance, invoicing, cloud storage, and operationa
 <br>
 
 [Live Demo](https://ceo.elnegocio.digital) •
-[Official Website](https://elnegocio.digital) •
+[Official Website](https://helpdesk.icu) •
 [Setup Guide](#installation-workflow) •
 [Features](#features)
 
