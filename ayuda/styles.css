@@ -32,7 +32,7 @@ body {
     color: var(--text-main);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--bg-white);
+    background-color: var(--bg-slate-50);
 }
 
 
