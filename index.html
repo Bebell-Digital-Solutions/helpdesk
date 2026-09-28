@@ -187,7 +187,11 @@
         }
 
 
-
+        /* Custom scrollbar for webkit to match the dark aesthetic */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000000; }
+        ::-webkit-scrollbar-thumb { background: #df1783; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #c31d8a; }
 
  
 
@@ -489,6 +493,33 @@
         .hero-container:hover::after, .mockup-container:hover::after {
             transform:translateX(120%);
         }
+
+
+
+
+/* Container for the right side of the hero section */
+.hero-visuals {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Applies the exact 20px spacing */
+}
+
+/* Styling for the new top image */
+.hero-top-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Matches the rounded corners of your dashboard mockup */
+    display: block;
+}
+
+
+
+
+
+
+
+
+  
 
         /* Tech Colors for Skeletons */
         .sk-primary { background: #c7d2fe; }
@@ -1474,6 +1505,15 @@ color: #fff;
                         14 días de prueba sin costo. Configúralo en menos de 10 minutos.
                     </p>
                 </div>
+
+
+
+
+
+
+                            <div class="hero-visuals">
+    <img class="hero-top-image" src="https://bucket.mlcdn.com/a/3336/3336910/images/fbeba2cd7abf1e121e87e633e5cb6f99b425fdf2.png" alt="Top Banner">
+                
                 
                 <div class="hero-container">
                     <img
